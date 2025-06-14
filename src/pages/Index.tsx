@@ -102,10 +102,14 @@ const Index = () => {
                   />
                 </Link>
 
-                <button className="group px-10 py-5 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-2xl font-bold text-lg hover:border-orange-500 hover:text-orange-500 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-3">
+                <a
+                  href="/assets/Resume.pdf"
+                  download="SanjayKumar-Resume"
+                  target="_blank"
+                  className="group px-10 py-5 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-2xl font-bold text-lg hover:border-orange-500 hover:text-orange-500 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-3">
                   <Download size={24} className="group-hover:animate-bounce" />
                   Download Resume
-                </button>
+                </a>
               </div>
 
               {/* Enhanced Achievements Grid */}
@@ -181,7 +185,7 @@ const Index = () => {
                 <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
                   <Award className="text-white" size={36} />
                 </div>
-                <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                <h3 className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-600 transition-colors duration-300">
                   Modern Frameworks
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-lg">
@@ -193,7 +197,7 @@ const Index = () => {
                 <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
                   <Target className="text-white" size={36} />
                 </div>
-                <h3 className="text-xl font-bold mb-4 group-hover:text-green-600 transition-colors duration-300">
+                <h3 className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-green-600 dark:group-hover:text-green-600 transition-colors duration-300">
                   UI/UX Design
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-lg">
@@ -205,7 +209,7 @@ const Index = () => {
                 <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
                   <Rocket className="text-white" size={36} />
                 </div>
-                <h3 className="text-xl font-bold mb-4 group-hover:text-purple-600 transition-colors duration-300">
+                <h3 className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-600 transition-colors duration-300">
                   Integration
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-lg">

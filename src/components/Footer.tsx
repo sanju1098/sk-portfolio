@@ -7,7 +7,7 @@ const Footer = () => {
   const footerLinks = [
     {
       name: "Portfolio Website",
-      link: "https://sanjay-portfolio-delta.vercel.app",
+      link: "https://sanjay-dev-beta.vercel.app/",
       icon: <Globe className="h-6 w-6" />,
     },
     {
