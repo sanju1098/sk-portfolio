@@ -1,74 +1,53 @@
-import { additionalTech, skillCategories } from "@/config/skills";
+import { skillCategories } from "@/config/skills";
 
 const Skills = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="pt-20">
-        <section id="skills" className="py-10 bg-gray-50 dark:bg-gray-800/50">
+        <section className="py-10 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white ">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">
                 Technical Skills
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                A comprehensive overview of my technical expertise and
-                proficiency levels
+                Frontend development expertise with modern technologies and best
+                practices
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Main Skills Grid */}
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
               {skillCategories.map((category, index) => (
                 <div
                   key={index}
-                  className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
-                  <div className="flex items-center gap-4 mb-8">
+                  className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+                  <div className="flex items-center gap-3 mb-6">
                     {category.icon}
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                      {category.title}
-                    </h3>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                        {category.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {category.description}
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="space-y-6">
+                  <div className="grid grid-cols-2 gap-4">
                     {category.skills.map(skill => (
-                      <div key={skill.name}>
-                        <div className="flex justify-between items-center mb-2">
-                          <div className="flex items-center gap-3">
-                            <span className="text-2xl">{skill.icon}</span>
-                            <span className="font-semibold text-gray-800 dark:text-gray-200">
-                              {skill.name}
-                            </span>
-                          </div>
-                          <span className="text-sm text-gray-600 dark:text-gray-400">
-                            {skill.level}%
-                          </span>
-                        </div>
-                        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                          <div
-                            className="bg-gradient-to-r from-orange-500 to-teal-600 h-2 rounded-full transition-all duration-1000 ease-out"
-                            style={{ width: `${skill.level}%` }}></div>
-                        </div>
+                      <div
+                        key={skill.name}
+                        className="flex flex-col items-center p-4 bg-white dark:bg-gray-800 rounded-xl hover:scale-105 transition-transform duration-200 shadow-sm hover:shadow-md">
+                        <div className="text-4xl mb-3">{skill.icon}</div>
+                        <span className="text-sm font-semibold text-gray-800 dark:text-gray-200 text-center">
+                          {skill.name}
+                        </span>
                       </div>
                     ))}
                   </div>
                 </div>
               ))}
-            </div>
-
-            {/* Additional Technologies */}
-            <div className="mt-16 text-center">
-              <h3 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">
-                Additional Technologies
-              </h3>
-              <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-                {additionalTech.map(tech => (
-                  <span
-                    key={tech.name}
-                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-100 to-teal-100 dark:from-orange-900/30 dark:to-teal-900/30 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium hover:shadow-md transition-shadow duration-200">
-                    <span className="text-lg">{tech.icon}</span>
-                    {tech.name}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
         </section>

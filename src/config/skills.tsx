@@ -1,65 +1,122 @@
-import { Code2, Globe, FlaskConical, TerminalSquare } from "lucide-react";
+import {
+  Code2,
+  Globe,
+  FlaskConical,
+  TerminalSquare,
+  Database,
+  Palette,
+} from "lucide-react";
 
 export const skillCategories = [
   {
     title: "Programming Languages",
     icon: <Code2 className="w-8 h-8 text-orange-500" />,
+    description: "Core frontend languages",
     skills: [
-      { name: "JavaScript", level: 95, icon: "🟨" },
-      { name: "TypeScript", level: 90, icon: "🔷" },
-      { name: "HTML", level: 85, icon: "☕" },
-      { name: "CSS", level: 80, icon: "🐍" },
+      {
+        name: "JavaScript",
+        icon: (
+          <div className="w-12 h-12 bg-yellow-400 rounded flex items-center justify-center text-black font-bold text-lg">
+            JS
+          </div>
+        ),
+      },
+      {
+        name: "TypeScript",
+        icon: (
+          <div className="w-12 h-12 bg-blue-600 rounded flex items-center justify-center text-white font-bold text-lg">
+            TS
+          </div>
+        ),
+      },
+      {
+        name: "HTML5",
+        icon: (
+          <div className="w-12 h-12 bg-orange-600 rounded flex items-center justify-center text-white font-bold text-sm">
+            HTML
+          </div>
+        ),
+      },
+      {
+        name: "CSS3",
+        icon: (
+          <div className="w-12 h-12 bg-blue-500 rounded flex items-center justify-center text-white font-bold text-lg">
+            CSS
+          </div>
+        ),
+      },
     ],
   },
   {
-    title: "Frontend Frameworks & Libraries",
-    icon: <Globe className="w-8 h-8 text-teal-500" />,
+    title: "Frontend Frameworks",
+    icon: <Globe className="w-8 h-8 text-blue-500" />,
+    description: "Modern React ecosystem",
     skills: [
-      { name: "React", level: 95, icon: "⚛️" },
-      { name: "Next.js", level: 85, icon: "▲" },
-      { name: "Redux Toolkit", level: 90, icon: "🔄" },
-      { name: "Tanstack Query", level: 90, icon: "🔄" },
-      { name: "Material UI", level: 90, icon: "🔄" },
-      { name: "Shadcn UI", level: 90, icon: "🔄" },
-      { name: "Tailwind CSS", level: 90, icon: "🎨" },
-      { name: "Sass", level: 90, icon: "🎨" },
-      { name: "Styled Components", level: 90, icon: "🎨" },
+      { name: "React", icon: "⚛️" },
+      { name: "Next.js", icon: "▲" },
+      {
+        name: "Redux Toolkit",
+        icon: (
+          <div className="w-12 h-12 bg-purple-600 rounded flex items-center justify-center text-white font-bold text-sm">
+            Redux
+          </div>
+        ),
+      },
+      { name: "Tanstack Query", icon: "🔄" },
     ],
   },
   {
-    title: "Testing & Accessibility",
-    icon: <FlaskConical className="w-8 h-8 text-red-500" />,
+    title: "Styling & Design",
+    icon: <Palette className="w-8 h-8 text-purple-500" />,
+    description: "Modern styling solutions",
     skills: [
-      { name: "Jest", level: 85, icon: "🃏" },
-      { name: "React Testing Library", level: 85, icon: "🧪" },
-      { name: "WCAG", level: 80, icon: "♿" },
+      { name: "Tailwind CSS", icon: "🎨" },
+      { name: "SASS", icon: "💗" },
+      { name: "Styled Components", icon: "💅" },
+      { name: "Material UI", icon: "🎯" },
+      { name: "Shadcn UI", icon: "🎪" },
     ],
   },
   {
-    title: "Build Tools & Utilities",
+    title: "Testing & Quality",
+    icon: <FlaskConical className="w-8 h-8 text-green-500" />,
+    description: "Testing and code quality",
+    skills: [
+      { name: "Jest", icon: "🃏" },
+      { name: "React Testing Library", icon: "🧪" },
+      {
+        name: "WCAG Guidelines",
+        icon: (
+          <div className="w-12 h-12 bg-green-600 rounded flex items-center justify-center text-white font-bold text-xs">
+            A11Y
+          </div>
+        ),
+      },
+      { name: "ESLint & Prettier", icon: "✨" },
+    ],
+  },
+  {
+    title: "Build Tools & DevOps",
     icon: <TerminalSquare className="w-8 h-8 text-yellow-500" />,
+    description: "Development and deployment tools",
     skills: [
-      { name: "Vite", level: 90, icon: "⚡" },
-      { name: "Webpack", level: 85, icon: "📦" },
-      { name: "Storybook", level: 80, icon: "📖" },
-      { name: "Docker", level: 80, icon: "📮" },
+      { name: "Vite", icon: "⚡" },
+      { name: "Webpack", icon: "📦" },
+      { name: "Docker", icon: "🐳" },
+      { name: "Git & GitHub", icon: "🐙" },
+      { name: "Storybook", icon: "📖" },
     ],
   },
-];
-
-export const additionalTech = [
-  { name: "PostgreSQL", icon: "🗼" },
-  { name: "MongoDB", icon: "🗼" },
-  { name: "Babel", icon: "🗼" },
-  { name: "REST APIs", icon: "🌐" },
-  { name: "ESLint & Prettier", icon: "🌐" },
-  { name: "Microservices", icon: "🔧" },
-  { name: "i18next ", icon: "🔧" },
-  { name: "Agile/Scrum", icon: "📋" },
-  { name: "Jira", icon: "📊" },
-  { name: "Figma", icon: "🎨" },
-  { name: "Git & GitHub", icon: "🎨" },
-  { name: "Postman", icon: "🎨" },
-  { name: "Design Systems", icon: "⚡" },
-  { name: "Performance Optimization", icon: "⚡" },
+  {
+    title: "Additional Technologies",
+    icon: <Database className="w-8 h-8 text-teal-500" />,
+    description: "APIs and additional tools",
+    skills: [
+      { name: "REST APIs", icon: "🌐" },
+      { name: "PostgreSQL", icon: "🐘" },
+      { name: "MongoDB", icon: "🍃" },
+      { name: "Postman", icon: "📮" },
+      { name: "Figma", icon: "🎨" },
+    ],
+  },
 ];
