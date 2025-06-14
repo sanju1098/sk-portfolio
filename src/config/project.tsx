@@ -1,4 +1,5 @@
 import firebaseAppImg from "../assets/Images/firebase.png";
+import booktheshowImg from "../assets/Images/booktheshow.png";
 import chatAppImg from "../assets/Images/chatappUI.png";
 import cryptoLoom from "../assets/Images/cryptoLoom.png";
 import clerkAuthAppImg from "../assets/Images/clerkAuth.png";
@@ -8,6 +9,23 @@ import travelgenieImg from "../assets/Images/travelGenie.png";
 import { Codesandbox, Github } from "lucide-react";
 
 export const projects = [
+  {
+    image: booktheshowImg,
+    title: "Firebase Authentication with Google OAuth",
+    description:
+      "BookTheShow is a full-featured web application that allows users to browse movies, explore theaters, and book movie tickets across multiple cities and languages.",
+    gitLink: "https://github.com/sanju1098/booktheshow",
+    demoLink: "https://booktheshow.vercel.app/",
+    techStack: [
+      "React JS",
+      "Tailwind CSS",
+      "JavaScript",
+      "Firebase",
+      "Firebase Auth",
+      "Shadcn-UI",
+      "Movie API",
+    ],
+  },
   {
     image: firebaseAppImg,
     title: "Firebase Authentication with Google OAuth",
