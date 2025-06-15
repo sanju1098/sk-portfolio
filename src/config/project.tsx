@@ -11,7 +11,7 @@ import { Codesandbox, Github } from "lucide-react";
 export const projects = [
   {
     image: booktheshowImg,
-    title: "Firebase Authentication with Google OAuth",
+    title: "Book The Show",
     description:
       "BookTheShow is a full-featured web application that allows users to browse movies, explore theaters, and book movie tickets across multiple cities and languages.",
     gitLink: "https://github.com/sanju1098/booktheshow",

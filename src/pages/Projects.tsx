@@ -29,7 +29,7 @@ const Projects = () => {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-fit"
                       />
                     </div>
 
@@ -42,6 +42,8 @@ const Projects = () => {
                         <div className="flex space-x-2">
                           {project.gitLink && (
                             <a
+                              target="_blank"
+                              rel="noopener noreferrer"
                               href={project.gitLink}
                               className="p-2 text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors duration-200">
                               <Github size={20} />
@@ -50,6 +52,8 @@ const Projects = () => {
 
                           {project.demoLink && (
                             <a
+                              target="_blank"
+                              rel="noopener noreferrer"
                               href={project.demoLink}
                               className="p-2 text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors duration-200">
                               <ExternalLink size={20} />
