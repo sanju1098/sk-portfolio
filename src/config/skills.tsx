@@ -53,7 +53,14 @@ export const skillCategories = [
     description: "Modern React ecosystem",
     skills: [
       { name: "React", icon: "⚛️" },
-      { name: "Next.js", icon: "▲" },
+      {
+        name: "Next.js",
+        icon: (
+          <div className="w-12 h-12 bg-[#f8312f] rounded flex items-center justify-center text-white font-bold text-xs">
+            Next.js
+          </div>
+        ),
+      },
       {
         name: "Redux Toolkit",
         icon: (

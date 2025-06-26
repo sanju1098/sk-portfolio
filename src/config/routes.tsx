@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ErrorBoundary from "@/layout/ErrorBoundary";
 import Loader from "@/layout/Loader";
+import ScrollToTop from "@/layout/ScrollToTop";
 
 const Index = lazy(() => import("../pages/Index"));
 const Projects = lazy(() => import("../pages/Projects"));
@@ -16,6 +17,7 @@ const Layout = () => {
     <ErrorBoundary>
       <Suspense fallback={<Loader />}>
         <Header />
+        <ScrollToTop />
         <Outlet />
         <Footer />
       </Suspense>

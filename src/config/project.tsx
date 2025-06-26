@@ -13,7 +13,7 @@ export const projects = [
     image: booktheshowImg,
     title: "Book The Show",
     description:
-      "BookTheShow is a full-featured web application that allows users to browse movies, explore theaters, and book movie tickets across multiple cities and languages.",
+      "BookTheShow is a full-featured web application that allows users to browse movies, explore theaters, and book movie tickets across multiple cities and languages. It includes Firebase authentication with support for both email/password login and Google sign-in, enabling users to securely manage their bookings with ease.",
     gitLink: "https://github.com/sanju1098/booktheshow",
     demoLink: "https://booktheshow.vercel.app/",
     techStack: [
