@@ -4,7 +4,7 @@ const Skills = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="pt-20">
-        <section className="py-10 bg-white dark:bg-gray-900">
+        <section id="skills" className="py-10 bg-gray-50 dark:bg-gray-800/50">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">

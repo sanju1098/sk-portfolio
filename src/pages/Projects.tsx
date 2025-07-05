@@ -25,11 +25,16 @@ const Projects = () => {
                   className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
                   <div className="flex flex-col lg:flex-row">
                     {/* Project Image */}
-                    <div className="lg:w-2/5 aspect-video lg:aspect-auto">
+                    <div className="lg:w-2/5 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex flex-col p-4">
+                      <div className="flex gap-2 mb-2">
+                        <span className="w-3 h-3 bg-red-500 rounded-full" />
+                        <span className="w-3 h-3 bg-yellow-500 rounded-full" />
+                        <span className="w-3 h-3 bg-green-500 rounded-full" />
+                      </div>
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-fit"
+                        className="w-full h-auto rounded-xl object-cover transition hover:scale-[1.01]"
                       />
                     </div>
 
