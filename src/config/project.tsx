@@ -40,7 +40,7 @@ export const projects = [
     description:
       "TravelGenie.AI is a smart travel planning platform powered by Gemini 1.5 Flash AI, designed to create personalized itineraries. By entering details like destination, dates, budget, and interests, users get optimized trip plans with curated activities. The AI enables fast itinerary generation and real-time recommendations.",
     gitLink: "https://github.com/sanju1098/travel-genie-ai",
-    demoLink: "https://travel-genie-ai.netlify.app/",
+    demoLink: "https://travel-genie-ai-gem.vercel.app/",
     techStack: [
       "React JS",
       "TypeScript",
