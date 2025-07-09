@@ -75,7 +75,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`font-medium text-[18px] transition-colors duration-200 ${
+                className={`font-medium text-[1.12rem] transition-colors duration-200 ${
                   isActiveRoute(item.href)
                     ? "text-orange-500 dark:text-orange-400"
                     : "text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400"

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div className="bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="pt-20">
         <section id="projects" className="py-10 bg-gray-50 dark:bg-gray-800/50">
           <div className="container mx-auto px-6">

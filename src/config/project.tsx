@@ -6,9 +6,25 @@ import clerkAuthAppImg from "../assets/Images/clerkAuth.png";
 import notesImg from "../assets/Images/notes.png";
 import weatherImg from "../assets/Images/weather.png";
 import travelgenieImg from "../assets/Images/travelGenie.png";
+import aiStudioVerseImg from "../assets/Images/aiStudioVerse.png";
 import { Codesandbox, Github } from "lucide-react";
 
 export const projects = [
+  {
+    image: aiStudioVerseImg,
+    title: "AI Studio Verse ",
+    description:
+      "AI Studio Verse is a comprehensive AI-powered platform that combines intelligent text generation, advanced image analysis, and interactive chat capabilities. Built with a modern, responsive design, it provides creators and professionals with an intuitive workspace to harness AI tools for content creation and analysis.",
+    gitLink: "https://github.com/sanju1098/ai-studio-verse",
+    demoLink: "https://ai-studio-verse.vercel.app/",
+    techStack: [
+      "Vite.JS",
+      "Typescript",
+      "Tailwind CSS",
+      "Gemini AI",
+      "Shadcn/ui",
+    ],
+  },
   {
     image: booktheshowImg,
     title: "Book The Show",

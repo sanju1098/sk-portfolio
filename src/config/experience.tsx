@@ -8,23 +8,24 @@ export const workExperiences = [
       {
         name: "Airline Retailing Platform.",
         responsibilities: [
-          "Developed a responsive UI using React.js and TypeScript to display IATA Airline Retailing Order View RS (v21.3.4) data, implementing code splitting, lazy loading, and optimizations that reduced page load time by 25%.",
-          "Built an end-to-end order creation flow with progress indicators, ensuring accurate XML data submission on the NDC client platform.",
+          "Developed a responsive airline order tracking interface using React.js and TypeScript to render and manage IATA OrderView RS (v21.3.4) XML data, enabling real-time status visualization and robust form-driven workflows.",
+          "Improved application performance and scalability by implementing route-based code splitting, optimizing Webpack builds, and introducing a structured order flow with progress tracking and XML validation.",
         ],
       },
       {
-        name: "AI-Powered Chat UI & Admin UI (Digital Engineer).",
+        name: "AI-Powered Conversational Chat UI & Admin UI (Digital Engineer).",
         responsibilities: [
-          "Configured Vite.js for optimized builds, reducing build time by 45%, and deployed applications to Azure using Docker with efficient multi-stage deployment.",
-          "Designed a dynamic conversational chat interface using Next.js and Vercel’s useChat SDK, optimizing API performance, implementing intelligent feedback logic, and architecting a robust chat history management system.",
+          "Reduced build time by optimizing with Vite.js and deployed the application to Azure using Docker multi-stage builds in collaboration with the DevOps team.",
+          "Developed a real-time AI-powered chat interface using Next.js and Vercel’s useChat SDK, improving response accuracy through API tuning and ensuring session persistence and chat history management.",
+          "Enhanced overall user experience by improving API response times and implementing a feedback system that contributed to higher customer satisfaction.",
         ],
       },
       {
         name: "Unisys Component Library (UI UX Framework).",
         responsibilities: [
-          "Built and maintained a scalable React component library with 75+ reusable components and global theming support.",
-          "Integrated Storybook for documentation and implemented automated tests using Jest and RTL.",
-          "Developed a demo app for Web/Mobile and ensured code quality through regular peer reviews.",
+          "Delivered a React-based design system with 75+ reusable, WCAG-compliant components, integrated with Storybook for live documentation and tested using Jest and React Testing Library.",
+          "Created and deployed demo applications for Web and Mobile (including React Native templates) to showcase cross-platform component usage to internal teams.",
+          "Implemented global theming support for user-level customization and conducted peer code reviews, contributing to faster UI delivery and improved consistency across frontend modules.",
         ],
       },
     ],
@@ -38,9 +39,9 @@ export const workExperiences = [
       {
         name: " VMware CSP Market Place (Client: VMWare)",
         responsibilities: [
-          "Developed responsive, reusable UI components using React.js, HTML5, and CSS3, with form validation and error handling for VMware solutions.",
-          "Integrated VMware Clarity Design System and documented components using Storybook to ensure design consistency and reusability.",
-          "Improved accessibility to 80% WCAG compliance through NVDA testing, proactively resolved issues in the publisher module, and contributed to code quality through pull request reviews.",
+          "Built responsive, reusable UI components using React.js, HTML5, and CSS3, and implemented robust form validation and error handling for critical flows like version control and EULA management.",
+          "Documented shared components using VMware Clarity Design System with Storybook, improving maintainability and team collaboration.",
+          "Enhanced accessibility compliance by addressing ARIA and contrast issues, improving NVDA screen reader usability and aligning the application with WCAG 2.0 standards.",
         ],
       },
     ],
@@ -54,7 +55,7 @@ export const workExperiences = [
       {
         name: " Custom Local Retail Market Aggregator Platform (Custom LMAP)",
         responsibilities: [
-          "Created PostgreSQL database schemas for product and stock tables, developed views, serializers, and models for the Product and Order models using Python, Django, and Django Rest Framework, and implemented full - stack UI screens to ensure seamless API integration.",
+          "Built end-to-end product and order management features by designing PostgreSQL schemas, developing Django REST API layers, and integrating full-stack UI screens for seamless data interaction",
         ],
       },
     ],

@@ -11,12 +11,12 @@ import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-      <div className="min-h-screen">
+    <div className=" bg-white dark:bg-gray-900 transition-colors duration-300">
+      <div className="">
         {/* Hero Section */}
         <section
           id="home"
-          className="min-h-screen flex items-center justify-center relative overflow-hidden">
+          className=" flex items-center justify-center relative overflow-hidden">
           {/* Enhanced Background */}
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800"></div>
