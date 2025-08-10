@@ -82,7 +82,7 @@ const Index = () => {
                   {primaryTechStack.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-4 py-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-full text-sm font-semibold text-gray-700 dark:text-gray-300 hover:scale-105 transition-transform duration-200 cursor-default">
+                      className="px-4 py-2 bg-white/80 dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 rounded-full text-sm font-semibold text-gray-700 dark:text-gray-300 hover:scale-110 hover:bg-orange-100 dark:hover:bg-orange-900/30 transition-all duration-300 cursor-default shadow hover:shadow-lg">
                       {tech}
                     </span>
                   ))}
@@ -98,7 +98,7 @@ const Index = () => {
                   <span className="relative z-10">View My Experience</span>
                   <ArrowRight
                     size={24}
-                    className="relative z-10 group-hover:translate-x-1 transition-transform duration-200"
+                    className="relative z-10 transition-transform duration-300 group-hover:translate-x-4"
                   />
                 </Link>
 
@@ -134,9 +134,9 @@ const Index = () => {
         </section>
 
         {/* What I Do Section */}
-        <section className="py-24 bg-gray-50 dark:bg-gray-800/50">
+        <section className="py-12 bg-gray-50 dark:bg-gray-800/50">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-20">
+            <div className="text-center mb-10">
               <h2 className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                 What I Do
               </h2>
@@ -147,20 +147,23 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-12">
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="group bg-white dark:bg-gray-900 rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 dark:border-gray-800">
-                  <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-teal-600 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                    {service.icon}
+                  className="relative group p-8 bg-white dark:bg-gray-900 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                  <div className="absolute inset-0 pointer-events-none"></div>
+                  <div className="relative z-10 flex flex-col items-center text-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-teal-600 rounded-lg flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      {service.description}
+                    </p>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 group-hover:text-orange-600 transition-colors duration-300">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
-                    {service.description}
-                  </p>
                 </div>
               ))}
             </div>
@@ -168,9 +171,9 @@ const Index = () => {
         </section>
 
         {/* Skills Highlight Section */}
-        <section className="py-24 bg-white dark:bg-gray-900">
+        <section className="py-12 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-20">
+            <div className="text-center mb-10">
               <h2 className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                 My Expertise
               </h2>
@@ -183,7 +186,7 @@ const Index = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto">
               <div className="text-center group">
                 <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
-                  <Award className="text-white" size={36} />
+                  <Award className="text-white animate-bounce" size={36} />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-600 transition-colors duration-300">
                   Modern Frameworks
@@ -195,7 +198,7 @@ const Index = () => {
 
               <div className="text-center group">
                 <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
-                  <Target className="text-white" size={36} />
+                  <Target className="text-white animate-bounce" size={36} />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-green-600 dark:group-hover:text-green-600 transition-colors duration-300">
                   UI/UX Design
@@ -207,7 +210,7 @@ const Index = () => {
 
               <div className="text-center group">
                 <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
-                  <Rocket className="text-white" size={36} />
+                  <Rocket className="text-white animate-bounce" size={36} />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-600 transition-colors duration-300">
                   Integration
@@ -225,7 +228,7 @@ const Index = () => {
                 <span>View All Skills</span>
                 <ArrowRight
                   size={24}
-                  className="group-hover:translate-x-1 transition-transform duration-200"
+                  className="relative z-10 transition-transform duration-300 group-hover:translate-x-4"
                 />
               </Link>
             </div>

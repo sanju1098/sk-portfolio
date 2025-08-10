@@ -22,7 +22,7 @@ const Projects = () => {
               {projects.map((project, index) => (
                 <div
                   key={index}
-                  className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                   <div className="flex flex-col lg:flex-row">
                     {/* Project Image */}
                     <div className="lg:w-2/5 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex flex-col p-4">
@@ -34,14 +34,14 @@ const Projects = () => {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-auto rounded-xl object-cover transition hover:scale-[1.01]"
+                        className="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
 
                     {/* Project Content */}
                     <div className="lg:w-3/5 p-8">
                       <div className="flex items-start justify-between mb-4">
-                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors duration-300 group-hover:text-orange-600">
                           {project.title}
                         </h3>
                         <div className="flex space-x-2">
@@ -50,7 +50,8 @@ const Projects = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                               href={project.gitLink}
-                              className="p-2 text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors duration-200">
+                              className="p-2 text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors duration-200 transform hover:scale-125"
+                              title="View Source on GitHub">
                               <Github size={20} />
                             </a>
                           )}
@@ -60,14 +61,15 @@ const Projects = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                               href={project.demoLink}
-                              className="p-2 text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors duration-200">
+                              className="p-2 text-gray-600 dark:text-gray-400 hover:text-teal-500 transition-colors duration-200 transform hover:scale-125"
+                              title="View Live Preview">
                               <ExternalLink size={20} />
                             </a>
                           )}
                         </div>
                       </div>
 
-                      <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                      <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed transition-colors duration-300 group-hover:text-gray-800 dark:group-hover:text-gray-200">
                         {project.description}
                       </p>
 
@@ -75,7 +77,7 @@ const Projects = () => {
                         {project.techStack.map(tech => (
                           <span
                             key={tech}
-                            className="px-3 py-1 bg-gradient-to-r from-orange-100 to-teal-100 dark:from-orange-900/30 dark:to-teal-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium">
+                            className="px-3 py-1 bg-gradient-to-r from-orange-100 to-teal-100 dark:from-orange-900/30 dark:to-teal-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium transition-transform duration-200 hover:scale-110">
                             {tech}
                           </span>
                         ))}
@@ -91,7 +93,7 @@ const Projects = () => {
                 return (
                   <div
                     key={index}
-                    className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-orange-500 transition-colors duration-300 w-full sm:w-[48%] lg:w-[30%] rounded-xl p-6 flex flex-col items-center text-center shadow-md">
+                    className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-orange-500 transition-colors duration-300 w-full sm:w-[48%] lg:w-[30%] rounded-xl p-6 flex flex-col items-center text-center shadow-md transform transition-transform duration-300 hover:-translate-y-2 hover:scale-105">
                     {profile.icon}
                     <h3 className="text-xl text-black dark:text-white font-semibold mt-4">
                       {profile.profileName}

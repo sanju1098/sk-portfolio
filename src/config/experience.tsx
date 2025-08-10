@@ -1,4 +1,31 @@
+export const timeLineExperiences = [
+  { years: "May 2025 – Present", company: "Morgan Stanley (Russell Tobin)" },
+  { years: "Jun 2023  - Apr 2025", company: "Unisys India Pvt Ltd" },
+  { years: "Oct 2021 – Jun 2023", company: "Harlalka Services India Pvt Ltd" },
+  {
+    years: "Feb 2021 – Sep 2021",
+    company: "Sixth Circle Technologies Pvt Ltd",
+  },
+];
+
 export const workExperiences = [
+  {
+    company:
+      "Morgan Stanley (via Russell Tobin Associates Staffing Solutions).",
+    role: "Senior Application Development Engineer.",
+    timeline: "May 2025  - Present",
+    location: "Bangalore, Karnataka.",
+    projects: [
+      {
+        name: "Tech Events Portal",
+        responsibilities: [
+          "Architected and delivered a scalable, high-performance Event Management Platform using React, TypeScript, and ShadCN UI, achieving modular, accessible, and consistent UI components across the application.",
+          "Built a dynamic multi-step event form with 20+ fields and conditional logic using React Hook Form and Zod, ensuring 100% validation coverage and significantly reducing user errors.",
+          "Enhanced API efficiency with TanStack Query, implemented role-based access control for secure CRUD operations, and boosted event discoverability via dynamic calendar & list views, advanced filters (search, date, location), and CSV export",
+        ],
+      },
+    ],
+  },
   {
     company: "Unisys India Private Limited.",
     role: "Application Development Engineer.",

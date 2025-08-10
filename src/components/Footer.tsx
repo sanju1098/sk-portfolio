@@ -1,24 +1,28 @@
-import { Heart, Globe, Github, Linkedin, Mail } from "lucide-react";
-import { Links } from "react-router-dom";
+import { Heart, Globe, Github, Linkedin, Mail, FileText } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = [
     {
-      name: "Portfolio Website",
+      name: "Portfolio",
       link: "https://sanjay-dev-beta.vercel.app/",
       icon: <Globe className="h-6 w-6" />,
     },
     {
-      name: "GitHub",
+      name: "GitHub Profile",
       link: "https://github.com/sanju1098",
       icon: <Github className="h-6 w-6" />,
     },
     {
-      name: "LinkedIn",
+      name: "LinkedIn Profile",
       link: "https://www.linkedin.com/in/sanjay-kumar-s-r/",
       icon: <Linkedin className="h-6 w-6" />,
+    },
+    {
+      name: "Medium Profile",
+      link: "https://medium.com/@sanjay--kumar",
+      icon: <FileText className="h-6 w-6" />,
     },
     {
       name: "Email",
@@ -40,8 +44,11 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-orange-500 transition-colors duration-200 transform hover:scale-110"
-                aria-label={Links.name}>
-                {links.icon}
+                aria-label={links.name}
+                title={links.name}>
+                <span className="inline-block hover:animate-bounce">
+                  {links.icon}
+                </span>
               </a>
             ))}
           </div>
