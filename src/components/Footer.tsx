@@ -32,7 +32,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 dark:bg-black text-white py-10">
+    <footer className="bg-gray-950 dark:bg-black text-white py-10">
       <div className="container mx-auto px-6">
         <div className="text-center">
           {/* Social Links */}
@@ -53,14 +53,14 @@ const Footer = () => {
             ))}
           </div>
 
-          <div className="border-t border-gray-800 pt-8">
-            <p className="text-gray-400 flex items-center justify-center gap-2 mb-2">
+          <div className="border-t border-gray-700 pt-8">
+            <p className="text-gray-100 flex items-center justify-center gap-2 mb-2">
               Made with <Heart size={16} className="text-red-500" /> using React
               & Tailwind CSS
             </p>
-            <p className="text-gray-500 text-md">
+            <p className="text-gray-200 text-md">
               Copyright © {currentYear}{" "}
-              <span className="font-semibold bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">
+              <span className="font-semibold bg-gradient-to-r from-orange-600 to-teal-400 bg-clip-text text-transparent">
                 Sanjay Kumar S R
               </span>
               . All rights reserved.

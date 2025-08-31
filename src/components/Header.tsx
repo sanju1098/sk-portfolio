@@ -84,6 +84,7 @@ const Header = () => {
               </Link>
             ))}
             <button
+              aria-label="Toggle Dark Mode"
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-500 transition-colors duration-200">
               {isDark ? (
