@@ -84,7 +84,7 @@ const Header = () => {
               </Link>
             ))}
             <button
-              aria-label="Toggle Dark Mode"
+              aria-label="Toggle Theme"
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-500 transition-colors duration-200">
               {isDark ? (
@@ -98,6 +98,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-4">
             <button
+              aria-label="Toggle Theme"
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-500 transition-colors duration-200">
               {isDark ? (

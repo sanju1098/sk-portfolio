@@ -1,7 +1,7 @@
+import React from "react";
 import { timeLineExperiences, workExperiences } from "@/config/experience";
 import { MapPin, Calendar, Globe, Building } from "lucide-react";
-
-const Experience = () => {
+const Experience: React.FC = React.memo(() => {
   return (
     <div className="bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="pt-20">
@@ -107,6 +107,6 @@ const Experience = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Experience;

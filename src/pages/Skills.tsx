@@ -1,6 +1,6 @@
+import React from "react";
 import { skillCategories } from "@/config/skills";
-
-const Skills = () => {
+const Skills: React.FC = React.memo(() => {
   return (
     <div className="bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="pt-20">
@@ -59,6 +59,6 @@ const Skills = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Skills;

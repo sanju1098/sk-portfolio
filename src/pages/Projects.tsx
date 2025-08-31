@@ -1,8 +1,8 @@
+import React from "react";
 import { projects, workProfiles } from "@/config/project";
 import { ExternalLink, Github } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const Projects = () => {
+const Projects: React.FC = React.memo(() => {
   return (
     <div className="bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="pt-20">
@@ -34,6 +34,7 @@ const Projects = () => {
                       <img
                         src={project.image}
                         alt={project.title}
+                        loading="lazy"
                         className="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
@@ -117,6 +118,6 @@ const Projects = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Projects;

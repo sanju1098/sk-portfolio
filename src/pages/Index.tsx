@@ -1,3 +1,4 @@
+import React from "react";
 import { achievements, primaryTechStack, services } from "@/config/home";
 import {
   ArrowRight,
@@ -8,8 +9,7 @@ import {
   Target,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const Index = () => {
+const Index: React.FC = React.memo(() => {
   return (
     <div className=" bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="">
@@ -237,6 +237,6 @@ const Index = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Index;
