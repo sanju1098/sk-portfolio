@@ -7,6 +7,7 @@ import {
   CheckCircle,
   Award,
   Target,
+  Sparkles,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 const Index: React.FC = React.memo(() => {
@@ -32,15 +33,15 @@ const Index: React.FC = React.memo(() => {
           <div className="container mx-auto px-6 text-center relative z-10">
             <div className="max-w-5xl mx-auto">
               {/* Status Badge */}
-              {/* <div className="mb-8 animate-fade-in">
-								<div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500/10 to-teal-500/10 border border-orange-200 dark:border-orange-800 rounded-full backdrop-blur-sm">
-									<div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-									<span className="text-orange-600 dark:text-orange-400 font-medium">
-										Available for new opportunities
-									</span>
-									<Sparkles className="text-orange-500" size={16} />
-								</div>
-							</div> */}
+              <div className="mb-8 animate-fade-in">
+                <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500/10 to-teal-500/10 border border-orange-200 dark:border-orange-800 rounded-full backdrop-blur-sm">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-orange-600 dark:text-orange-400 font-medium">
+                    Available for new opportunities
+                  </span>
+                  <Sparkles className="text-orange-500" size={16} />
+                </div>
+              </div>
 
               {/* Main Heading with Enhanced Typography */}
               <div className="mb-8 mt-[70px] animate-fade-in">
