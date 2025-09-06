@@ -1,5 +1,5 @@
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+// import { Input } from "@/components/ui/input";
+// import { Textarea } from "@/components/ui/textarea";
 import { aboutWork } from "@/config/about";
 import {
   Code,
@@ -8,12 +8,56 @@ import {
   Link,
   Linkedin,
   Mail,
-  MapPin,
-  Send,
   User,
+  //   MapPin,
+  //   Send,
 } from "lucide-react";
+import React from "react";
+// import { useState } from "react";
 
-const About = () => {
+const About: React.FC = React.memo(() => {
+  //   const [formData, setFormData] = useState({
+  //     name: "",
+  //     email: "",
+  //     subject: "",
+  //     message: "",
+  //   });
+
+  //   const handleChange = (
+  //     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  //   ) => {
+  //     const { name, value } = e.target;
+  //     setFormData(prevData => ({
+  //       ...prevData,
+  //       [name]: value,
+  //     }));
+  //   };
+
+  //   const submitMail = async () => {
+  //     const mailData = {
+  //       from: formData.email,
+  //       to: "sanjay@gmail.com",
+  //       subject: `${formData.subject} - ${formData.name}`,
+  //       content: formData.message,
+  //     };
+
+  //     // Example: send via fetch to your backend API
+  //     try {
+  //       const res = await fetch("/api/send-mail", {
+  //         method: "POST",
+  //         headers: { "Content-Type": "application/json" },
+  //         body: JSON.stringify(mailData),
+  //       });
+  //       if (res.ok) {
+  //         alert("Message sent successfully!");
+  //       } else {
+  //         alert("Failed to send message.");
+  //       }
+  //     } catch (error) {
+  //       alert("Error sending message.");
+  //     }
+  //   };
+
   return (
     <div className="bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="pt-20">
@@ -144,7 +188,7 @@ const About = () => {
             {/* Get in Touch */}
             <section className="py-16 px-6">
               <div className="container">
-                <div className="grid lg:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 gap-12">
                   {/* Contact Information */}
                   <div className="space-y-8 animate-fade-in">
                     <div>
@@ -160,9 +204,9 @@ const About = () => {
                     </div>
 
                     <div className="space-y-6">
-                      <div className="flex items-center space-x-4 group hover:scale-105 transition-transform duration-200">
-                        <div className="w-14 h-14 bg-gradient-to-r from-orange-500 to-teal-600 rounded-xl flex items-center justify-center group-hover:shadow-lg transition-shadow duration-200">
-                          <Mail className="text-white" size={24} />
+                      <div className="flex items-center gap-6 group hover:scale-105 transition-transform duration-200">
+                        <div className="w-12 h-12 bg-orange-500 dark:bg-teal-600 rounded-full flex items-center justify-center group-hover:shadow-lg transition-shadow duration-200">
+                          <Mail className="text-white" size={22} />
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 dark:text-white text-lg">
@@ -171,56 +215,50 @@ const About = () => {
                           <a
                             href="mailto:sanjay.kumar981110@gmail.com"
                             className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors">
-                            sanjay.kumar981110@gmail.com
+                            Reach me directly at{" "}
+                            <strong>sanjay.kumar981110@gmail.com</strong>
                           </a>
                         </div>
                       </div>
 
-                      <div className="flex items-center space-x-4 group hover:scale-105 transition-transform duration-200">
-                        <div className="w-14 h-14 bg-gradient-to-r from-orange-500 to-teal-600 rounded-xl flex items-center justify-center group-hover:shadow-lg transition-shadow duration-200">
-                          <MapPin className="text-white" size={24} />
+                      <div className="flex items-center gap-6 group hover:scale-105 transition-transform duration-200">
+                        <div className="w-12 h-12 bg-blue-600 dark:bg-blue-700 rounded-full flex items-center justify-center group-hover:shadow-lg transition-shadow duration-200">
+                          <Linkedin className="text-white" size={22} />
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 dark:text-white text-lg">
-                            Location
+                            LinkedIn
                           </h4>
-                          <p className="text-gray-600 dark:text-gray-400">
-                            Bengaluru, Karnataka, IN
-                          </p>
+                          <a
+                            href="https://www.linkedin.com/in/sanjay-kumar-s-r/"
+                            className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors">
+                            Connect with me on LinkedIn for professional updates{" "}
+                            <strong>linkedin.com/in/sanjay-kumar-s-r/</strong>
+                          </a>
                         </div>
                       </div>
-                    </div>
 
-                    {/* Social Links */}
-                    <div className="pt-8">
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-6 text-xl">
-                        Follow Me & Connect
-                      </h4>
-                      <div className="flex space-x-4">
-                        <a
-                          href="https://www.linkedin.com/in/sanjay-kumar-s-r/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-14 h-14 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center hover:bg-gradient-to-r hover:from-orange-500 hover:to-teal-600 hover:text-white hover:scale-110 transition-all duration-300 group">
-                          <Linkedin size={24} />
-                        </a>
-                        <a
-                          href="https://github.com/sanju1098"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-14 h-14 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center hover:bg-gradient-to-r hover:from-orange-500 hover:to-teal-600 hover:text-white hover:scale-110 transition-all duration-300 group">
-                          <Github size={24} />
-                        </a>
+                      <div className="flex items-center gap-6 group hover:scale-105 transition-transform duration-200">
+                        <div className="w-12 h-12 bg-gray-900 dark:bg-gray-700 rounded-full flex items-center justify-center group-hover:shadow-lg transition-shadow duration-200">
+                          <Github className="text-white" size={22} />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 dark:text-white text-lg">
+                            Github
+                          </h4>
+                          <a
+                            href="https://github.com/sanju1098"
+                            className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+                            Explore my projects and contributions on{" "}
+                            <strong>github.com/sanju1098</strong>
+                          </a>
+                        </div>
                       </div>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-                        Connect with me on LinkedIn for professional updates, or
-                        drop me an email for project inquiries.
-                      </p>
                     </div>
                   </div>
 
                   {/* Contact Form */}
-                  <div className="bg-gray-50 dark:bg-gray-800 rounded-3xl animate-fade-in">
+                  {/* <div className="bg-gray-50 dark:bg-gray-800 rounded-3xl animate-fade-in">
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                       Send Me a Message
                     </h3>
@@ -238,6 +276,8 @@ const About = () => {
                           required
                           placeholder="Your Name"
                           className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                          value={formData.name}
+                          onChange={e => handleChange(e)}
                         />
                       </div>
                       <div>
@@ -253,6 +293,8 @@ const About = () => {
                           required
                           placeholder="Your Email"
                           className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                          value={formData.email}
+                          onChange={e => handleChange(e)}
                         />
                       </div>
                     </div>
@@ -269,6 +311,8 @@ const About = () => {
                         required
                         placeholder="Subject"
                         className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                        value={formData.subject}
+                        onChange={e => handleChange(e)}
                       />
                     </div>
                     <div className="mt-6">
@@ -280,8 +324,8 @@ const About = () => {
                       <Textarea
                         id="message"
                         name="message"
-                        // value={formData.message}
-                        // onChange={handleChange}
+                        value={formData.message}
+                        onChange={e => handleChange(e)}
                         required
                         rows={6}
                         placeholder="Tell me about your project, opportunity, or just say hello..."
@@ -291,7 +335,8 @@ const About = () => {
                     <div className="mt-6">
                       <button
                         type="submit"
-                        className="w-full bg-gradient-to-r from-orange-500 to-teal-600 hover:from-orange-600 hover:to-teal-700 text-white font-semibold py-4 rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2">
+                        className="w-full bg-gradient-to-r from-orange-500 to-teal-600 hover:from-orange-600 hover:to-teal-700 text-white font-semibold py-4 rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2"
+                        onClick={submitMail}>
                         <span>Send Message</span>
                         <Send size={20} />
                       </button>
@@ -304,7 +349,7 @@ const About = () => {
                         to reach out on LinkedIn.
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </section>
@@ -313,6 +358,6 @@ const About = () => {
       </div>
     </div>
   );
-};
+});
 
 export default About;

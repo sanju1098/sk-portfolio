@@ -10,10 +10,12 @@ const Experience: React.FC = React.memo(() => {
           id="experience"
           className="py-10 bg-gray-50 dark:bg-gray-800/50">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">
-                Professional Experience
-              </h2>
+            <div className="animate-fade-in text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                <span className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">
+                  Professional Experience
+                </span>
+              </h1>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
                 My journey through different roles and the impact I've made at
                 each organization
@@ -45,7 +47,7 @@ const Experience: React.FC = React.memo(() => {
               ))}
             </div> */}
 
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-5xl mx-auto m-4">
               {workExperiences.map((exp, index) => (
                 <div key={index} className="relative md:pl-8 pb-12 last:pb-0">
                   {/* Timeline line - hidden on mobile */}

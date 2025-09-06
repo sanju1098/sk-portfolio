@@ -9,17 +9,19 @@ const Projects: React.FC = React.memo(() => {
       <div className="pt-20">
         <section id="projects" className="py-10 bg-gray-50 dark:bg-gray-800/50">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">
-                Featured Projects
-              </h2>
+            <div className="animate-fade-in text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                <span className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">
+                  Featured Projects
+                </span>
+              </h1>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
                 A showcase of my recent work building scalable web applications
                 and innovative solutions
               </p>
             </div>
 
-            <div className="px-0 md:px-4">
+            <div className="px-0 md:px-4 m-4">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projects.map((project, index) => (
                   <div

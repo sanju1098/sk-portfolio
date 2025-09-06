@@ -7,10 +7,12 @@ const Skills: React.FC = React.memo(() => {
       <div className="pt-20">
         <section id="skills" className="py-10 bg-gray-50 dark:bg-gray-800/50">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">
-                Technical Skills
-              </h2>
+            <div className="animate-fade-in text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                <span className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">
+                  Technical Skills
+                </span>
+              </h1>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
                 Frontend development expertise with modern technologies and best
                 practices
@@ -18,7 +20,7 @@ const Skills: React.FC = React.memo(() => {
             </div>
 
             {/* Main Skills Grid */}
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-7xl mx-auto m-4">
               {skillCategories.map((category, index) => (
                 <div
                   key={index}
