@@ -10,6 +10,7 @@ import {
   // Sparkles,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+
 const Index: React.FC = React.memo(() => {
   return (
     <div className=" bg-white dark:bg-gray-900 transition-colors duration-300">
@@ -148,7 +149,7 @@ const Index: React.FC = React.memo(() => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
               {services.map((service, index) => (
                 <div
                   key={index}
@@ -184,7 +185,7 @@ const Index: React.FC = React.memo(() => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-5xl mx-auto">
               <div className="text-center group">
                 <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
                   <Award className="text-white animate-bounce" size={36} />
@@ -218,6 +219,21 @@ const Index: React.FC = React.memo(() => {
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-lg">
                   REST API, State Management
+                </p>
+              </div>
+
+              <div className="text-center group">
+                <div className="w-24 h-24 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
+                  <CheckCircle
+                    className="text-white animate-bounce"
+                    size={36}
+                  />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-600 transition-colors duration-300">
+                  Testing & Deployment
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-lg">
+                  Unit Testing, CI/CD, Docker, Nginx
                 </p>
               </div>
             </div>

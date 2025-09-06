@@ -1,6 +1,7 @@
 import React from "react";
-import { timeLineExperiences, workExperiences } from "@/config/experience";
-import { MapPin, Calendar, Globe, Building } from "lucide-react";
+import { workExperiences } from "@/config/experience";
+import { MapPin, Calendar } from "lucide-react";
+
 const Experience: React.FC = React.memo(() => {
   return (
     <div className="bg-white dark:bg-gray-900 transition-colors duration-300">
@@ -19,19 +20,19 @@ const Experience: React.FC = React.memo(() => {
               </p>
             </div>
 
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between relative mb-8">
+            {/* <div className="flex flex-col md:flex-row md:items-start md:justify-between relative mb-8">
               <div className="hidden md:block absolute top-5 left-0 w-full h-1 bg-gray-300 dark:bg-gray-600"></div>
 
               {timeLineExperiences.map((exp, index) => (
                 <div
                   key={index}
                   className="flex-1 flex flex-col items-center md:items-center relative z-10 mb-8">
-                  {/* Circle */}
+                   Circle 
                   <div className="w-10 h-10 flex items-center justify-center bg-orange-500 text-white rounded-full shadow-lg mb-4 relative z-10">
                     {timeLineExperiences.length - index}
                   </div>
 
-                  {/* Text */}
+                  Text
                   <div className="text-center max-w-[150px]">
                     <span className="block text-xs font-semibold text-orange-500">
                       {exp.years}
@@ -42,62 +43,71 @@ const Experience: React.FC = React.memo(() => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
 
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-5xl mx-auto">
               {workExperiences.map((exp, index) => (
-                <div key={index} className="relative pl-8 pb-12 last:pb-0">
-                  {/* Timeline line */}
+                <div key={index} className="relative md:pl-8 pb-12 last:pb-0">
+                  {/* Timeline line - hidden on mobile */}
                   {index !== workExperiences.length - 1 && (
-                    <div className="absolute left-4 top-12 w-0.5 h-full bg-gradient-to-b from-orange-500 to-teal-600"></div>
+                    <div className="hidden md:block absolute left-4 top-12 w-0.5 h-full bg-gradient-to-b from-orange-500 to-teal-600"></div>
                   )}
 
-                  {/* Timeline dot */}
-                  <div className="absolute left-2 top-6 w-4 h-4 bg-gradient-to-r from-orange-500 to-teal-600 rounded-full border-4 border-white dark:border-gray-900"></div>
+                  {/* Timeline dot - hidden on mobile */}
+                  <div className="hidden md:block absolute left-2 top-6 w-4 h-4 bg-gradient-to-r from-orange-500 to-teal-600 rounded-full border-4 border-white dark:border-gray-900"></div>
 
-                  <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl duration-300 p-6 md:p-8 border-2 border-transparent hover:border-orange-500 dark:hover:border-teal-500 transition-colors">
-                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                      <div>
-                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center mb-1">
-                          <Building
-                            size={22}
-                            className="mr-2 text-orange-400"
+                  <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 md:p-8">
+                    <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:items-start md:justify-between">
+                      <div className="flex items-start space-x-4 flex-1 min-w-0">
+                        <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center flex-shrink-0">
+                          <img
+                            src={exp.logo}
+                            alt={`${exp.company} logo`}
+                            className="w-12 h-12 object-contain"
                           />
-                          {exp.company}
-                        </h3>
-                        <h4 className="text-lg font-semibold text-orange-600 dark:text-orange-400 mb-3">
-                          {exp.role}
-                        </h4>
-                        <div className="flex flex-wrap gap-x-6 gap-y-1 text-gray-600 dark:text-gray-400 text-sm">
-                          <span className="flex items-center">
-                            <Calendar size={16} className="mr-2" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2 break-words">
+                            {exp.company}
+                          </h3>
+                          <h4 className="text-lg md:text-xl font-semibold text-orange-600 dark:text-orange-400 mb-3 break-words">
+                            {exp.role}
+                          </h4>
+                        </div>
+                      </div>
+                      <div className="flex flex-col md:items-end space-y-2 md:flex-shrink-0 md:ml-4">
+                        <div className="flex items-center text-gray-600 dark:text-gray-400">
+                          <Calendar size={16} className="mr-2 flex-shrink-0" />
+                          <span className="font-medium text-sm md:text-base">
                             {exp.timeline}
                           </span>
-                          <span className="flex items-center">
-                            <MapPin size={16} className="mr-2" />
+                        </div>
+                        <div className="flex items-center text-gray-600 dark:text-gray-400">
+                          <MapPin size={16} className="mr-2 flex-shrink-0" />
+                          <span className="text-sm md:text-base">
                             {exp.location}
                           </span>
                         </div>
                       </div>
                     </div>
 
-                    <div className="space-y-6 mt-4">
-                      {exp?.projects?.map((project, idx) => (
-                        <div
-                          key={idx}
-                          className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 md:p-5 mb-2 transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-                          <div className="flex items-center font-medium text-md text-gray-900 dark:text-white mb-2">
-                            <Globe size={18} className="mr-2 text-orange-500" />
-                            {project.name}
-                          </div>
-                          <ul className="list-disc list-inside space-y-1 text-gray-600 dark:text-gray-400 text-sm pl-5">
-                            {project.responsibilities.map((resp, rIdx) => (
-                              <li key={rIdx}>{resp}</li>
-                            ))}
-                          </ul>
+                    {exp?.projects?.map((project, idx) => (
+                      <div key={idx} className="mb-1 p-2">
+                        <div className="flex items-center font-medium text-md text-gray-900 dark:text-white mb-2">
+                          {/* <Globe size={18} className="mr-2 text-orange-500" /> */}
+                          {project.name}
                         </div>
-                      ))}
-                    </div>
+                        <ul className="list-disc list-inside space-y-1 text-gray-600 dark:text-gray-400 text-sm">
+                          {project.responsibilities.map((resp, rIdx) => (
+                            <li
+                              key={rIdx}
+                              className="text-gray-600 dark:text-gray-400 text-sm">
+                              {resp}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
                   </div>
                 </div>
               ))}

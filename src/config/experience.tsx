@@ -1,5 +1,10 @@
+import russellLogo from "../assets/Images/RTLogo.jpg";
+import unisysLogo from "../assets/Images/UnisysLogo.jpg";
+import hsiplLogo from "../assets/Images/HSIPLLogo.jpg";
+import stcLogo from "../assets/Images/SCTLogo.jpg";
+
 export const timeLineExperiences = [
-  { years: "May 2025 – Present", company: "Morgan Stanley (Russell Tobin)" },
+  { years: "May 2025 – Present", company: "Russell Tobin" },
   { years: "Jun 2023  - Apr 2025", company: "Unisys India Pvt Ltd" },
   { years: "Oct 2021 – Jun 2023", company: "Harlalka Services India Pvt Ltd" },
   {
@@ -11,7 +16,8 @@ export const timeLineExperiences = [
 export const workExperiences = [
   {
     company:
-      "Morgan Stanley (via Russell Tobin Associates Staffing Solutions).",
+      "Russell Tobin Associates Staffing Solutions (Client: Morgan Stanley).",
+    logo: russellLogo,
     role: "Senior Application Development Engineer.",
     timeline: "May 2025  - Present",
     location: "Bangalore, Karnataka.",
@@ -19,15 +25,16 @@ export const workExperiences = [
       {
         name: "Tech Events Portal",
         responsibilities: [
-          "Architected and delivered a scalable, high-performance Event Management Platform using React, TypeScript, and ShadCN UI, achieving modular, accessible, and consistent UI components across the application.",
-          "Built a dynamic multi-step event form with 20+ fields and conditional logic using React Hook Form and Zod, ensuring 100% validation coverage and significantly reducing user errors.",
-          "Enhanced API efficiency with TanStack Query, implemented role-based access control for secure CRUD operations, and boosted event discoverability via dynamic calendar & list views, advanced filters (search, date, location), and CSV export",
+          "Architected & delivered a scalable Tech Events Portal in the Enterprise Technology & Services (ETS) team at Morgan Stanley, using React, TypeScript, and ShadCN UI to build modular, accessible, and consistent UI components.",
+          "Developed a dynamic multi-step event form with React Hook Form and Zod, ensuring robust validation, conditional logic, effective caching, and role-based access control, thereby minimizing errors and improving reliability.",
+          "Enhanced user experience & efficiency by implementing advanced filters, seamless integrations, and optimized API workflows, while leveraging GitHub Copilot to accelerate development and improve code quality.",
         ],
       },
     ],
   },
   {
     company: "Unisys India Private Limited.",
+    logo: unisysLogo,
     role: "Application Development Engineer.",
     timeline: "June 2023  - April 2025",
     location: "Bangalore, Karnataka.",
@@ -59,6 +66,7 @@ export const workExperiences = [
   },
   {
     company: "Harlalka Services India Private Limited.",
+    logo: hsiplLogo,
     role: "Frontend Developer.",
     timeline: "October 2021 – June 2023",
     location: "Bangalore, Karnataka.",
@@ -75,6 +83,7 @@ export const workExperiences = [
   },
   {
     company: "Sixth Circle Technologies Pvt Ltd.",
+    logo: stcLogo,
     role: "Intern Web Developer.",
     timeline: "February 2021 – September 2021",
     location: "Bangalore, Karnataka.",

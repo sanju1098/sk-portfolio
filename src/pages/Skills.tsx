@@ -1,5 +1,6 @@
 import React from "react";
 import { skillCategories } from "@/config/skills";
+
 const Skills: React.FC = React.memo(() => {
   return (
     <div className="bg-white dark:bg-gray-900 transition-colors duration-300">
@@ -41,7 +42,7 @@ const Skills: React.FC = React.memo(() => {
                     {category.skills.map(skill => (
                       <div
                         key={skill.name}
-                        className="flex flex-col items-center p-4 bg-white dark:bg-gray-800 rounded-xl hover:scale-110 hover:bg-gradient-to-br hover:from-orange-50 hover:to-teal-50 dark:hover:from-orange-900/30 dark:hover:to-teal-900/30 transition-transform transition-colors duration-200 shadow-sm hover:shadow-lg cursor-pointer">
+                        className="flex flex-col items-center p-4 bg-white dark:bg-gray-800 rounded-xl hover:scale-110 hover:bg-gradient-to-br hover:from-orange-50 hover:to-teal-50 dark:hover:from-orange-900/30 dark:hover:to-teal-900/30 transition-transform duration-200 shadow-sm hover:shadow-lg cursor-pointer">
                         <div className="text-4xl mb-3 transition-transform duration-200 group-hover:scale-110">
                           {skill.icon}
                         </div>

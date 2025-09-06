@@ -69,7 +69,14 @@ export const skillCategories = [
           </div>
         ),
       },
-      { name: "Tanstack Query", icon: "🔄" },
+      {
+        name: "Tanstack Query",
+        icon: (
+          <div className="w-12 h-12 bg-[#fc5e65] rounded flex items-center justify-center text-white font-bold text-xs">
+            Query
+          </div>
+        ),
+      },
     ],
   },
   {
