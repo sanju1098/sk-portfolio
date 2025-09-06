@@ -11,6 +11,7 @@ const Projects = lazy(() => import("../pages/Projects"));
 const Skills = lazy(() => import("../pages/Skills"));
 const Experience = lazy(() => import("../pages/Experience"));
 const NotFound = lazy(() => import("../pages/NotFound"));
+const About = lazy(() => import("../pages/About"));
 
 const Layout = () => {
   return (
@@ -44,6 +45,10 @@ export const routes = createBrowserRouter([
       {
         path: "/experience",
         element: <Experience />,
+      },
+      {
+        path: "/about",
+        element: <About />,
       },
     ],
   },

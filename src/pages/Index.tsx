@@ -58,7 +58,7 @@ const Index: React.FC = React.memo(() => {
                 <div className="flex flex-col md:flex-row items-center justify-center gap-3 mb-6">
                   <div className="hidden md:block w-2 h-2 bg-orange-500 rounded-full"></div>
                   <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700 dark:text-gray-300">
-                    Senior Application Developer
+                    Senior Frontend Developer
                   </h2>
                   <div className="hidden md:block w-2 h-2 bg-orange-500 rounded-full"></div>
                 </div>

@@ -48,6 +48,7 @@ const Header = () => {
     { name: "Projects", href: "/projects" },
     { name: "Skills", href: "/skills" },
     { name: "Experience", href: "/experience" },
+    { name: "About", href: "/about" },
   ];
 
   const isActiveRoute = (href: string) => {
