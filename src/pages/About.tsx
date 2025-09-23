@@ -1,6 +1,6 @@
 // import { Input } from "@/components/ui/input";
 // import { Textarea } from "@/components/ui/textarea";
-import { aboutWork } from "@/config/about";
+import { aboutWork, badges } from "@/config/about";
 import {
   Code,
   Github,
@@ -158,31 +158,29 @@ const About: React.FC = React.memo(() => {
                   ))}
                 </div>
                 <div className="flex flex-wrap gap-6 justify-center">
-                  <div className="flex flex-col items-center justify-center mt-8">
-                    <img
-                      loading="lazy"
-                      src={
-                        "https://espresa-prod-app-store.s3.amazonaws.com/company/card/e1f35856035b46d9bcd354c0dc7b2e69.png"
-                      }
-                      alt="Espresa"
-                      className="w-48 mb-4"
-                    />
-                    <a
-                      href={
-                        "https://app.espresa.com/r/shared/643a0a4f-7974-46ea-be54-953178b2e353/"
-                      }
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-teal-500 hover:underline flex items-center gap-2"
-                      aria-label="See Badge">
-                      See Badge
-                      <Link size={18} strokeWidth={2} />
-                    </a>
-                  </div>
-                  {/*  */}
+                  {badges.map((badge, index) => (
+                    <div
+                      className="flex flex-col items-center justify-center mt-8"
+                      key={index}>
+                      <img
+                        loading="lazy"
+                        src={badge.imageLink}
+                        alt={badge.name}
+                        className="w-48 mb-4"
+                      />
+                      <a
+                        href={badge.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-teal-500 hover:underline flex items-center gap-2"
+                        aria-label="See Badge">
+                        See Badge
+                        <Link size={18} strokeWidth={2} />
+                      </a>
+                    </div>
+                  ))}
                 </div>
               </div>
-              {/*  */}
             </div>
 
             {/* Get in Touch */}
@@ -205,8 +203,11 @@ const About: React.FC = React.memo(() => {
 
                     <div className="space-y-6">
                       <div className="flex items-center gap-6 group hover:scale-105 transition-transform duration-200">
-                        <div className="w-12 h-12 bg-orange-500 dark:bg-teal-600 rounded-full flex items-center justify-center group-hover:shadow-lg transition-shadow duration-200">
-                          <Mail className="text-white" size={22} />
+                        <div className="w-12 h-12 rounded-full flex items-center justify-center group-hover:shadow-lg transition-shadow duration-200">
+                          <Mail
+                            className="text-orange-500 dark:text-teal-600"
+                            size={30}
+                          />
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 dark:text-white text-lg">
@@ -222,8 +223,11 @@ const About: React.FC = React.memo(() => {
                       </div>
 
                       <div className="flex items-center gap-6 group hover:scale-105 transition-transform duration-200">
-                        <div className="w-12 h-12 bg-blue-600 dark:bg-blue-700 rounded-full flex items-center justify-center group-hover:shadow-lg transition-shadow duration-200">
-                          <Linkedin className="text-white" size={22} />
+                        <div className="w-12 h-12 rounded-full flex items-center justify-center group-hover:shadow-lg transition-shadow duration-200">
+                          <Linkedin
+                            className="text-blue-600 dark:text-blue-700"
+                            size={30}
+                          />
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 dark:text-white text-lg">
@@ -239,8 +243,11 @@ const About: React.FC = React.memo(() => {
                       </div>
 
                       <div className="flex items-center gap-6 group hover:scale-105 transition-transform duration-200">
-                        <div className="w-12 h-12 bg-gray-900 dark:bg-gray-700 rounded-full flex items-center justify-center group-hover:shadow-lg transition-shadow duration-200">
-                          <Github className="text-white" size={22} />
+                        <div className="w-12 h-12 rounded-full flex items-center justify-center group-hover:shadow-lg transition-shadow duration-200">
+                          <Github
+                            className="text-gray-900 dark:text-gray-700 "
+                            size={30}
+                          />
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 dark:text-white text-lg">

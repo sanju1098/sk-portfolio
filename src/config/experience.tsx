@@ -25,9 +25,9 @@ export const workExperiences = [
       {
         name: "Tech Events Portal",
         responsibilities: [
-          "Architected & delivered a scalable Tech Events Portal in the Enterprise Technology & Services (ETS) team at Morgan Stanley, using React, TypeScript, and ShadCN UI to build modular, accessible, and consistent UI components.",
-          "Developed a dynamic multi-step event form with React Hook Form and Zod, ensuring robust validation, conditional logic, effective caching, and role-based access control, thereby minimizing errors and improving reliability.",
-          "Enhanced user experience & efficiency by implementing advanced filters, seamless integrations, and optimized API workflows, while leveraging GitHub Copilot to accelerate development and improve code quality.",
+          "Architected and delivered a scalable event management platform in Morgan Stanley’s ETS team with ShadCN UI, and built a dynamic multi-step form using React Hook Form and Zod, ensuring 100% validation coverage and reducing errors.",
+          "Optimized API efficiency with TanStack Query for data fetching, caching, and eliminating redundant requests, improving load times, and implemented role-based access control with protected routes to enable secure, permission-based CRUD operations.",
+          "Enhanced event discoverability and user experience by developing dynamic calendar & list views, implementing advanced client-side filters (debounced search, date, location), and adding CSV export functionality for events and user data.",
         ],
       },
     ],
@@ -74,9 +74,9 @@ export const workExperiences = [
       {
         name: " VMware CSP Market Place (Client: VMWare)",
         responsibilities: [
-          "Built responsive, reusable UI components using React.js, HTML5, and CSS3, and implemented robust form validation and error handling for critical flows like version control and EULA management.",
-          "Documented shared components using VMware Clarity Design System with Storybook, improving maintainability and team collaboration.",
-          "Enhanced accessibility compliance by addressing ARIA and contrast issues, improving NVDA screen reader usability and aligning the application with WCAG 2.0 standards.",
+          "Developed responsive and reusable UI components using React.js, HTML5, CSS3, and VMware Clarity Design System with Storybook, enhancing performance, maintainability, and cross-team component documentation.",
+          "Implemented robust form validation and error handling across class and functional components for version control and EULA flows, while debugging critical issues in the publisher module to improve code quality and application performance.",
+          "Improved accessibility compliance with NVDA and WCAG 2.0 standards, raising adherence from 50% to 80% by resolving 100+ ARIA and contrast issues, and delivered incremental features in Agile sprints following full SDLC practices.",
         ],
       },
     ],
