@@ -166,15 +166,15 @@ const About: React.FC = React.memo(() => {
                         loading="lazy"
                         src={badge.imageLink}
                         alt={badge.name}
-                        className="w-48 mb-4"
+                        className="w-36 mb-4"
                       />
                       <a
                         href={badge.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-teal-500 hover:underline flex items-center gap-2"
-                        aria-label="See Badge">
-                        See Badge
+                        aria-label={badge.buttonName}>
+                        {badge.buttonName}
                         <Link size={18} strokeWidth={2} />
                       </a>
                     </div>

@@ -7,12 +7,29 @@ import notesImg from "../assets/Images/notes.png";
 import weatherImg from "../assets/Images/weather.png";
 import travelgenieImg from "../assets/Images/travelGenie.png";
 import aiStudioVerseImg from "../assets/Images/aiStudioVerse.png";
+import formKitImg from "../assets/Images/formkit.png";
 import { Codesandbox, Github } from "lucide-react";
 
 export const projects = [
   {
+    image: formKitImg,
+    title: "FormKit - Drag & Drop Form Builder",
+    description:
+      "A powerful drag-and-drop form builder built with React and TypeScript. It lets users create responsive forms with real-time preview, undo/redo, and flexible field management. Forms can be customized with colors, themes, and styles, making the builder both intuitive and highly adaptable.",
+    gitLink:
+      "https://github.com/sanju1098/okta-design-assignments/tree/master/okta-design-assignment2",
+    techStack: [
+      "Next.JS",
+      "React JS",
+      "Typescript",
+      "Tailwind CSS",
+      "Zustand",
+      "Shadcn UI",
+    ],
+  },
+  {
     image: aiStudioVerseImg,
-    title: "AI Studio Verse ",
+    title: "AI Studio Verse",
     description:
       "AI Studio Verse is a comprehensive AI-powered platform that combines intelligent text generation, advanced image analysis, and interactive chat capabilities. Built with a modern, responsive design, it provides creators and professionals with an intuitive workspace to harness AI tools for content creation and analysis.",
     gitLink: "https://github.com/sanju1098/ai-studio-verse",
@@ -22,7 +39,7 @@ export const projects = [
       "Typescript",
       "Tailwind CSS",
       "Gemini AI",
-      "Shadcn/ui",
+      "Shadcn UI",
     ],
   },
   {
@@ -38,7 +55,7 @@ export const projects = [
       "JavaScript",
       "Firebase",
       "Firebase Auth",
-      "Shadcn-UI",
+      "Shadcn UI",
       "Movie API",
     ],
   },
