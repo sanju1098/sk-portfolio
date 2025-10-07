@@ -1,63 +1,16 @@
-// import { Input } from "@/components/ui/input";
-// import { Textarea } from "@/components/ui/textarea";
-import { aboutWork, badges } from "@/config/about";
+import { badges } from "@/config/about";
 import {
   Code,
+  FileSymlink,
   Github,
   Heart,
-  Link,
   Linkedin,
   Mail,
   User,
-  //   MapPin,
-  //   Send,
 } from "lucide-react";
 import React from "react";
-// import { useState } from "react";
 
 const About: React.FC = React.memo(() => {
-  //   const [formData, setFormData] = useState({
-  //     name: "",
-  //     email: "",
-  //     subject: "",
-  //     message: "",
-  //   });
-
-  //   const handleChange = (
-  //     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  //   ) => {
-  //     const { name, value } = e.target;
-  //     setFormData(prevData => ({
-  //       ...prevData,
-  //       [name]: value,
-  //     }));
-  //   };
-
-  //   const submitMail = async () => {
-  //     const mailData = {
-  //       from: formData.email,
-  //       to: "sanjay@gmail.com",
-  //       subject: `${formData.subject} - ${formData.name}`,
-  //       content: formData.message,
-  //     };
-
-  //     // Example: send via fetch to your backend API
-  //     try {
-  //       const res = await fetch("/api/send-mail", {
-  //         method: "POST",
-  //         headers: { "Content-Type": "application/json" },
-  //         body: JSON.stringify(mailData),
-  //       });
-  //       if (res.ok) {
-  //         alert("Message sent successfully!");
-  //       } else {
-  //         alert("Failed to send message.");
-  //       }
-  //     } catch (error) {
-  //       alert("Error sending message.");
-  //     }
-  //   };
-
   return (
     <div className="bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="pt-20">
@@ -128,55 +81,40 @@ const About: React.FC = React.memo(() => {
                     <Code className="text-white" size={32} />
                   </div>
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-                    My Work & Achievements
+                    My Achievements
                   </h2>
                 </div>
-                <div className="flex flex-wrap gap-6 justify-center">
-                  {aboutWork.map((item, index) => (
-                    <div
-                      key={index}
-                      className="bg-white dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105 group flex-1 min-w-[180px] max-w-[220px] relative">
-                      {item.link && (
-                        <a
-                          href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="absolute top-4 right-4 text-teal-500 hover:underline"
-                          aria-label={`Visit ${item.title}`}>
-                          <Link size={18} strokeWidth={2} />
-                        </a>
-                      )}
-                      <div className="text-center">
-                        <div className="text-3xl font-bold text-teal-500 mb-2">
-                          {item.count}
-                        </div>
-                        <p className="text-gray-600 dark:text-gray-400 group-hover:text-teal-500 transition-colors flex items-center justify-center gap-2">
-                          {item.title}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="flex flex-wrap gap-6 justify-center">
+                <div className="flex flex-wrap gap-8 justify-center">
                   {badges.map((badge, index) => (
                     <div
-                      className="flex flex-col items-center justify-center mt-8"
+                      className="flex flex-col items-center justify-between min-w-[180px] max-w-[200px] px-2 py-4 bg-white dark:bg-gray-900 rounded-xl shadow-md"
                       key={index}>
-                      <img
-                        loading="lazy"
-                        src={badge.imageLink}
-                        alt={badge.name}
-                        className="w-36 mb-4"
-                      />
-                      <a
-                        href={badge.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-teal-500 hover:underline flex items-center gap-2"
-                        aria-label={badge.buttonName}>
-                        {badge.buttonName}
-                        <Link size={18} strokeWidth={2} />
-                      </a>
+                      <div className="flex flex-col items-center w-full">
+                        <div className="flex items-center justify-center w-28 h-28 bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 mb-3">
+                          <img
+                            loading="lazy"
+                            src={badge.imageLink}
+                            alt={badge.name}
+                            className="object-contain w-24 h-24"
+                          />
+                        </div>
+                        <div className="text-center w-full">
+                          <div
+                            className="text-gray-700 dark:text-gray-300 text-md mt-1 truncate"
+                            title={badge.name}>
+                            {badge.name}
+                          </div>
+                          <a
+                            href={badge.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-teal-500 text-sm hover:underline flex items-center justify-center gap-2 font-semibold mt-1"
+                            aria-label={badge.buttonName}>
+                            {badge.buttonName}
+                            <FileSymlink size={18} strokeWidth={2} />
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -263,100 +201,6 @@ const About: React.FC = React.memo(() => {
                       </div>
                     </div>
                   </div>
-
-                  {/* Contact Form */}
-                  {/* <div className="bg-gray-50 dark:bg-gray-800 rounded-3xl animate-fade-in">
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                      Send Me a Message
-                    </h3>
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <label
-                          htmlFor="name"
-                          className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                          Name *
-                        </label>
-                        <Input
-                          type="text"
-                          id="name"
-                          name="name"
-                          required
-                          placeholder="Your Name"
-                          className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                          value={formData.name}
-                          onChange={e => handleChange(e)}
-                        />
-                      </div>
-                      <div>
-                        <label
-                          htmlFor="email"
-                          className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                          Email *
-                        </label>
-                        <Input
-                          type="text"
-                          id="email"
-                          name="email"
-                          required
-                          placeholder="Your Email"
-                          className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                          value={formData.email}
-                          onChange={e => handleChange(e)}
-                        />
-                      </div>
-                    </div>
-                    <div className="mt-6">
-                      <label
-                        htmlFor="subject"
-                        className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                        Subject *
-                      </label>
-                      <Input
-                        type="text"
-                        id="subject"
-                        name="subject"
-                        required
-                        placeholder="Subject"
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                        value={formData.subject}
-                        onChange={e => handleChange(e)}
-                      />
-                    </div>
-                    <div className="mt-6">
-                      <label
-                        htmlFor="message"
-                        className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                        Message *
-                      </label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={e => handleChange(e)}
-                        required
-                        rows={6}
-                        placeholder="Tell me about your project, opportunity, or just say hello..."
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                      />
-                    </div>
-                    <div className="mt-6">
-                      <button
-                        type="submit"
-                        className="w-full bg-gradient-to-r from-orange-500 to-teal-600 hover:from-orange-600 hover:to-teal-700 text-white font-semibold py-4 rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2"
-                        onClick={submitMail}>
-                        <span>Send Message</span>
-                        <Send size={20} />
-                      </button>
-                    </div>
-
-                    <div className="mt-6 p-4 bg-orange-50 dark:bg-orange-900/20 rounded-xl">
-                      <p className="text-sm text-orange-700 dark:text-orange-300">
-                        <strong>Quick Response:</strong> I typically respond to
-                        messages within 24 hours. For urgent matters, feel free
-                        to reach out on LinkedIn.
-                      </p>
-                    </div>
-                  </div> */}
                 </div>
               </div>
             </section>

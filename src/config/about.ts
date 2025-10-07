@@ -1,30 +1,19 @@
 import hackerLogo from "../assets/Images/hackerrank-logo.png";
 
-export const aboutWork = [
-  {
-    count: 45,
-    title: "Github Repos",
-    link: "https://github.com/sanju1098",
-  },
-  {
-    count: 126,
-    title: "Code Sandbox count",
-    link: "https://codesandbox.io/u/Sanjay%20Kumar%20SR",
-  },
-  {
-    count: 2,
-    title: "Medium Articles",
-    link: "https://medium.com/@sanjay--kumar",
-  },
-];
-
 export const badges = [
   {
-    name: "Espresa",
+    name: "Silver Badge - Espresa",
     imageLink:
       "https://espresa-prod-app-store.s3.amazonaws.com/company/card/e1f35856035b46d9bcd354c0dc7b2e69.png",
     link: "https://app.espresa.com/r/shared/643a0a4f-7974-46ea-be54-953178b2e353/",
     buttonName: "View Badge",
+  },
+  {
+    name: "MVTM - Espresa",
+    imageLink:
+      "https://play-lh.googleusercontent.com/lTxWxQsXN7Z9kdZlnFLMViw0kmHHh91vGFRtCRVLlAGZskndO4eQWDA827f4RvrD9nY",
+    link: "https://app.espresa.com/r/shared/643a0a4f-7974-46ea-be54-953178b2e353/",
+    buttonName: "View Reward",
   },
   {
     name: "Introduction to Generative AI",
@@ -34,9 +23,9 @@ export const badges = [
     buttonName: "View Badge",
   },
   {
-    name: "HackerRank Profile",
+    name: "HackerRank Certifications",
     imageLink: hackerLogo,
     link: "https://www.hackerrank.com/profile/sanjay__kumar",
-    buttonName: "View Profile",
+    buttonName: "View Certificates",
   },
 ];

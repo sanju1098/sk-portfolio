@@ -21,10 +21,10 @@ export const projects = [
     techStack: [
       "Next.JS",
       "React JS",
-      "Typescript",
+      "TypeScript",
       "Tailwind CSS",
       "Zustand",
-      "Shadcn UI",
+      "ShadCN UI",
     ],
   },
   {
@@ -35,11 +35,12 @@ export const projects = [
     gitLink: "https://github.com/sanju1098/ai-studio-verse",
     demoLink: "https://ai-studio-verse.vercel.app/",
     techStack: [
-      "Vite.JS",
-      "Typescript",
+      "React JS",
+      "TypeScript",
       "Tailwind CSS",
-      "Gemini AI",
-      "Shadcn UI",
+      "Gemini 1.5 Flash AI",
+      "ShadCN UI",
+      "Vite.JS",
     ],
   },
   {
@@ -55,7 +56,7 @@ export const projects = [
       "JavaScript",
       "Firebase",
       "Firebase Auth",
-      "Shadcn UI",
+      "ShadCN UI",
       "Movie API",
     ],
   },
@@ -92,7 +93,7 @@ export const projects = [
     demoLink: "https://reactjs-weather-appplication.netlify.app/",
     techStack: [
       "React JS",
-      "Typescript",
+      "TypeScript",
       "Vite",
       "Open Weathermap API",
       "JavaScript",

@@ -25,9 +25,8 @@ export const workExperiences = [
       {
         name: "Tech Events Portal",
         responsibilities: [
-          "Architected and delivered a scalable event management platform in Morgan Stanley’s ETS team with ShadCN UI, and built a dynamic multi-step form using React Hook Form and Zod, ensuring 100% validation coverage and reducing errors.",
-          "Optimized API efficiency with TanStack Query for data fetching, caching, and eliminating redundant requests, improving load times, and implemented role-based access control with protected routes to enable secure, permission-based CRUD operations.",
-          "Enhanced event discoverability and user experience by developing dynamic calendar & list views, implementing advanced client-side filters (debounced search, date, location), and adding CSV export functionality for events and user data.",
+          "Architected and delivered a scalable event management platform in Morgan Stanley’s ETS, built with modular ShadCN UI components and a dynamic multi-step form using React Hook Form + Zod for complete validation and seamless UX.",
+          "Optimized frontend performance using TanStack Query with efficient API caching, dynamic calendar/list views, and responsive client-side filters.",
         ],
       },
     ],
@@ -42,24 +41,23 @@ export const workExperiences = [
       {
         name: "Airline Retailing Platform.",
         responsibilities: [
-          "Developed a responsive airline order tracking interface using React.js and TypeScript to render and manage IATA OrderView RS (v21.3.4) XML data, enabling real-time status visualization and robust form-driven workflows.",
-          "Improved application performance and scalability by implementing route-based code splitting, optimizing Webpack builds, and introducing a structured order flow with progress tracking and XML validation.",
+          "Developed a real-time airline order creation and tracking UI for Iberia Airline using React.js and TypeScript, integrating the IATA Airline Retailing Order View Schema (v21.3.4) and RESTful APIs within a microservices architecture.",
+          "Enhanced page performance by 25% through route-based lazy loading and dynamic code splitting, while mentoring junior engineers on Webpack and modular UI design, improving sprint delivery efficiency.",
         ],
       },
       {
-        name: "AI-Powered Conversational Chat UI & Admin UI (Digital Engineer).",
+        name: "AI-Powered Conversational Chat UI (Digital Engineer)",
         responsibilities: [
-          "Reduced build time by optimizing with Vite.js and deployed the application to Azure using Docker multi-stage builds in collaboration with the DevOps team.",
-          "Developed a real-time AI-powered chat interface using Next.js and Vercel’s useChat SDK, improving response accuracy through API tuning and ensuring session persistence and chat history management.",
-          "Enhanced overall user experience by improving API response times and implementing a feedback system that contributed to higher customer satisfaction.",
+          "Built an AI-powered conversational chat interface using Next.js, Vercel, and useChat SDK, handling 1K+ daily messages with source-cited responses.",
+          "Improved API response time by 2s using React Query caching/retries and increased CSAT by 15% through an integrated feedback system.",
+          "Optimized build size and streamlined CI/CD using Docker multi-stage builds, deploying efficiently to Azure with the DevOps team.",
         ],
       },
       {
         name: "Unisys Component Library (UI UX Framework).",
         responsibilities: [
-          "Delivered a React-based design system with 75+ reusable, WCAG-compliant components, integrated with Storybook for live documentation and tested using Jest and React Testing Library.",
-          "Created and deployed demo applications for Web and Mobile (including React Native templates) to showcase cross-platform component usage to internal teams.",
-          "Implemented global theming support for user-level customization and conducted peer code reviews, contributing to faster UI delivery and improved consistency across frontend modules.",
+          "Delivered a React-based internal component library (npm package/design system) with 75+ WCAG-compliant UI components, showcased in Storybook, reducing UI development time and improving cross-team consistency.",
+          "Acted as Scrum Master and frontend developer, facilitating sprints, resolving blockers, and conducting code reviews — boosting team velocity by 20% and ensuring consistent, high-quality UI delivery.",
         ],
       },
     ],
@@ -74,9 +72,9 @@ export const workExperiences = [
       {
         name: " VMware CSP Market Place (Client: VMWare)",
         responsibilities: [
-          "Developed responsive and reusable UI components using React.js, HTML5, CSS3, and VMware Clarity Design System with Storybook, enhancing performance, maintainability, and cross-team component documentation.",
-          "Implemented robust form validation and error handling across class and functional components for version control and EULA flows, while debugging critical issues in the publisher module to improve code quality and application performance.",
-          "Improved accessibility compliance with NVDA and WCAG 2.0 standards, raising adherence from 50% to 80% by resolving 100+ ARIA and contrast issues, and delivered incremental features in Agile sprints following full SDLC practices.",
+          "Developed responsive, reusable UI components using React.js, HTML5, CSS3, and VMware Clarity Design System, documented via Storybook for consistency and maintainability.",
+          "Migrated class-based to functional components, added robust form validation and error handling for version control and EULA workflows, improving reliability and accuracy.",
+          "Improved WCAG 2.0 accessibility compliance through NVDA testing and resolution of 100+ ARIA/contrast issues, while actively contributing to Agile sprints and SDLC practices.",
         ],
       },
     ],
