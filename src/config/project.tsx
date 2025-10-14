@@ -8,9 +8,19 @@ import weatherImg from "../assets/Images/weather.png";
 import travelgenieImg from "../assets/Images/travelGenie.png";
 import aiStudioVerseImg from "../assets/Images/aiStudioVerse.png";
 import formKitImg from "../assets/Images/formkit.png";
+import bharatTradeImg from "../assets/Images/bharatTrade.png";
 import { Codesandbox, Github } from "lucide-react";
 
 export const projects = [
+  {
+    image: bharatTradeImg,
+    title: "Bharat Trade",
+    description:
+      "Bharat Trade is a feature-rich web application that provides market data, stock analytics, currency exchange, news, and performance tracking using mock data (not real-time). The app is designed with a clean, glassmorphic UI and supports both light and dark themes. It leverages modular components and hooks for scalability and maintainability.",
+    gitLink: "https://github.com/sanju1098/bharat-trade",
+    demoLink: "https://bharat-trade.vercel.app/",
+    techStack: ["React JS", "TypeScript", "Tailwind CSS", "ShadCN UI", "Vite"],
+  },
   {
     image: formKitImg,
     title: "FormKit - Drag & Drop Form Builder",
@@ -40,7 +50,7 @@ export const projects = [
       "Tailwind CSS",
       "Gemini 1.5 Flash AI",
       "ShadCN UI",
-      "Vite.JS",
+      "Vite",
     ],
   },
   {
