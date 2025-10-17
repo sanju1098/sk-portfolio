@@ -1,14 +1,23 @@
-import { badges } from "@/config/about";
+import { workAchievements } from "@/config/about";
 import {
   Code,
   FileSymlink,
   Github,
-  Heart,
+  Link2,
   Linkedin,
   Mail,
   User,
 } from "lucide-react";
 import React from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 const About: React.FC = React.memo(() => {
   return (
@@ -57,17 +66,6 @@ const About: React.FC = React.memo(() => {
                       technologies, contributing to open-source projects, or
                       sharing my knowledge with the developer community.
                     </p>
-
-                    <div className="flex flex-wrap gap-6 mt-8 justify-center">
-                      <div className="flex items-center space-x-4 text-gray-600 dark:text-gray-400">
-                        <Code size={20} />
-                        <span>Open source contributor</span>
-                      </div>
-                      <div className="flex items-center space-x-4 text-gray-600 dark:text-gray-400">
-                        <Heart size={20} />
-                        <span>Passionate about clean code</span>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -85,34 +83,81 @@ const About: React.FC = React.memo(() => {
                   </h2>
                 </div>
                 <div className="flex flex-wrap gap-8 justify-center">
-                  {badges.map((badge, index) => (
+                  {workAchievements.map((achievement, index) => (
                     <div
                       className="flex flex-col items-center justify-between min-w-[180px] max-w-[200px] px-2 py-4 bg-white dark:bg-gray-900 rounded-xl shadow-md"
                       key={index}>
                       <div className="flex flex-col items-center w-full">
-                        <div className="flex items-center justify-center w-28 h-28 bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 mb-3">
-                          <img
-                            loading="lazy"
-                            src={badge.imageLink}
-                            alt={badge.name}
-                            className="object-contain w-24 h-24"
-                          />
-                        </div>
+                        <img
+                          loading="lazy"
+                          src={achievement.badgeImage}
+                          alt={achievement.name}
+                          className="object-contain w-36 h-24"
+                        />
                         <div className="text-center w-full">
                           <div
                             className="text-gray-700 dark:text-gray-300 text-md mt-1 truncate"
-                            title={badge.name}>
-                            {badge.name}
+                            title={achievement.name}>
+                            {achievement.name}
                           </div>
-                          <a
-                            href={badge.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-teal-500 text-sm hover:underline flex items-center justify-center gap-2 font-semibold mt-1"
-                            aria-label={badge.buttonName}>
-                            {badge.buttonName}
-                            <FileSymlink size={18} strokeWidth={2} />
-                          </a>
+                          {achievement.image ? (
+                            <Dialog>
+                              <div className="flex justify-center w-full">
+                                <DialogTrigger asChild>
+                                  <button
+                                    className="mx-auto text-teal-500 text-sm hover:cursor-pointer flex items-center justify-center gap-2 font-semibold mt-1"
+                                    aria-label={achievement.buttonName}>
+                                    {achievement.buttonName}
+                                    <FileSymlink size={18} strokeWidth={2} />
+                                  </button>
+                                </DialogTrigger>
+                              </div>
+                              <DialogContent className="w-full min-w-4xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 shadow-lg">
+                                <DialogHeader>
+                                  <DialogTitle className="flex items-center gap-4">
+                                    <span className="block text-lg md:text-3xl font-extrabold">
+                                      {achievement.name}
+                                    </span>
+                                  </DialogTitle>
+                                  <DialogDescription>
+                                    <div className="flex flex-col items-center gap-4">
+                                      <img
+                                        loading="lazy"
+                                        src={achievement.image}
+                                        alt={achievement.name}
+                                        className="mx-auto object-contain"
+                                      />
+                                      {achievement.redirectLink && (
+                                        <Button
+                                          type="button"
+                                          className="bg-teal-500 text-white hover:bg-teal-600 hover:scale-105 transition-transform duration-150 shadow-sm hover:shadow-lg mt-2"
+                                          onClick={() =>
+                                            window.open(
+                                              achievement.redirectLink,
+                                              "_blank",
+                                              "noopener,noreferrer",
+                                            )
+                                          }
+                                          aria-label={`Open ${achievement.name} in new tab`}>
+                                          {achievement.buttonName}
+                                        </Button>
+                                      )}
+                                    </div>
+                                  </DialogDescription>
+                                </DialogHeader>
+                              </DialogContent>
+                            </Dialog>
+                          ) : (
+                            <a
+                              href={achievement.redirectLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-teal-500 text-sm hover:underline flex items-center justify-center gap-2 font-semibold mt-1"
+                              aria-label={achievement.buttonName}>
+                              {achievement.buttonName}
+                              <Link2 size={18} strokeWidth={2} />
+                            </a>
+                          )}
                         </div>
                       </div>
                     </div>
