@@ -13,6 +13,7 @@ export const workAchievements = [
     redirectLink:
       "https://www.cloudskillsboost.google/public_profiles/8fed8869-3f5d-448d-85be-42f5b60b1bcf/badges/18511082",
     buttonName: "View Badge",
+    issueDate: "Sep 21, 2025",
   },
   {
     name: "Silver Badge - Espresa",
@@ -21,12 +22,14 @@ export const workAchievements = [
     redirectLink:
       "https://app.espresa.com/r/shared/643a0a4f-7974-46ea-be54-953178b2e353/",
     buttonName: "View Badge",
+    issueDate: "Jan 29, 2025",
   },
   {
     name: "Ownership Reward - Espresa",
     badgeImage: ownershipLogo,
     image: ownership,
     buttonName: "View Reward",
+    issueDate: "Jul 15, 2024",
   },
   {
     name: "MVTM - Espresa",
@@ -34,11 +37,13 @@ export const workAchievements = [
     redirectLink:
       "https://drive.google.com/file/d/1Byrpu7ipyh30p8tN0nCpAciLiyILpiHo/view?usp=sharing",
     buttonName: "View Reward",
+    issueDate: "Jun 03, 2024",
   },
   {
     name: "HackerRank Certifications",
     badgeImage: hackerLogo,
     redirectLink: "https://www.hackerrank.com/profile/sanjay__kumar",
     buttonName: "View Certificates",
+    issueDate: "Sep 08, 2025",
   },
 ];

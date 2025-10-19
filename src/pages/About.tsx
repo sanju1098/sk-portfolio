@@ -40,7 +40,7 @@ const About: React.FC = React.memo(() => {
             </div>
 
             {/* About Me Section  */}
-            <div className="px-6">
+            <div className="px-0 md:px-6">
               <div className="container mx-auto">
                 <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 md:p-12 animate-fade-in my-4">
                   <div className="flex items-center mb-8">
@@ -83,85 +83,93 @@ const About: React.FC = React.memo(() => {
                   </h2>
                 </div>
                 <div className="flex flex-wrap gap-8 justify-center">
-                  {workAchievements.map((achievement, index) => (
-                    <div
-                      className="flex flex-col items-center justify-between min-w-[180px] max-w-[200px] px-2 py-4 bg-white dark:bg-gray-900 rounded-xl shadow-md"
-                      key={index}>
-                      <div className="flex flex-col items-center w-full">
-                        <img
-                          loading="lazy"
-                          src={achievement.badgeImage}
-                          alt={achievement.name}
-                          className="object-contain w-36 h-24"
-                        />
-                        <div className="text-center w-full">
-                          <div
-                            className="text-gray-700 dark:text-gray-300 text-md mt-1 truncate"
-                            title={achievement.name}>
-                            {achievement.name}
+                  {[...workAchievements]
+                    .sort((a, b) => {
+                      const da = new Date(a.issueDate).getTime();
+                      const db = new Date(b.issueDate).getTime();
+                      if (db !== da) return db - da; // recent first
+                      return a.name.localeCompare(b.name);
+                    })
+                    .map((achievement, index) => (
+                      <div
+                        className="flex flex-col items-center justify-between min-w-[180px] max-w-[200px] px-2 py-4 bg-white dark:bg-gray-900 rounded-xl shadow-md"
+                        key={index}>
+                        <div className="flex flex-col items-center w-full">
+                          <img
+                            loading="lazy"
+                            src={achievement.badgeImage}
+                            alt={achievement.name}
+                            className="object-contain w-36 h-24"
+                          />
+                          <div className="text-center w-full">
+                            <div
+                              className="text-gray-700 dark:text-gray-300 text-md mt-1 truncate"
+                              title={achievement.name}>
+                              {achievement.name}
+                            </div>
+                            {achievement.image ? (
+                              <Dialog>
+                                <div className="flex justify-center w-full">
+                                  <DialogTrigger asChild>
+                                    <button
+                                      className="mx-auto text-teal-500 text-sm hover:cursor-pointer flex items-center justify-center gap-2 font-semibold mt-1"
+                                      aria-label={achievement.buttonName}>
+                                      {achievement.buttonName}
+                                      <FileSymlink size={18} strokeWidth={2} />
+                                    </button>
+                                  </DialogTrigger>
+                                </div>
+                                <DialogContent className="mx-4 sm:mx-auto w-full max-w-[90vw] sm:max-w-xl md:max-w-4xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 shadow-lg p-4 sm:p-6 rounded-lg sm:rounded-2xl overflow-auto max-h-[85vh] text-gray-900 dark:text-white dark:[&_svg]:text-white">
+                                  <DialogHeader>
+                                    <DialogTitle className="flex items-center gap-4">
+                                      <span className="block text-lg sm:text-2xl md:text-3xl font-extrabold">
+                                        {achievement.name}
+                                      </span>
+                                    </DialogTitle>
+                                    <DialogDescription>
+                                      <div className="flex flex-col items-center gap-4">
+                                        <img
+                                          loading="lazy"
+                                          src={achievement.image}
+                                          alt={achievement.name}
+                                          className="w-full sm:w-auto max-w-full sm:max-w-[560px] md:max-w-[800px] h-auto max-h-[50vh] sm:max-h-[60vh] md:max-h-[70vh] object-contain rounded-md"
+                                        />
+
+                                        {achievement.redirectLink && (
+                                          <Button
+                                            type="button"
+                                            className="bg-teal-500 text-white hover:bg-teal-600 hover:scale-105 transition-transform duration-150 shadow-sm hover:shadow-lg mt-2"
+                                            onClick={() =>
+                                              window.open(
+                                                achievement.redirectLink,
+                                                "_blank",
+                                                "noopener,noreferrer",
+                                              )
+                                            }
+                                            aria-label={`Open ${achievement.name} in new tab`}>
+                                            {achievement.buttonName}
+                                          </Button>
+                                        )}
+                                      </div>
+                                    </DialogDescription>
+                                  </DialogHeader>
+                                </DialogContent>
+                              </Dialog>
+                            ) : (
+                              <a
+                                href={achievement.redirectLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-teal-500 text-sm hover:underline flex items-center justify-center gap-2 font-semibold mt-1"
+                                aria-label={achievement.buttonName}>
+                                {achievement.buttonName}
+                                <Link2 size={18} strokeWidth={2} />
+                              </a>
+                            )}
                           </div>
-                          {achievement.image ? (
-                            <Dialog>
-                              <div className="flex justify-center w-full">
-                                <DialogTrigger asChild>
-                                  <button
-                                    className="mx-auto text-teal-500 text-sm hover:cursor-pointer flex items-center justify-center gap-2 font-semibold mt-1"
-                                    aria-label={achievement.buttonName}>
-                                    {achievement.buttonName}
-                                    <FileSymlink size={18} strokeWidth={2} />
-                                  </button>
-                                </DialogTrigger>
-                              </div>
-                              <DialogContent className="w-full min-w-4xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 shadow-lg">
-                                <DialogHeader>
-                                  <DialogTitle className="flex items-center gap-4">
-                                    <span className="block text-lg md:text-3xl font-extrabold">
-                                      {achievement.name}
-                                    </span>
-                                  </DialogTitle>
-                                  <DialogDescription>
-                                    <div className="flex flex-col items-center gap-4">
-                                      <img
-                                        loading="lazy"
-                                        src={achievement.image}
-                                        alt={achievement.name}
-                                        className="mx-auto object-contain"
-                                      />
-                                      {achievement.redirectLink && (
-                                        <Button
-                                          type="button"
-                                          className="bg-teal-500 text-white hover:bg-teal-600 hover:scale-105 transition-transform duration-150 shadow-sm hover:shadow-lg mt-2"
-                                          onClick={() =>
-                                            window.open(
-                                              achievement.redirectLink,
-                                              "_blank",
-                                              "noopener,noreferrer",
-                                            )
-                                          }
-                                          aria-label={`Open ${achievement.name} in new tab`}>
-                                          {achievement.buttonName}
-                                        </Button>
-                                      )}
-                                    </div>
-                                  </DialogDescription>
-                                </DialogHeader>
-                              </DialogContent>
-                            </Dialog>
-                          ) : (
-                            <a
-                              href={achievement.redirectLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-teal-500 text-sm hover:underline flex items-center justify-center gap-2 font-semibold mt-1"
-                              aria-label={achievement.buttonName}>
-                              {achievement.buttonName}
-                              <Link2 size={18} strokeWidth={2} />
-                            </a>
-                          )}
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
                 </div>
               </div>
             </div>
