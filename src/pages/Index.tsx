@@ -66,17 +66,24 @@ const Index: React.FC = React.memo(() => {
 
               {/* Enhanced Description */}
               <div className="mb-12 animate-fade-in">
-                <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed font-medium">
-                  Professional Application Developer with{" "}
-                  <span className="text-orange-600 dark:text-orange-400 font-bold">
-                    4+ years
-                  </span>{" "}
-                  of experience crafting
+                <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed font-medium">
+                  Turning ideas into{" "}
                   <span className="bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent font-bold">
-                    {" "}
-                    responsive, scalable, and user-centric
+                    elegant, high-performance
                   </span>{" "}
                   web applications.
+                  <div>
+                    With{" "}
+                    <span className="text-orange-600 dark:text-orange-400 font-bold">
+                      4+ years
+                    </span>{" "}
+                    of experience, I build{" "}
+                    <span className="bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent font-bold">
+                      responsive, scalable, and user-centric
+                    </span>{" "}
+                    applications that empower businesses to grow and stand out
+                    online.
+                  </div>
                 </p>
 
                 {/* Tech Stack Pills */}

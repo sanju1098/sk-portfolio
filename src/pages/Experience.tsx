@@ -47,7 +47,7 @@ const Experience: React.FC = React.memo(() => {
               ))}
             </div> */}
 
-            <div className="max-w-5xl mx-auto m-4">
+            <div className="max-w-7xl mx-auto m-4">
               {workExperiences.map((exp, index) => (
                 <div key={index} className="relative md:pl-8 pb-12 last:pb-0">
                   {/* Timeline line - hidden on mobile */}
@@ -74,6 +74,11 @@ const Experience: React.FC = React.memo(() => {
                           </h3>
                           <h4 className="text-lg md:text-xl font-semibold text-orange-600 dark:text-orange-400 mb-3 break-words">
                             {exp.role}
+                            {/* {exp.duration && (
+                              <span className="hidden md:inline-flex items-center text-sm bg-gradient-to-r from-orange-100 to-teal-50 dark:from-orange-900/40 dark:to-teal-900/30 text-gray-700 dark:text-gray-200 mx-2 px-3 py-1 rounded-full shadow-sm">
+                                {exp.duration}
+                              </span>
+                            )} */}
                           </h4>
                         </div>
                       </div>

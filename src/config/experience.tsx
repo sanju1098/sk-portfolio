@@ -4,7 +4,7 @@ import hsiplLogo from "../assets/Images/HSIPLLogo.jpg";
 import stcLogo from "../assets/Images/SCTLogo.jpg";
 
 export const timeLineExperiences = [
-  { years: "May 2025 – Present", company: "Russell Tobin" },
+  { years: "May 2025 – Sep 2025", company: "Russell Tobin" },
   { years: "Jun 2023  - Apr 2025", company: "Unisys India Pvt Ltd" },
   { years: "Oct 2021 – Jun 2023", company: "Harlalka Services India Pvt Ltd" },
   {
@@ -16,11 +16,12 @@ export const timeLineExperiences = [
 export const workExperiences = [
   {
     company:
-      "Russell Tobin Associates Staffing Solutions (Client: Morgan Stanley).",
+      "Russell Tobin Associates Staffing Solutions (Client: Morgan Stanley)",
     logo: russellLogo,
-    role: "Senior Application Development Engineer.",
-    timeline: "May 2025  - Present",
-    location: "Bangalore, Karnataka.",
+    role: "Senior Application Development Engineer",
+    timeline: "May 2025  - Sep 2025",
+    duration: "5m",
+    location: "Bangalore, Karnataka",
     projects: [
       {
         name: "Tech Events Portal",
@@ -33,14 +34,15 @@ export const workExperiences = [
     ],
   },
   {
-    company: "Unisys India Private Limited.",
+    company: "Unisys India Private Limited",
     logo: unisysLogo,
-    role: "Application Development Engineer.",
+    role: "Application Development Engineer",
     timeline: "June 2023  - April 2025",
-    location: "Bangalore, Karnataka.",
+    duration: "1y 11m",
+    location: "Bangalore, Karnataka",
     projects: [
       {
-        name: "Airline Retailing Platform.",
+        name: "Airline Retailing Platform",
         responsibilities: [
           "Developed a real-time airline order tracking UI using React.js and TypeScript, visualizing IATA Airline Retailing Order View RS (v21.3.4) data in a structured, user-friendly interface with real-time updates and dynamic order visualization.",
           "Built a modern, responsive web application featuring route-based lazy loading, dynamic code splitting, and optimized rendering, reducing page load time and improving workflow reliability and user experience.",
@@ -57,7 +59,7 @@ export const workExperiences = [
         ],
       },
       {
-        name: "Unisys Component Library (UI UX Framework).",
+        name: "Unisys Component Library (UI UX Framework)",
         responsibilities: [
           "Designed, developed, and maintained a scalable React-based Web Component Library with 75+ reusable, WCAG-compliant UI components, improving flexibility, consistency, and development speed across multiple projects.",
           "Architected and documented UI components in Storybook, integrated global theming for consistent branding, and packaged the library as an NPM module using Rollup, enabling easy distribution, versioning, and reuse across teams.",
@@ -67,11 +69,12 @@ export const workExperiences = [
     ],
   },
   {
-    company: "Harlalka Services India Private Limited.",
+    company: "Harlalka Services India Private Limited",
     logo: hsiplLogo,
-    role: "Frontend Developer.",
+    role: "Frontend Developer",
     timeline: "October 2021 – June 2023",
-    location: "Bangalore, Karnataka.",
+    duration: "1y 09m",
+    location: "Bangalore, Karnataka",
     projects: [
       {
         name: " VMware CSP Market Place (Client: VMWare)",
@@ -85,11 +88,11 @@ export const workExperiences = [
     ],
   },
   {
-    company: "Sixth Circle Technologies Pvt Ltd.",
+    company: "Sixth Circle Technologies Pvt Ltd",
     logo: stcLogo,
-    role: "Intern Web Developer.",
+    role: "Intern Web Developer",
     timeline: "February 2021 – September 2021",
-    location: "Bangalore, Karnataka.",
+    location: "Bangalore, Karnataka",
     projects: [
       {
         name: " Custom Local Retail Market Aggregator Platform (Custom LMAP)",
