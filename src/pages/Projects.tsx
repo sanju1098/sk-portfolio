@@ -1,6 +1,9 @@
 import React from "react";
 import { projects, workProfiles } from "@/config/project";
-import { ExternalLink, Github } from "lucide-react";
+import {
+  // ExternalLink,
+  Github,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Projects: React.FC = React.memo(() => {
@@ -60,7 +63,7 @@ const Projects: React.FC = React.memo(() => {
                                 <Github size={20} />
                               </a>
                             )}
-                            {project.demoLink && (
+                            {/* {project.demoLink && (
                               <a
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -69,7 +72,7 @@ const Projects: React.FC = React.memo(() => {
                                 title="View Live Preview">
                                 <ExternalLink size={20} />
                               </a>
-                            )}
+                            )} */}
                           </div>
                         </div>
 
