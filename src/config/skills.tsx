@@ -1,17 +1,19 @@
 import {
   Code2,
   Globe,
+  Palette,
+  Gauge,
   FlaskConical,
   TerminalSquare,
   Database,
-  Palette,
+  GitBranch,
 } from "lucide-react";
 
 export const skillCategories = [
   {
     title: "Programming Languages",
     icon: <Code2 className="w-8 h-8 text-orange-500" />,
-    description: "Core frontend languages",
+    description: "Core frontend programming languages and fundamentals",
     skills: [
       {
         name: "JavaScript",
@@ -47,20 +49,14 @@ export const skillCategories = [
       },
     ],
   },
+
   {
     title: "Frontend Frameworks",
     icon: <Globe className="w-8 h-8 text-blue-500" />,
-    description: "Modern React ecosystem",
+    description: "Modern React ecosystem and state management tools",
     skills: [
       { name: "React", icon: "⚛️" },
-      {
-        name: "Next.js",
-        icon: (
-          <div className="w-12 h-12 bg-[#f8312f] rounded flex items-center justify-center text-white font-bold text-xs">
-            Next.js
-          </div>
-        ),
-      },
+      { name: "Next.js", icon: "▲" },
       {
         name: "Redux Toolkit",
         icon: (
@@ -70,7 +66,7 @@ export const skillCategories = [
         ),
       },
       {
-        name: "Tanstack Query",
+        name: "TanStack Query",
         icon: (
           <div className="w-12 h-12 bg-[#fc5e65] rounded flex items-center justify-center text-white font-bold text-xs">
             Query
@@ -79,25 +75,25 @@ export const skillCategories = [
       },
     ],
   },
+
   {
-    title: "Styling & Design",
+    title: "UI Libraries & Styling",
     icon: <Palette className="w-8 h-8 text-purple-500" />,
-    description: "Modern styling solutions",
+    description: "Component libraries and modern styling approaches",
     skills: [
       { name: "Tailwind CSS", icon: "🎨" },
+      { name: "ShadCN UI", icon: "🎪" },
+      { name: "Material UI", icon: "🎯" },
       { name: "SASS", icon: "💗" },
       { name: "Styled Components", icon: "💅" },
-      { name: "Material UI", icon: "🎯" },
-      { name: "Shadcn UI", icon: "🎪" },
     ],
   },
+
   {
-    title: "Testing & Quality",
-    icon: <FlaskConical className="w-8 h-8 text-green-500" />,
-    description: "Testing and code quality",
+    title: "Accessibility & Performance",
+    icon: <Gauge className="w-8 h-8 text-green-500" />,
+    description: "Web standards, accessibility, and performance optimization",
     skills: [
-      { name: "Jest", icon: "🃏" },
-      { name: "React Testing Library", icon: "🧪" },
       {
         name: "WCAG Guidelines",
         icon: (
@@ -106,31 +102,60 @@ export const skillCategories = [
           </div>
         ),
       },
+      { name: "NVDA Screen Reader", icon: "🎧" },
+      { name: "SEO", icon: "🔍" },
+      { name: "Lazy Loading", icon: "⚡" },
+      { name: "Code Splitting", icon: "📦" },
+      { name: "Web Vitals", icon: "📊" },
+      { name: "Lighthouse", icon: "🏮" },
+    ],
+  },
+
+  {
+    title: "Testing & Code Quality",
+    icon: <FlaskConical className="w-8 h-8 text-indigo-500" />,
+    description: "Testing libraries and code quality tools",
+    skills: [
+      { name: "Storybook", icon: "📖" },
+      { name: "Jest", icon: "🃏" },
+      { name: "React Testing Library", icon: "🧪" },
       { name: "ESLint & Prettier", icon: "✨" },
     ],
   },
+
   {
     title: "Build Tools & DevOps",
     icon: <TerminalSquare className="w-8 h-8 text-yellow-500" />,
-    description: "Development and deployment tools",
+    description: "Build systems, deployment, and environment setup",
     skills: [
       { name: "Vite", icon: "⚡" },
       { name: "Webpack", icon: "📦" },
       { name: "Docker", icon: "🐳" },
-      { name: "Git & GitHub", icon: "🐙" },
-      { name: "Storybook", icon: "📖" },
+      { name: "NGINX", icon: "🟢" },
     ],
   },
+
   {
-    title: "Additional Technologies",
+    title: "APIs, Databases & Tools",
     icon: <Database className="w-8 h-8 text-teal-500" />,
-    description: "APIs and additional tools",
+    description: "Data handling, APIs, and design tools",
     skills: [
       { name: "REST APIs", icon: "🌐" },
-      { name: "PostgreSQL", icon: "🐘" },
       { name: "MongoDB", icon: "🍃" },
       { name: "Postman", icon: "📮" },
+      { name: "AI SDK", icon: "🤖" },
       { name: "Figma", icon: "🎨" },
+    ],
+  },
+
+  {
+    title: "Version Control & Package Managers",
+    icon: <GitBranch className="w-8 h-8 text-red-500" />,
+    description: "Collaboration tools and dependency management",
+    skills: [
+      { name: "Git & GitHub", icon: "🐙" },
+      { name: "NPM", icon: "📦" },
+      { name: "Yarn", icon: "🧶" },
     ],
   },
 ];

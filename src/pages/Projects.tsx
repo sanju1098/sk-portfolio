@@ -1,10 +1,6 @@
 import React from "react";
 import { projects, workProfiles } from "@/config/project";
-import {
-  // ExternalLink,
-  Github,
-} from "lucide-react";
-import { Link } from "react-router-dom";
+import { ExternalLink, Github } from "lucide-react";
 
 const Projects: React.FC = React.memo(() => {
   return (
@@ -18,9 +14,9 @@ const Projects: React.FC = React.memo(() => {
                   Featured Projects
                 </span>
               </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                A showcase of my recent work building scalable web applications
-                and innovative solutions
+              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto text-center">
+                Top projects I’ve worked on — a curated selection highlighting
+                impact, technologies used, and live demos.
               </p>
             </div>
 
@@ -48,7 +44,7 @@ const Projects: React.FC = React.memo(() => {
 
                       {/* Project Content */}
                       <div className="p-6 flex flex-col flex-1">
-                        <div className="flex items-start justify-between mb-4">
+                        <div className="flex items-start justify-between">
                           <h3 className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-300 group-hover:text-orange-600">
                             {project.title}
                           </h3>
@@ -63,7 +59,7 @@ const Projects: React.FC = React.memo(() => {
                                 <Github size={20} />
                               </a>
                             )}
-                            {/* {project.demoLink && (
+                            {project.demoLink && (
                               <a
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -72,15 +68,15 @@ const Projects: React.FC = React.memo(() => {
                                 title="View Live Preview">
                                 <ExternalLink size={20} />
                               </a>
-                            )} */}
+                            )}
                           </div>
                         </div>
 
-                        <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed transition-colors duration-300 group-hover:text-gray-800 dark:group-hover:text-gray-200">
+                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed transition-colors duration-300 group-hover:text-gray-800 dark:group-hover:text-gray-200">
                           {project.description}
                         </p>
 
-                        <div className="flex flex-wrap gap-2 mt-auto">
+                        <div className="flex flex-wrap gap-2 mt-2">
                           {project.techStack.map(tech => (
                             <span
                               key={tech}
@@ -96,29 +92,45 @@ const Projects: React.FC = React.memo(() => {
               </div>
             </div>
 
-            <div className="flex flex-wrap justify-evenly md:m-8 m-2 gap-6">
-              {workProfiles.map((profile: any, index: number) => {
-                return (
-                  <div
-                    key={index}
-                    className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-orange-500 transition duration-300 w-full sm:w-[48%] lg:w-[30%] rounded-xl p-6 flex flex-col items-center text-center shadow-md transform hover:-translate-y-2 hover:scale-105">
-                    {profile.icon}
-                    <h3 className="text-xl text-black dark:text-white font-semibold mt-4">
-                      {profile.profileName}
-                    </h3>
-                    <p className="mt-2 text-gray-600 dark:text-gray-300">
-                      {profile.description}
-                    </p>
-                    <Link
-                      to={profile.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-4 text-orange-600 dark:text-orange-400 font-medium hover:underline hover:text-orange-700 dark:hover:text-orange-300 transition-colors">
-                      Visit {profile.profileName} →
-                    </Link>
-                  </div>
-                );
-              })}
+            <p className="mt-8 text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+              Apart from these featured projects, I’ve also shared several{" "}
+              <span className="font-semibold bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">
+                continuation works, experimental apps, and code samples
+              </span>{" "}
+              on my{" "}
+              <a
+                href="https://github.com/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange-600 dark:text-orange-400 hover:underline hover:text-orange-700 dark:hover:text-orange-300">
+                GitHub
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://codesandbox.io/u/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange-600 dark:text-orange-400 hover:underline hover:text-orange-700 dark:hover:text-orange-300">
+                CodeSandbox
+              </a>
+              . Explore more of my projects and ongoing work there!
+            </p>
+            <div className="flex justify-center gap-4 flex-wrap">
+              {workProfiles.map((profile, index) => (
+                <button
+                  key={profile.profileName + index}
+                  className={`inline-flex items-center gap-2 px-5 py-2 rounded-lg ${profile.className} transition-colors`}
+                  onClick={() =>
+                    window.open(
+                      `${profile.link}`,
+                      "_blank",
+                      "noopener,noreferrer",
+                    )
+                  }>
+                  {profile.icon}
+                  {profile.profileName}
+                </button>
+              ))}
             </div>
           </div>
         </section>
