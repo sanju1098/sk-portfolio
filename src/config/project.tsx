@@ -1,8 +1,8 @@
 // import firebaseAppImg from "../assets/Images/firebase.png";
-// import chatAppImg from "../assets/Images/chatappUI.png";
 // import clerkAuthAppImg from "../assets/Images/clerkAuth.png";
 // import notesImg from "../assets/Images/notes.png";
 // import formKitImg from "../assets/Images/formkit.png";
+import chatuuuImg from "../assets/Images/chatuuuAI.png";
 import booktheshowImg from "../assets/Images/booktheshow.png";
 import cryptoLoom from "../assets/Images/cryptoLoom.png";
 import weatherImg from "../assets/Images/weather.png";
@@ -12,6 +12,23 @@ import bharatTradeImg from "../assets/Images/bharatTrade.png";
 import { Codesandbox, Github } from "lucide-react";
 
 export const projects = [
+  {
+    image: chatuuuImg,
+    title: "Chatuuu",
+    description:
+      "Chatuuu is a lightweight AI chat application built with Next.js (App Router) and TypeScript. It demonstrates a modern React + Next.js app structure featuring integrated AI capabilities, reusable UI components (the “ai-elements”) for building conversational interfaces, and a clean, scalable design for AI-powered chat experiences.",
+    gitLink: "https://github.com/sanju1098/chatuuu",
+    demoLink: "https://chatuuu-ai.vercel.app/",
+    techStack: [
+      "Next.JS",
+      "React JS",
+      "TypeScript",
+      "Tailwind CSS",
+      "ShadCN UI",
+      "AI SDK",
+      "GOOGLE GENERATIVE AI",
+    ],
+  },
   {
     image: bharatTradeImg,
     title: "Bharat Trade",
