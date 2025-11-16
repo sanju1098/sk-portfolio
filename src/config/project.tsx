@@ -16,7 +16,7 @@ export const projects = [
     image: chatuuuImg,
     title: "Chatuuu",
     description:
-      "Chatuuu is a lightweight AI chat application built with Next.js (App Router) and TypeScript. It demonstrates a modern React + Next.js app structure featuring integrated AI capabilities, reusable UI components (the “ai-elements”) for building conversational interfaces, and a clean, scalable design for AI-powered chat experiences.",
+      "Chatuuu is a lightweight full-stack AI chat application built using Next.js, TypeScript, and Shadcn UI, featuring real-time AI messaging with support for image uploads that the system can intelligently read and interpret. Powered by Gemini 2.5 Flash through ai-sdk, ai-sdk/google, and AI Elements, it delivers high-performance processing with streamed text responses for fast and smooth interactions. The project brings together a modern frontend, an efficient backend, and advanced AI capabilities to create a responsive, intelligent, and seamless user experience.",
     gitLink: "https://github.com/sanju1098/chatuuu",
     demoLink: "https://chatuuu-ai.vercel.app/",
     techStack: [
@@ -25,7 +25,7 @@ export const projects = [
       "TypeScript",
       "Tailwind CSS",
       "ShadCN UI",
-      "AI SDK",
+      "AI SDK Elements",
       "GOOGLE GENERATIVE AI",
     ],
   },
