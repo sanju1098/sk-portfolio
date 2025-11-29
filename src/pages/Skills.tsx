@@ -43,7 +43,7 @@ const Skills: React.FC = React.memo(() => {
                     {category.skills.map(skill => (
                       <div
                         key={skill.name}
-                        className="flex flex-col items-center p-4 rounded-xl bg-gray-50 dark:bg-gray-800 hover:bg-gradient-to-br hover:from-orange-50 hover:to-teal-50 dark:hover:from-orange-900/20 dark:hover:to-teal-900/20transition-all duration-200 shadow-sm hover:shadow-md cursor-pointe">
+                        className="flex flex-col items-center p-4 rounded-xl bg-gray-50 dark:bg-gray-800 hover:bg-gradient-to-br hover:from-orange-50 hover:to-teal-50 dark:hover:from-orange-900/20 dark:hover:to-teal-900/20 transition-all duration-200 shadow-sm hover:shadow-md cursor-pointe">
                         <div className="text-4xl mb-2">{skill.icon}</div>
                         <p className="text-md font-semibold text-gray-700 dark:text-gray-200 text-center">
                           {skill.name}

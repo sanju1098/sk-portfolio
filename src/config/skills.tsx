@@ -133,8 +133,8 @@ export const skillCategories = [
       { name: "Storybook", icon: <StorybookIcon /> },
       { name: "Jest", icon: <JestIcon /> },
       { name: "React Testing Library", icon: <ReactTestingLibraryIcon /> },
+      { name: "ESLint", icon: <ESLintIcon /> },
       { name: "Prettier", icon: <PrettierIcon /> },
-      { name: "ESLint & Prettier", icon: <ESLintIcon /> },
     ],
   },
 
