@@ -135,3 +135,25 @@
       sans-serif;
   }
 }
+
+.scroll-track {
+  display: flex;
+  width: max-content; /* important for smooth scroll */
+  animation: scroll 15s linear infinite;
+}
+
+.scroll-track:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      -50%
+    ); /* scroll half of the total width (because we duplicated) */
+  }
+}

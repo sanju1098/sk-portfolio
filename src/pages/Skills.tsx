@@ -20,18 +20,16 @@ const Skills: React.FC = React.memo(() => {
             </div>
 
             {/* Main Skills Grid */}
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-7xl mx-auto m-4">
+            <div className="max-w-8xl mx-auto px-4 py-10 grid lg:grid-cols-3 md:grid-cols-2 gap-8">
               {skillCategories.map((category, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.03] transition-all duration-300 group relative overflow-hidden">
-                  <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-full h-full bg-gradient-to-tr from-orange-100/30 to-teal-100/30 dark:from-orange-900/20 dark:to-teal-900/20 blur-2xl" />
-                  </div>
-                  <div className="flex items-center gap-3 mb-6 relative z-10">
-                    {category.icon}
+                  className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700bg-white dark:bg-gray-900 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                  {/* Header */}
+                  <div className="flex items-center gap-3 p-5 bg-gradient-to-r from-orange-400/10 to-teal-400/10 dark:from-orange-400/20 dark:to-teal-400/20">
+                    <div className="text-3xl">{category.icon}</div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-white">
                         {category.title}
                       </h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -40,17 +38,16 @@ const Skills: React.FC = React.memo(() => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4 relative z-10">
+                  {/* Skills */}
+                  <div className="grid grid-cols-3 gap-4 p-5">
                     {category.skills.map(skill => (
                       <div
                         key={skill.name}
-                        className="flex flex-col items-center p-4 bg-white dark:bg-gray-800 rounded-xl hover:scale-110 hover:bg-gradient-to-br hover:from-orange-50 hover:to-teal-50 dark:hover:from-orange-900/30 dark:hover:to-teal-900/30 transition-transform duration-200 shadow-sm hover:shadow-lg cursor-pointer">
-                        <div className="text-4xl mb-3 transition-transform duration-200 group-hover:scale-110">
-                          {skill.icon}
-                        </div>
-                        <span className="text-sm font-semibold text-gray-800 dark:text-gray-200 text-center">
+                        className="flex flex-col items-center p-4 rounded-xl bg-gray-50 dark:bg-gray-800 hover:bg-gradient-to-br hover:from-orange-50 hover:to-teal-50 dark:hover:from-orange-900/20 dark:hover:to-teal-900/20transition-all duration-200 shadow-sm hover:shadow-md cursor-pointe">
+                        <div className="text-4xl mb-2">{skill.icon}</div>
+                        <p className="text-md font-semibold text-gray-700 dark:text-gray-200 text-center">
                           {skill.name}
-                        </span>
+                        </p>
                       </div>
                     ))}
                   </div>

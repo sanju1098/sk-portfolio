@@ -1,4 +1,42 @@
 import {
+  AISDKIcon,
+  CodeSplitIcon,
+  CSSIcon,
+  DockerIcon,
+  ESLintIcon,
+  FigmaIcon,
+  GitIcon,
+  HTMLIcon,
+  JavaScriptIcon,
+  JestIcon,
+  LazyLoadingIcon,
+  LightHouseIcon,
+  MaterialUIIcon,
+  MongoDBIcon,
+  NextJSIcon,
+  NginxIcon,
+  NpmIcon,
+  NvdaIcon,
+  PostmanIcon,
+  PrettierIcon,
+  ReactIcon,
+  ReactQueryIcon,
+  ReactTestingLibraryIcon,
+  ReduxIcon,
+  RestApiIcon,
+  SassIcon,
+  SEOIcon,
+  ShadcnUIIcon,
+  StorybookIcon,
+  StyledComponentsIcon,
+  TailwindIcon,
+  TypeScriptIcon,
+  ViteIcon,
+  WebpackIcon,
+  WebVitalsIcon,
+  YarnIcon,
+} from "@/components/icons";
+import {
   Code2,
   Globe,
   Palette,
@@ -17,35 +55,19 @@ export const skillCategories = [
     skills: [
       {
         name: "JavaScript",
-        icon: (
-          <div className="w-12 h-12 bg-yellow-400 rounded flex items-center justify-center text-black font-bold text-lg">
-            JS
-          </div>
-        ),
+        icon: <JavaScriptIcon />,
       },
       {
         name: "TypeScript",
-        icon: (
-          <div className="w-12 h-12 bg-blue-600 rounded flex items-center justify-center text-white font-bold text-lg">
-            TS
-          </div>
-        ),
+        icon: <TypeScriptIcon />,
       },
       {
         name: "HTML5",
-        icon: (
-          <div className="w-12 h-12 bg-orange-600 rounded flex items-center justify-center text-white font-bold text-sm">
-            HTML
-          </div>
-        ),
+        icon: <HTMLIcon />,
       },
       {
         name: "CSS3",
-        icon: (
-          <div className="w-12 h-12 bg-blue-500 rounded flex items-center justify-center text-white font-bold text-lg">
-            CSS
-          </div>
-        ),
+        icon: <CSSIcon />,
       },
     ],
   },
@@ -55,23 +77,15 @@ export const skillCategories = [
     icon: <Globe className="w-8 h-8 text-blue-500" />,
     description: "Modern React ecosystem and state management tools",
     skills: [
-      { name: "React", icon: "⚛️" },
-      { name: "Next.js", icon: "▲" },
+      { name: "React", icon: <ReactIcon /> },
+      { name: "Next.js", icon: <NextJSIcon /> },
       {
         name: "Redux Toolkit",
-        icon: (
-          <div className="w-12 h-12 bg-purple-600 rounded flex items-center justify-center text-white font-bold text-sm">
-            Redux
-          </div>
-        ),
+        icon: <ReduxIcon />,
       },
       {
         name: "TanStack Query",
-        icon: (
-          <div className="w-12 h-12 bg-[#fc5e65] rounded flex items-center justify-center text-white font-bold text-xs">
-            Query
-          </div>
-        ),
+        icon: <ReactQueryIcon />,
       },
     ],
   },
@@ -81,11 +95,11 @@ export const skillCategories = [
     icon: <Palette className="w-8 h-8 text-purple-500" />,
     description: "Component libraries and modern styling approaches",
     skills: [
-      { name: "Tailwind CSS", icon: "🎨" },
-      { name: "ShadCN UI", icon: "🎪" },
-      { name: "Material UI", icon: "🎯" },
-      { name: "SASS", icon: "💗" },
-      { name: "Styled Components", icon: "💅" },
+      { name: "Tailwind CSS", icon: <TailwindIcon /> },
+      { name: "ShadCN UI", icon: <ShadcnUIIcon /> },
+      { name: "Material UI", icon: <MaterialUIIcon /> },
+      { name: "SASS", icon: <SassIcon /> },
+      { name: "Styled Components", icon: <StyledComponentsIcon /> },
     ],
   },
 
@@ -102,12 +116,12 @@ export const skillCategories = [
           </div>
         ),
       },
-      { name: "NVDA Screen Reader", icon: "🎧" },
-      { name: "SEO", icon: "🔍" },
-      { name: "Lazy Loading", icon: "⚡" },
-      { name: "Code Splitting", icon: "📦" },
-      { name: "Web Vitals", icon: "📊" },
-      { name: "Lighthouse", icon: "🏮" },
+      { name: "NVDA Screen Reader", icon: <NvdaIcon /> },
+      { name: "SEO", icon: <SEOIcon /> },
+      { name: "Lazy Loading", icon: <LazyLoadingIcon /> },
+      { name: "Code Splitting", icon: <CodeSplitIcon /> },
+      { name: "Web Vitals", icon: <WebVitalsIcon /> },
+      { name: "Lighthouse", icon: <LightHouseIcon /> },
     ],
   },
 
@@ -116,10 +130,11 @@ export const skillCategories = [
     icon: <FlaskConical className="w-8 h-8 text-indigo-500" />,
     description: "Testing libraries and code quality tools",
     skills: [
-      { name: "Storybook", icon: "📖" },
-      { name: "Jest", icon: "🃏" },
-      { name: "React Testing Library", icon: "🧪" },
-      { name: "ESLint & Prettier", icon: "✨" },
+      { name: "Storybook", icon: <StorybookIcon /> },
+      { name: "Jest", icon: <JestIcon /> },
+      { name: "React Testing Library", icon: <ReactTestingLibraryIcon /> },
+      { name: "Prettier", icon: <PrettierIcon /> },
+      { name: "ESLint & Prettier", icon: <ESLintIcon /> },
     ],
   },
 
@@ -128,10 +143,10 @@ export const skillCategories = [
     icon: <TerminalSquare className="w-8 h-8 text-yellow-500" />,
     description: "Build systems, deployment, and environment setup",
     skills: [
-      { name: "Vite", icon: "⚡" },
-      { name: "Webpack", icon: "📦" },
-      { name: "Docker", icon: "🐳" },
-      { name: "NGINX", icon: "🟢" },
+      { name: "Vite", icon: <ViteIcon /> },
+      { name: "Webpack", icon: <WebpackIcon /> },
+      { name: "Docker", icon: <DockerIcon /> },
+      { name: "NGINX", icon: <NginxIcon /> },
     ],
   },
 
@@ -140,11 +155,11 @@ export const skillCategories = [
     icon: <Database className="w-8 h-8 text-teal-500" />,
     description: "Data handling, APIs, and design tools",
     skills: [
-      { name: "REST APIs", icon: "🌐" },
-      { name: "MongoDB", icon: "🍃" },
-      { name: "Postman", icon: "📮" },
-      { name: "AI SDK", icon: "🤖" },
-      { name: "Figma", icon: "🎨" },
+      { name: "REST APIs", icon: <RestApiIcon /> },
+      { name: "MongoDB", icon: <MongoDBIcon /> },
+      { name: "Postman", icon: <PostmanIcon /> },
+      { name: "AI SDK", icon: <AISDKIcon /> },
+      { name: "Figma", icon: <FigmaIcon /> },
     ],
   },
 
@@ -153,9 +168,9 @@ export const skillCategories = [
     icon: <GitBranch className="w-8 h-8 text-red-500" />,
     description: "Collaboration tools and dependency management",
     skills: [
-      { name: "Git & GitHub", icon: "🐙" },
-      { name: "NPM", icon: "📦" },
-      { name: "Yarn", icon: "🧶" },
+      { name: "Git & GitHub", icon: <GitIcon /> },
+      { name: "NPM", icon: <NpmIcon /> },
+      { name: "Yarn", icon: <YarnIcon /> },
     ],
   },
 ];

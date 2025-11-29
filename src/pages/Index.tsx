@@ -1,5 +1,10 @@
 import React from "react";
-import { achievements, primaryTechStack, services } from "@/config/home";
+import {
+  achievements,
+  primaryTechStack,
+  scrollItems,
+  services,
+} from "@/config/home";
 import {
   ArrowRight,
   Download,
@@ -7,9 +12,9 @@ import {
   CheckCircle,
   Award,
   Target,
-  // Sparkles,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import Typewriter from "typewriter-effect";
 
 const Index: React.FC = React.memo(() => {
   return (
@@ -33,17 +38,6 @@ const Index: React.FC = React.memo(() => {
 
           <div className="container mx-auto px-6 text-center relative z-10">
             <div className="max-w-5xl mx-auto">
-              {/* Status Badge */}
-              {/* <div className="mb-8 animate-fade-in">
-                <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500/10 to-teal-500/10 border border-orange-200 dark:border-orange-800 rounded-full backdrop-blur-sm">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-orange-600 dark:text-orange-400 font-medium">
-                    Available for new opportunities
-                  </span>
-                  <Sparkles className="text-orange-500" size={16} />
-                </div>
-              </div> */}
-
               {/* Main Heading with Enhanced Typography */}
               <div className="mb-8 mt-[70px] animate-fade-in">
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-4 leading-tight">
@@ -58,36 +52,57 @@ const Index: React.FC = React.memo(() => {
                 <div className="flex flex-col md:flex-row items-center justify-center gap-3 mb-6">
                   <div className="hidden md:block w-2 h-2 bg-orange-500 rounded-full"></div>
                   <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700 dark:text-gray-300">
-                    Senior Frontend Developer
+                    <Typewriter
+                      options={{
+                        strings: [
+                          "Senior Frontend Developer",
+                          "Senior UI Developer",
+                          "Application Developer",
+                        ],
+                        autoStart: true,
+                        loop: true,
+                        delay: 50,
+                      }}
+                    />
                   </h2>
                   <div className="hidden md:block w-2 h-2 bg-orange-500 rounded-full"></div>
                 </div>
+
+                {/* Status Badge */}
+                {/* <div className="animate-fade-in">
+                  <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500/10 to-teal-500/10 border border-orange-200 dark:border-orange-800 rounded-full backdrop-blur-sm">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                    <span className="text-orange-600 dark:text-orange-400 font-small">
+                      Available for new opportunities
+                    </span>
+                  </div>
+                </div> */}
               </div>
 
               {/* Enhanced Description */}
               <div className="mb-12 animate-fade-in">
-                <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed font-medium">
+                <p className="text-xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed font-medium">
                   Turning ideas into{" "}
                   <span className="bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent font-bold">
                     elegant, high-performance
                   </span>{" "}
                   web applications.
-                  <div>
-                    With{" "}
-                    <span className="text-orange-600 dark:text-orange-400 font-bold">
-                      4+ years
-                    </span>{" "}
-                    of experience, I build{" "}
-                    <span className="bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent font-bold">
-                      responsive, scalable, and user-centric
-                    </span>{" "}
-                    applications that empower businesses to grow and stand out
-                    online.
-                  </div>
                 </p>
+                <div className="text-xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed font-medium">
+                  With{" "}
+                  <span className="text-orange-600 dark:text-orange-400 font-bold">
+                    4+ years
+                  </span>{" "}
+                  of experience, I build{" "}
+                  <span className="bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent font-bold">
+                    responsive, scalable, and user-centric
+                  </span>{" "}
+                  applications that empower businesses to grow and stand out
+                  online.
+                </div>
 
                 {/* Tech Stack Pills */}
-                <div className="flex flex-wrap justify-center gap-3 mb-8">
+                <div className="flex flex-wrap justify-center gap-3 my-8">
                   {primaryTechStack.map((tech, index) => (
                     <span
                       key={index}
@@ -245,11 +260,25 @@ const Index: React.FC = React.memo(() => {
               </div>
             </div>
 
-            <div className="text-center mt-16">
+            <div className="flex justify-center items-center my-8">
+              <div className="overflow-hidden lg:w-[68%] py-6 rounded-[100px] bg-gradient-to-r from-orange-400/30 to-teal-400/10 dark:from-orange-400/20 dark:to-teal-400/20">
+                <div className="scroll-track">
+                  {[...scrollItems, ...scrollItems].map((IconComponent, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center justify-center mx-4 flex-shrink-0 text-4xl">
+                      {IconComponent}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center">
               <Link
                 to="/skills"
                 className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-orange-500 to-teal-600 text-white rounded-2xl font-bold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-                <span>View All Skills</span>
+                <span>View Skills</span>
                 <ArrowRight
                   size={24}
                   className="relative z-10 transition-transform duration-300 group-hover:translate-x-4"

@@ -1,4 +1,19 @@
 import {
+  DockerIcon,
+  JavaScriptIcon,
+  JestIcon,
+  MaterialUIIcon,
+  NextJSIcon,
+  NginxIcon,
+  NvdaIcon,
+  ReactIcon,
+  ReduxIcon,
+  ShadcnUIIcon,
+  StorybookIcon,
+  TailwindIcon,
+  TypeScriptIcon,
+} from "@/components/icons";
+import {
   Code,
   Rocket,
   ShieldCheck,
@@ -59,4 +74,20 @@ export const primaryTechStack = [
   "JavaScript",
   "Next.js",
   "Tailwind CSS",
+];
+
+export const scrollItems = [
+  <ReactIcon size={48} />,
+  <TypeScriptIcon size={48} />,
+  <NextJSIcon size={48} />,
+  <JavaScriptIcon size={48} />,
+  <ReduxIcon size={48} />,
+  <ShadcnUIIcon size={48} />,
+  <MaterialUIIcon size={48} />,
+  <TailwindIcon size={48} />,
+  <NvdaIcon size={48} />,
+  <StorybookIcon size={48} />,
+  <JestIcon size={48} />,
+  <DockerIcon size={48} />,
+  <NginxIcon size={48} />,
 ];
