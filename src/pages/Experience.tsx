@@ -22,31 +22,6 @@ const Experience: React.FC = React.memo(() => {
               </p>
             </div>
 
-            {/* <div className="flex flex-col md:flex-row md:items-start md:justify-between relative mb-8">
-              <div className="hidden md:block absolute top-5 left-0 w-full h-1 bg-gray-300 dark:bg-gray-600"></div>
-
-              {timeLineExperiences.map((exp, index) => (
-                <div
-                  key={index}
-                  className="flex-1 flex flex-col items-center md:items-center relative z-10 mb-8">
-                   Circle 
-                  <div className="w-10 h-10 flex items-center justify-center bg-orange-500 text-white rounded-full shadow-lg mb-4 relative z-10">
-                    {timeLineExperiences.length - index}
-                  </div>
-
-                  Text
-                  <div className="text-center max-w-[150px]">
-                    <span className="block text-xs font-semibold text-orange-500">
-                      {exp.years}
-                    </span>
-                    <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-                      {exp.company}
-                    </h3>
-                  </div>
-                </div>
-              ))}
-            </div> */}
-
             <div className="max-w-7xl mx-auto m-4">
               {workExperiences.map((exp, index) => (
                 <div key={index} className="relative md:pl-8 pb-12 last:pb-0">

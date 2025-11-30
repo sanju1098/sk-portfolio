@@ -3,16 +3,6 @@ import unisysLogo from "../assets/Images/UnisysLogo.jpg";
 import hsiplLogo from "../assets/Images/HSIPLLogo.jpg";
 import stcLogo from "../assets/Images/SCTLogo.jpg";
 
-export const timeLineExperiences = [
-  { years: "May 2025 – Sep 2025", company: "Russell Tobin" },
-  { years: "Jun 2023  - Apr 2025", company: "Unisys India Pvt Ltd" },
-  { years: "Oct 2021 – Jun 2023", company: "Harlalka Services India Pvt Ltd" },
-  {
-    years: "Feb 2021 – Sep 2021",
-    company: "Sixth Circle Technologies Pvt Ltd",
-  },
-];
-
 export const workExperiences = [
   {
     company:
