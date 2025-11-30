@@ -1,6 +1,7 @@
 import React from "react";
 import { projects, workProfiles } from "@/config/project";
 import { ExternalLink, Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Projects: React.FC = React.memo(() => {
   return (
@@ -72,18 +73,38 @@ const Projects: React.FC = React.memo(() => {
                           </div>
                         </div>
 
-                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed transition-colors duration-300 group-hover:text-gray-800 dark:group-hover:text-gray-200">
+                        <p
+                          className="text-gray-600 dark:text-gray-400 leading-relaxed transition-colors duration-300 group-hover:text-gray-800 dark:group-hover:text-gray-200 overflow-hidden break-words"
+                          style={{
+                            display: "-webkit-box",
+                            WebkitLineClamp: 3,
+                            WebkitBoxOrient: "vertical",
+                          }}>
                           {project.description}
                         </p>
 
                         <div className="flex flex-wrap gap-2 mt-2">
-                          {project.techStack.map(tech => (
+                          {project.techStack.slice(0, 3).map(tech => (
                             <span
                               key={tech}
                               className="px-3 py-1 bg-gradient-to-r from-orange-100 to-teal-100 dark:from-orange-900/30 dark:to-teal-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium transition-transform duration-200 hover:scale-110">
                               {tech}
                             </span>
                           ))}
+
+                          {project.techStack.length > 3 && (
+                            <span className="px-3 py-1 bg-gradient-to-r from-orange-100 to-teal-100 dark:from-orange-900/30 dark:to-teal-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium">
+                              +{project.techStack.length - 3} more
+                            </span>
+                          )}
+                          <Button
+                            size={"sm"}
+                            aria-label={`Show ${project.title} Project in details`}
+                            title={`Show ${project.title} Project in details`}
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-gradient-to-r from-orange-500 to-teal-600 text-white dark:text-gray-900 font-medium shadow-md hover:from-orange-600 hover:to-teal-500 transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-400/30">
+                            See in details
+                            <ExternalLink size={16} />
+                          </Button>
                         </div>
                       </div>
                     </div>

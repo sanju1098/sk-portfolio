@@ -26,7 +26,7 @@ export const projects = [
       "Tailwind CSS",
       "ShadCN UI",
       "AI SDK Elements",
-      "GOOGLE GENERATIVE AI",
+      "Google Generative AI",
     ],
   },
   {
@@ -54,39 +54,39 @@ export const projects = [
   //     "ShadCN UI",
   //   ],
   // },
-  {
-    image: aiStudioVerseImg,
-    title: "AI Studio Verse",
-    description:
-      "AI Studio Verse is a comprehensive AI-powered platform that combines intelligent text generation, advanced image analysis, and interactive chat capabilities. Built with a modern, responsive design, it provides creators and professionals with an intuitive workspace to harness AI tools for content creation and analysis.",
-    gitLink: "https://github.com/sanju1098/ai-studio-verse",
-    demoLink: "https://ai-studio-verse.vercel.app/",
-    techStack: [
-      "React JS",
-      "TypeScript",
-      "Tailwind CSS",
-      "Gemini 2.5 Flash AI",
-      "ShadCN UI",
-      "Vite",
-    ],
-  },
-  {
-    image: booktheshowImg,
-    title: "Book The Show",
-    description:
-      "BookTheShow is a full-featured web application that allows users to browse movies, explore theaters, and book movie tickets across multiple cities and languages. It includes Firebase authentication with support for both email/password login and Google sign-in, enabling users to securely manage their bookings with ease.",
-    gitLink: "https://github.com/sanju1098/booktheshow",
-    demoLink: "https://booktheshow.vercel.app/",
-    techStack: [
-      "React JS",
-      "Tailwind CSS",
-      "JavaScript",
-      "Firebase",
-      "Firebase Auth",
-      "ShadCN UI",
-      "Movie API",
-    ],
-  },
+  // {
+  //   image: aiStudioVerseImg,
+  //   title: "AI Studio Verse",
+  //   description:
+  //     "AI Studio Verse is a comprehensive AI-powered platform that combines intelligent text generation, advanced image analysis, and interactive chat capabilities. Built with a modern, responsive design, it provides creators and professionals with an intuitive workspace to harness AI tools for content creation and analysis.",
+  //   gitLink: "https://github.com/sanju1098/ai-studio-verse",
+  //   demoLink: "https://ai-studio-verse.vercel.app/",
+  //   techStack: [
+  //     "React JS",
+  //     "TypeScript",
+  //     "Tailwind CSS",
+  //     "Gemini 2.5 Flash AI",
+  //     "ShadCN UI",
+  //     "Vite",
+  //   ],
+  // },
+  // {
+  //   image: booktheshowImg,
+  //   title: "Book The Show",
+  //   description:
+  //     "BookTheShow is a full-featured web application that allows users to browse movies, explore theaters, and book movie tickets across multiple cities and languages. It includes Firebase authentication with support for both email/password login and Google sign-in, enabling users to securely manage their bookings with ease.",
+  //   gitLink: "https://github.com/sanju1098/booktheshow",
+  //   demoLink: "https://booktheshow.vercel.app/",
+  //   techStack: [
+  //     "React JS",
+  //     "Tailwind CSS",
+  //     "JavaScript",
+  //     "Firebase",
+  //     "Firebase Auth",
+  //     "ShadCN UI",
+  //     "Movie API",
+  //   ],
+  // },
   // {
   //   image: firebaseAppImg,
   //   title: "Firebase Authentication with Google OAuth",
@@ -95,47 +95,47 @@ export const projects = [
   //   gitLink: "https://github.com/sanju1098/Firebase-Authentication",
   //   techStack: ["React JS", "Material UI", "JavaScript", "CSS", "Firebase"],
   // },
-  {
-    image: travelgenieImg,
-    title: "TravelGenie.AI",
-    description:
-      "TravelGenie.AI is a smart travel planning platform powered by Gemini 1.5 Flash AI, designed to create personalized itineraries. By entering details like destination, dates, budget, and interests, users get optimized trip plans with curated activities. The AI enables fast itinerary generation and real-time recommendations.",
-    gitLink: "https://github.com/sanju1098/travel-genie-ai",
-    demoLink: "https://travel-genie-ai-gem.vercel.app/",
-    techStack: [
-      "React JS",
-      "TypeScript",
-      "Material UI",
-      "Tailwind CSS",
-      "Vite",
-      "Gemini 2.5 Flash AI",
-    ],
-  },
-  {
-    image: weatherImg,
-    title: "Weather Forecast",
-    description:
-      "Weather Forecast provides real-time weather updates for any searched city with a modern, user-friendly interface. It displays current weather details, including temperature, wind speed, humidity, and atmospheric pressure, along with a five-day forecast. The UI features a clean design with structured cards and clear typography for easy readability.",
-    gitLink: "https://github.com/sanju1098/Simple-Notes-App",
-    demoLink: "https://reactjs-weather-appplication.netlify.app/",
-    techStack: [
-      "React JS",
-      "TypeScript",
-      "Vite",
-      "Open Weathermap API",
-      "JavaScript",
-      "CSS",
-    ],
-  },
-  {
-    image: cryptoLoom,
-    title: "CryptoLoom",
-    description:
-      "CryptoLoom is a real-time cryptocurrency dashboard that streams live market data from Binance’s WebSocket API. It displays up-to-date price, volume, and percentage change for various cryptocurrencies in both card and table views.",
-    gitLink: "https://github.com/sanju1098/crypto-loom",
-    demoLink: "https://crypto-loom-pi.vercel.app/",
-    techStack: ["React JS", "TypeScript", "Vite", "WebSocket", "Binance API"],
-  },
+  // {
+  //   image: travelgenieImg,
+  //   title: "TravelGenie.AI",
+  //   description:
+  //     "TravelGenie.AI is a smart travel planning platform powered by Gemini 1.5 Flash AI, designed to create personalized itineraries. By entering details like destination, dates, budget, and interests, users get optimized trip plans with curated activities. The AI enables fast itinerary generation and real-time recommendations.",
+  //   gitLink: "https://github.com/sanju1098/travel-genie-ai",
+  //   demoLink: "https://travel-genie-ai-gem.vercel.app/",
+  //   techStack: [
+  //     "React JS",
+  //     "TypeScript",
+  //     "Material UI",
+  //     "Tailwind CSS",
+  //     "Vite",
+  //     "Gemini 2.5 Flash AI",
+  //   ],
+  // },
+  // {
+  //   image: weatherImg,
+  //   title: "Weather Forecast",
+  //   description:
+  //     "Weather Forecast provides real-time weather updates for any searched city with a modern, user-friendly interface. It displays current weather details, including temperature, wind speed, humidity, and atmospheric pressure, along with a five-day forecast. The UI features a clean design with structured cards and clear typography for easy readability.",
+  //   gitLink: "https://github.com/sanju1098/Simple-Notes-App",
+  //   demoLink: "https://reactjs-weather-appplication.netlify.app/",
+  //   techStack: [
+  //     "React JS",
+  //     "TypeScript",
+  //     "Vite",
+  //     "Open Weathermap API",
+  //     "JavaScript",
+  //     "CSS",
+  //   ],
+  // },
+  // {
+  //   image: cryptoLoom,
+  //   title: "CryptoLoom",
+  //   description:
+  //     "CryptoLoom is a real-time cryptocurrency dashboard that streams live market data from Binance’s WebSocket API. It displays up-to-date price, volume, and percentage change for various cryptocurrencies in both card and table views.",
+  //   gitLink: "https://github.com/sanju1098/crypto-loom",
+  //   demoLink: "https://crypto-loom-pi.vercel.app/",
+  //   techStack: ["React JS", "TypeScript", "Vite", "WebSocket", "Binance API"],
+  // },
   // {
   //   image: chatAppImg,
   //   title: "WebSocket Real-Time Chat Application",
