@@ -58,7 +58,7 @@ const Experience: React.FC = React.memo(() => {
                   {/* Timeline dot - hidden on mobile */}
                   <div className="hidden md:block absolute left-2 top-6 w-4 h-4 bg-gradient-to-r from-orange-500 to-teal-600 rounded-full border-4 border-white dark:border-gray-900"></div>
 
-                  <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 md:p-8">
+                  <div className="bg-gradient-to-br from-orange-50 to-teal-50 dark:from-orange-900/30 dark:to-teal-900/30 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 md:p-8">
                     <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:items-start md:justify-between">
                       <div className="flex items-start space-x-4 flex-1 min-w-0">
                         <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center flex-shrink-0">

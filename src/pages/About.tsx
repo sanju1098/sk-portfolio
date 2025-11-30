@@ -82,52 +82,6 @@ const About: React.FC = React.memo(() => {
                 </div>
               </div>
 
-              {/* Education Section  */}
-              <div className="container mx-auto">
-                <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 md:p-12 animate-fade-in my-4">
-                  <div className="flex items-center mb-8">
-                    <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-teal-600 rounded-full flex items-center justify-center mr-6">
-                      <School className="text-white" size={32} />
-                    </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-                      Education
-                    </h2>
-                  </div>
-
-                  <div className="space-y-2">
-                    <div className="flex items-start gap-6">
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 rounded-full flex items-center justify-center shadow-md">
-                          <GraduationCap
-                            className="text-orange-500 dark:text-teal-600 "
-                            size={28}
-                          />
-                        </div>
-                      </div>
-
-                      <div className="flex-1">
-                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
-                          <div>
-                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                              Bachelor of Engineering — Computer Science
-                            </h3>
-                            <p className="text-md text-gray-600 dark:text-gray-400 mt-1">
-                              T John Institute of Technology, Bangalore
-                            </p>
-                          </div>
-
-                          <time
-                            className="mt-1 sm:mt-0 inline-block text-sm text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full"
-                            dateTime="2016-08">
-                            Aug 2016 — Oct 2020
-                          </time>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               {/* My Work & Achievements Section */}
               <div className="container mx-auto mb-4">
                 <div className="bg-gradient-to-br from-orange-50 to-teal-50 dark:from-gray-800 dark:to-gray-700 rounded-3xl shadow-xl p-8 md:p-12 animate-fade-in">
@@ -230,6 +184,52 @@ const About: React.FC = React.memo(() => {
                           </div>
                         </div>
                       ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Education Section  */}
+              <div className="container mx-auto">
+                <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 md:p-12 animate-fade-in my-4">
+                  <div className="flex items-center mb-8">
+                    <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-teal-600 rounded-full flex items-center justify-center mr-6">
+                      <School className="text-white" size={32} />
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+                      Education
+                    </h2>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="flex items-start gap-6">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 rounded-full flex items-center justify-center shadow-md">
+                          <GraduationCap
+                            className="text-orange-500 dark:text-teal-600 "
+                            size={28}
+                          />
+                        </div>
+                      </div>
+
+                      <div className="flex-1">
+                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                          <div>
+                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                              Bachelor of Engineering — Computer Science
+                            </h3>
+                            <p className="text-md text-gray-600 dark:text-gray-400 mt-1">
+                              T John Institute of Technology, Bangalore
+                            </p>
+                          </div>
+
+                          <time
+                            className="mt-1 sm:mt-0 inline-block text-sm text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full"
+                            dateTime="2016-08">
+                            Aug 2016 — Oct 2020
+                          </time>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
