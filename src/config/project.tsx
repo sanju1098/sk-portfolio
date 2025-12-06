@@ -2,6 +2,7 @@
 // import clerkAuthAppImg from "../assets/Images/clerkAuth.png";
 // import notesImg from "../assets/Images/notes.png";
 // import formKitImg from "../assets/Images/formkit.png";
+import astraMindImg from "../assets/Images/astraMind.png";
 import chatuuuImg from "../assets/Images/chatuuuAI.png";
 import booktheshowImg from "../assets/Images/booktheshow.png";
 import cryptoLoom from "../assets/Images/cryptoLoom.png";
@@ -12,6 +13,27 @@ import bharatTradeImg from "../assets/Images/bharatTrade.png";
 import { Codesandbox, Github } from "lucide-react";
 
 export const projects = [
+  {
+    image: astraMindImg,
+    title: "AstraMind",
+    description:
+      "AstraMind is an intelligent platform that lets users chat with their documents. By combining advanced AI with seamless document processing, AstraMind transforms PDFs into interactive knowledge sources. Upload a file, ask a question, and get precise, context-aware answers backed by source citations — all inside a clean, modern UI.",
+    gitLink: "https://github.com/sanju1098/astramindai",
+    demoLink: "https://astramindai.lovable.app/",
+    techStack: [
+      "Lovable AI",
+      "Lovable Cloud",
+      "React JS",
+      "TypeScript",
+      "Tailwind CSS",
+      "ShadCN UI",
+      "React Router",
+      "TanStack Query",
+      "Framer Motion",
+      "Vector Embeddings",
+      "RAG",
+    ],
+  },
   {
     image: chatuuuImg,
     title: "Chatuuu",
@@ -26,7 +48,7 @@ export const projects = [
       "Tailwind CSS",
       "ShadCN UI",
       "AI SDK Elements",
-      "GOOGLE GENERATIVE AI",
+      "Google Generative AI",
     ],
   },
   {

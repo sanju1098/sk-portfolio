@@ -261,7 +261,10 @@ const Index: React.FC = React.memo(() => {
             </div>
 
             <div className="flex justify-center items-center my-8">
-              <div className="overflow-hidden lg:w-[68%] py-6 rounded-[100px] bg-gradient-to-r from-orange-400/30 to-teal-400/10 dark:from-orange-400/20 dark:to-teal-400/20">
+              <div
+                className="overflow-hidden lg:w-[68%] py-6 rounded-[100px]"
+                // bg-gradient-to-r from-orange-400/30 to-teal-400/10 dark:from-orange-400/20 dark:to-teal-400/20"
+              >
                 <div className="scroll-track">
                   {[...scrollItems, ...scrollItems].map((IconComponent, i) => (
                     <div
@@ -277,7 +280,8 @@ const Index: React.FC = React.memo(() => {
             <div className="text-center">
               <Link
                 to="/skills"
-                className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-orange-500 to-teal-600 text-white rounded-2xl font-bold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                className="group inline-flex items-center gap-3 px-10 py-5 
+                bg-gradient-to-r from-orange-500 to-teal-600 text-white rounded-2xl font-bold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
                 <span>View Skills</span>
                 <ArrowRight
                   size={24}

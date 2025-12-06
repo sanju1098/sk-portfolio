@@ -92,75 +92,79 @@ const Projects: React.FC = React.memo(() => {
                           }}>
                           {project.description}
                         </p>
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <Button
+                              size="sm"
+                              aria-label={`Show ${project.title} Project in details`}
+                              title={`Show ${project.title} Project in details`}
+                              type="button"
+                              className="w-[fit-content] inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-teal-600 dark:bg-teal-600 text-white font-medium shadow-md hover:bg-teal-700 dark:hover:bg-teal-700 transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-400/30">
+                              Read More
+                            </Button>
+                          </DialogTrigger>
+                          <DialogContent className="sm:max-w-1/2 bg-[#f9fafb] dark:bg-zinc-800">
+                            <DialogHeader>
+                              <DialogTitle className="text-3xl dark:text-white font-bold mb-4">
+                                {project.title}
+                              </DialogTitle>
+                              <DialogDescription className="text-md dark:text-gray-300">
+                                {project.description}
+                                <div className="flex flex-wrap gap-2 mt-2">
+                                  {project.techStack.map(tech => (
+                                    <span
+                                      key={tech}
+                                      className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium transition-transform duration-200 hover:scale-110">
+                                      {tech}
+                                    </span>
+                                  ))}
+                                </div>
+                              </DialogDescription>
+                            </DialogHeader>
+                            <DialogFooter>
+                              <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={project.demoLink}
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-teal-600 dark:bg-teal-600 text-white font-medium shadow-md hover:bg-teal-700 dark:hover:bg-teal-700 transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-400/30"
+                                title="View live preview">
+                                Live Preview
+                                <ExternalLink size={14} />
+                              </a>
+                              <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={project.gitLink}
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-teal-600 dark:bg-teal-600 text-white font-medium shadow-md hover:bg-teal-700 dark:hover:bg-teal-700 transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-400/30"
+                                title="View live preview">
+                                GitHub
+                                <Github size={14} />
+                              </a>
+                              <DialogClose asChild>
+                                <Button
+                                  variant="outline"
+                                  className="dark:text-white">
+                                  Close
+                                </Button>
+                              </DialogClose>
+                            </DialogFooter>
+                          </DialogContent>
+                        </Dialog>
 
                         <div className="flex flex-wrap gap-2 mt-2">
-                          {project.techStack.slice(0, 3).map(tech => (
+                          {project.techStack.slice(0, 4).map(tech => (
                             <span
                               key={tech}
-                              className="px-3 py-1 bg-gradient-to-r from-orange-100 to-teal-100 dark:from-orange-900/30 dark:to-teal-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium transition-transform duration-200 hover:scale-110">
+                              className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium transition-transform duration-200 hover:scale-110">
                               {tech}
                             </span>
                           ))}
 
                           {project.techStack.length > 3 && (
-                            <span className="px-3 py-1 bg-gradient-to-r from-orange-100 to-teal-100 dark:from-orange-900/30 dark:to-teal-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium">
+                            <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium transition-transform duration-200 hover:scale-110">
                               +{project.techStack.length - 3} more
                             </span>
                           )}
-                          <Dialog>
-                            <DialogTrigger asChild>
-                              <Button
-                                size={"sm"}
-                                aria-label={`Show ${project.title} Project in details`}
-                                title={`Show ${project.title} Project in details`}
-                                className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-gradient-to-r from-orange-500 to-teal-600 text-white dark:text-gray-900 font-medium shadow-md hover:from-orange-600 hover:to-teal-500 transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-400/30">
-                                Read More
-                                <ExternalLink size={16} />
-                              </Button>
-                            </DialogTrigger>
-                            <DialogContent className="sm:max-w-1/2 bg-[#f9fafb] dark:bg-zinc-800">
-                              <DialogHeader>
-                                <DialogTitle className="text-3xl">
-                                  {project.title}
-                                </DialogTitle>
-                                <DialogDescription className="text-md">
-                                  {project.description}
-                                  <div className="flex flex-wrap gap-2 mt-2">
-                                    {project.techStack.map(tech => (
-                                      <span
-                                        key={tech}
-                                        className="px-3 py-1 bg-gradient-to-r from-orange-100 to-teal-100 dark:from-orange-900/30 dark:to-teal-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium transition-transform duration-200 hover:scale-110">
-                                        {tech}
-                                      </span>
-                                    ))}
-                                  </div>
-                                </DialogDescription>
-                              </DialogHeader>
-                              <DialogFooter>
-                                <a
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  href={project.demoLink}
-                                  className="inline-flex items-center gap-1 px-3 py-1 rounded-md bg-gradient-to-r from-orange-500 to-teal-600 text-white dark:text-gray-900 text-sm font-medium shadow-md hover:from-orange-600 hover:to-teal-500 transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-400/30"
-                                  title="View live preview">
-                                  Live Preview
-                                  <ExternalLink size={14} />
-                                </a>
-                                <a
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  href={project.gitLink}
-                                  className="inline-flex items-center gap-1 px-3 py-1 rounded-md bg-gradient-to-r from-orange-500 to-teal-600 text-white dark:text-gray-900 text-sm font-medium shadow-md hover:from-orange-600 hover:to-teal-500 transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-400/30"
-                                  title="View live preview">
-                                  GitHub
-                                  <Github size={14} />
-                                </a>
-                                <DialogClose asChild>
-                                  <Button variant="outline">Close</Button>
-                                </DialogClose>
-                              </DialogFooter>
-                            </DialogContent>
-                          </Dialog>
                         </div>
                       </div>
                     </div>
