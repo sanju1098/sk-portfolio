@@ -1,6 +1,6 @@
-import { workAchievements } from "@/config/about";
+import { certificates, workAchievements } from "@/config/about";
 import {
-  Code,
+  FileBadge,
   FileSymlink,
   Github,
   GraduationCap,
@@ -8,6 +8,7 @@ import {
   Linkedin,
   Mail,
   School,
+  Trophy,
   User,
 } from "lucide-react";
 import React from "react";
@@ -82,15 +83,15 @@ const About: React.FC = React.memo(() => {
                 </div>
               </div>
 
-              {/* My Work & Achievements Section */}
+              {/* Professional Achievements Section */}
               <div className="container mx-auto mb-4">
                 <div className="bg-gradient-to-br from-orange-50 to-teal-50 dark:from-gray-800 dark:to-gray-700 rounded-3xl shadow-xl p-8 md:p-12 animate-fade-in">
-                  <div className="flex items-center mb-8">
+                  <div className="flex items-center">
                     <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-teal-600 rounded-full flex items-center justify-center mr-6">
-                      <Code className="text-white" size={32} />
+                      <Trophy className="text-white" size={32} />
                     </div>
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-                      My Achievements
+                      Professional Achievements
                     </h2>
                   </div>
                   <div className="flex flex-wrap gap-8 justify-center">
@@ -180,6 +181,59 @@ const About: React.FC = React.memo(() => {
                                   <Link2 size={18} strokeWidth={2} />
                                 </a>
                               )}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Certifications & Awards Section */}
+              <div className="container mx-auto mb-4">
+                <div className="bg-gradient-to-br from-orange-50 to-teal-50 dark:from-gray-800 dark:to-gray-700 rounded-3xl shadow-xl p-8 md:p-12 animate-fade-in">
+                  <div className="flex items-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-teal-600 rounded-full flex items-center justify-center mr-6">
+                      <FileBadge className="text-white" size={32} />
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+                      Certifications & Awards
+                    </h2>
+                  </div>
+                  <div className="flex flex-wrap gap-8 justify-center">
+                    {[...certificates]
+                      .sort((a, b) => {
+                        const da = new Date(a.issueDate).getTime();
+                        const db = new Date(b.issueDate).getTime();
+                        if (db !== da) return db - da; // recent first
+                        return a.name.localeCompare(b.name);
+                      })
+                      .map((achievement, index) => (
+                        <div
+                          className="flex flex-col items-center justify-between min-w-[180px] max-w-[200px] px-2 py-4 bg-white dark:bg-gray-900 rounded-xl shadow-md"
+                          key={index}>
+                          <div className="flex flex-col items-center w-full">
+                            <img
+                              loading="lazy"
+                              src={achievement.badgeImage}
+                              alt={achievement.name}
+                              className="object-contain w-36 h-24"
+                            />
+                            <div className="text-center w-full">
+                              <div
+                                className="text-gray-700 dark:text-gray-300 text-md mt-1 truncate"
+                                title={achievement.name}>
+                                {achievement.name}
+                              </div>
+                              <a
+                                href={achievement.redirectLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-teal-500 text-sm hover:underline flex items-center justify-center gap-2 font-semibold mt-1"
+                                aria-label={achievement.buttonName}>
+                                {achievement.buttonName}
+                                <Link2 size={18} strokeWidth={2} />
+                              </a>
                             </div>
                           </div>
                         </div>

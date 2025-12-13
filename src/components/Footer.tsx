@@ -1,42 +1,45 @@
-import { Heart, Globe, Github, Linkedin, Mail, FileText } from "lucide-react";
+import {
+  Heart,
+  // Globe, Github, Linkedin, Mail, FileText
+} from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = [
-    {
-      name: "Portfolio",
-      link: "https://sanjay-dev-beta.vercel.app/",
-      icon: <Globe className="h-6 w-6" />,
-    },
-    {
-      name: "GitHub Profile",
-      link: "https://github.com/sanju1098",
-      icon: <Github className="h-6 w-6" />,
-    },
-    {
-      name: "LinkedIn Profile",
-      link: "https://www.linkedin.com/in/sanjay-kumar-s-r/",
-      icon: <Linkedin className="h-6 w-6" />,
-    },
-    {
-      name: "Medium Profile",
-      link: "https://medium.com/@sanjay--kumar",
-      icon: <FileText className="h-6 w-6" />,
-    },
-    {
-      name: "Email",
-      link: "mailto:sanjay.kumar981110@gmail.com",
-      icon: <Mail className="h-6 w-6" />,
-    },
-  ];
+  // const footerLinks = [
+  //   {
+  //     name: "Portfolio",
+  //     link: "https://sanjay-dev-beta.vercel.app/",
+  //     icon: <Globe className="h-6 w-6" />,
+  //   },
+  //   {
+  //     name: "GitHub Profile",
+  //     link: "https://github.com/sanju1098",
+  //     icon: <Github className="h-6 w-6" />,
+  //   },
+  //   {
+  //     name: "LinkedIn Profile",
+  //     link: "https://www.linkedin.com/in/sanjay-kumar-s-r/",
+  //     icon: <Linkedin className="h-6 w-6" />,
+  //   },
+  //   {
+  //     name: "Medium Profile",
+  //     link: "https://medium.com/@sanjay--kumar",
+  //     icon: <FileText className="h-6 w-6" />,
+  //   },
+  //   {
+  //     name: "Email",
+  //     link: "mailto:sanjay.kumar981110@gmail.com",
+  //     icon: <Mail className="h-6 w-6" />,
+  //   },
+  // ];
 
   return (
-    <footer className="bg-gray-950 dark:bg-black text-white py-10">
+    <footer className="bg-gray-950 dark:bg-black text-white py-4">
       <div className="container mx-auto px-6">
         <div className="text-center">
           {/* Social Links */}
-          <div className="flex justify-center items-center gap-6 mb-8">
+          {/* <div className="flex justify-center items-center gap-6 mb-8">
             {footerLinks.map((links: any, index: number) => (
               <a
                 key={index}
@@ -51,9 +54,9 @@ const Footer = () => {
                 </span>
               </a>
             ))}
-          </div>
+          </div> */}
 
-          <div className="border-t border-gray-700 pt-8">
+          <div className="border-gray-700">
             <p className="text-gray-100 flex items-center justify-center gap-2 mb-2">
               Made with <Heart size={16} className="text-red-500" /> using React
               & Tailwind CSS

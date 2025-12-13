@@ -17,6 +17,7 @@ import {
   NginxIcon,
   NpmIcon,
   NvdaIcon,
+  PnpmIcon,
   PostmanIcon,
   PrettierIcon,
   ReactIcon,
@@ -169,8 +170,9 @@ export const skillCategories = [
     description: "Collaboration tools and dependency management",
     skills: [
       { name: "Git & GitHub", icon: <GitIcon /> },
-      { name: "NPM", icon: <NpmIcon /> },
+      { name: "Npm", icon: <NpmIcon /> },
       { name: "Yarn", icon: <YarnIcon /> },
+      { name: "Pnpm", icon: <PnpmIcon /> },
     ],
   },
 ];

@@ -27,6 +27,7 @@ import {
   SiVite,
   SiWebpack,
   SiYarn,
+  SiPnpm,
 } from "react-icons/si";
 import { FaAssistiveListeningSystems, FaSass } from "react-icons/fa";
 import { CgLoadbarDoc } from "react-icons/cg";
@@ -148,4 +149,7 @@ export const NpmIcon = (props: any) => (
 );
 export const YarnIcon = (props: any) => (
   <SiYarn size={35} color="#2C8EBB" {...props} />
+);
+export const PnpmIcon = (props: any) => (
+  <SiPnpm size={35} color="#F69220" {...props} />
 );
