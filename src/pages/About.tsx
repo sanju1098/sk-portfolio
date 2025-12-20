@@ -50,12 +50,14 @@ const About: React.FC = React.memo(() => {
                     <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-teal-600 rounded-full flex items-center justify-center mr-6">
                       <User className="text-white" size={32} />
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+                    <h2
+                      tabIndex={0}
+                      className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
                       About Me
                     </h2>
                   </div>
 
-                  <div className="space-y-2">
+                  <div tabIndex={0} className="space-y-2">
                     <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
                       I'm a passionate <strong>Frontend Developer</strong> with
                       over <strong>4 years</strong> of experience crafting
@@ -90,7 +92,9 @@ const About: React.FC = React.memo(() => {
                     <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-teal-600 rounded-full flex items-center justify-center mr-6">
                       <Trophy className="text-white" size={32} />
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+                    <h2
+                      tabIndex={0}
+                      className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
                       Professional Achievements
                     </h2>
                   </div>
@@ -115,6 +119,7 @@ const About: React.FC = React.memo(() => {
                             />
                             <div className="text-center w-full">
                               <div
+                                tabIndex={0}
                                 className="text-gray-700 dark:text-gray-300 text-md mt-1 truncate"
                                 title={achievement.name}>
                                 {achievement.name}
@@ -196,7 +201,9 @@ const About: React.FC = React.memo(() => {
                     <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-teal-600 rounded-full flex items-center justify-center mr-6">
                       <FileBadge className="text-white" size={32} />
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+                    <h2
+                      tabIndex={0}
+                      className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
                       Certifications & Awards
                     </h2>
                   </div>
@@ -221,6 +228,7 @@ const About: React.FC = React.memo(() => {
                             />
                             <div className="text-center w-full">
                               <div
+                                tabIndex={0}
                                 className="text-gray-700 dark:text-gray-300 text-md mt-1 truncate"
                                 title={achievement.name}>
                                 {achievement.name}
@@ -249,7 +257,9 @@ const About: React.FC = React.memo(() => {
                     <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-teal-600 rounded-full flex items-center justify-center mr-6">
                       <School className="text-white" size={32} />
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+                    <h2
+                      tabIndex={0}
+                      className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
                       Education
                     </h2>
                   </div>
@@ -267,10 +277,10 @@ const About: React.FC = React.memo(() => {
 
                       <div className="flex-1">
                         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
-                          <div>
-                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                          <div tabIndex={0}>
+                            <p className="text-xl font-semibold text-gray-900 dark:text-white">
                               Bachelor of Engineering — Computer Science
-                            </h3>
+                            </p>
                             <p className="text-md text-gray-600 dark:text-gray-400 mt-1">
                               T John Institute of Technology, Bangalore
                             </p>
@@ -295,10 +305,14 @@ const About: React.FC = React.memo(() => {
                     {/* Contact Information */}
                     <div className="space-y-8 animate-fade-in">
                       <div>
-                        <h3 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
+                        <p
+                          tabIndex={0}
+                          className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
                           Get In Touch
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed text-lg">
+                        </p>
+                        <p
+                          tabIndex={0}
+                          className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed text-lg">
                           I'm always open to discussing new opportunities,
                           interesting projects, or just having a chat about the
                           latest in frontend development. Feel free to reach out
@@ -314,11 +328,12 @@ const About: React.FC = React.memo(() => {
                               size={30}
                             />
                           </div>
-                          <div>
-                            <h4 className="font-semibold text-gray-900 dark:text-white text-lg">
+                          <div tabIndex={0}>
+                            <p className="font-semibold text-gray-900 dark:text-white text-lg">
                               Email
-                            </h4>
+                            </p>
                             <a
+                              tabIndex={-1}
                               href="mailto:sanjay.kumar981110@gmail.com"
                               className="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors">
                               Reach me directly at{" "}
@@ -334,11 +349,12 @@ const About: React.FC = React.memo(() => {
                               size={30}
                             />
                           </div>
-                          <div>
-                            <h4 className="font-semibold text-gray-900 dark:text-white text-lg">
+                          <div tabIndex={0}>
+                            <p className="font-semibold text-gray-900 dark:text-white text-lg">
                               LinkedIn
-                            </h4>
+                            </p>
                             <a
+                              tabIndex={-1}
                               href="https://www.linkedin.com/in/sanjay-kumar-s-r/"
                               className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors">
                               Connect with me on LinkedIn for professional
@@ -355,11 +371,12 @@ const About: React.FC = React.memo(() => {
                               size={30}
                             />
                           </div>
-                          <div>
-                            <h4 className="font-semibold text-gray-900 dark:text-white text-lg">
+                          <div tabIndex={0}>
+                            <p className="font-semibold text-gray-900 dark:text-white text-lg">
                               Github
-                            </h4>
+                            </p>
                             <a
+                              tabIndex={-1}
                               href="https://github.com/sanju1098"
                               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
                               Explore my projects and contributions on{" "}

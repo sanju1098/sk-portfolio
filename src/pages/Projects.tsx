@@ -20,7 +20,10 @@ const Projects: React.FC = React.memo(() => {
         <section id="projects" className="py-10 bg-gray-50 dark:bg-gray-800/50">
           <div className="container mx-auto px-6">
             <div className="animate-fade-in text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1
+                className="text-4xl md:text-5xl font-bold mb-6"
+                tabIndex={0}
+                aria-label="Featured Projects">
                 <span className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">
                   Featured Projects
                 </span>
@@ -48,7 +51,7 @@ const Projects: React.FC = React.memo(() => {
                         <img
                           src={project.image}
                           alt={project.title}
-                          loading="lazy"
+                          loading="eager"
                           className="w-full h-auto rounded-xl object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                       </div>
@@ -56,9 +59,12 @@ const Projects: React.FC = React.memo(() => {
                       {/* Project Content */}
                       <div className="p-6 flex flex-col flex-1">
                         <div className="flex items-start justify-between">
-                          <h3 className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-300 group-hover:text-orange-600">
+                          <p
+                            tabIndex={0}
+                            aria-label={project.title}
+                            className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-300 group-hover:text-orange-600">
                             {project.title}
-                          </h3>
+                          </p>
                           <div className="flex space-x-2">
                             {project.gitLink && (
                               <a
@@ -66,7 +72,7 @@ const Projects: React.FC = React.memo(() => {
                                 rel="noopener noreferrer"
                                 href={project.gitLink}
                                 className="p-2 text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-500 transition-colors duration-200 transform hover:scale-125"
-                                title="View source code on gitHub">
+                                title={`View source code on GitHub for ${project.title}`}>
                                 <Github size={20} />
                               </a>
                             )}
@@ -76,7 +82,7 @@ const Projects: React.FC = React.memo(() => {
                                 rel="noopener noreferrer"
                                 href={project.demoLink}
                                 className="p-2 text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-500 transition-colors duration-200 transform hover:scale-125"
-                                title="View live preview">
+                                title={`View live preview for ${project.title}`}>
                                 <ExternalLink size={20} />
                               </a>
                             )}

@@ -11,7 +11,7 @@ const Experience: React.FC = React.memo(() => {
           className="py-10 bg-gray-50 dark:bg-gray-800/50">
           <div className="container mx-auto px-6">
             <div className="animate-fade-in text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 tabIndex={0} className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">
                   Professional Experience
                 </span>
@@ -44,17 +44,21 @@ const Experience: React.FC = React.memo(() => {
                           />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2 break-words">
+                          <h3
+                            tabIndex={0}
+                            className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2 break-words">
                             {exp.company}
                           </h3>
-                          <h4 className="text-lg md:text-xl font-semibold text-orange-600 dark:text-orange-400 mb-3 break-words">
+                          <p
+                            tabIndex={0}
+                            className="text-lg md:text-xl font-semibold text-orange-600 dark:text-orange-400 mb-3 break-words">
                             {exp.role}
                             {/* {exp.duration && (
                               <span className="hidden md:inline-flex items-center text-sm bg-gradient-to-r from-orange-100 to-teal-50 dark:from-orange-900/40 dark:to-teal-900/30 text-gray-700 dark:text-gray-200 mx-2 px-3 py-1 rounded-full shadow-sm">
                                 {exp.duration}
                               </span>
                             )} */}
-                          </h4>
+                          </p>
                         </div>
                       </div>
                       <div className="flex flex-col md:items-end space-y-2 md:flex-shrink-0 md:ml-4">

@@ -66,6 +66,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link
             to="/"
+            aria-label="Sanjay Kumar"
             className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">
             {"<SK />"}
           </Link>

@@ -8,7 +8,7 @@ const Skills: React.FC = React.memo(() => {
         <section id="skills" className="py-10 bg-gray-50 dark:bg-gray-800/50">
           <div className="container mx-auto px-6">
             <div className="animate-fade-in text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 tabIndex={0} className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">
                   Technical Skills
                 </span>
@@ -29,7 +29,9 @@ const Skills: React.FC = React.memo(() => {
                   <div className="flex items-center gap-3 p-5 bg-gradient-to-r from-orange-400/10 to-teal-400/10 dark:from-orange-400/20 dark:to-teal-400/20">
                     <div className="text-3xl">{category.icon}</div>
                     <div>
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                      <h3
+                        tabIndex={0}
+                        className="text-lg font-bold text-gray-900 dark:text-white">
                         {category.title}
                       </h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -42,6 +44,7 @@ const Skills: React.FC = React.memo(() => {
                   <div className="grid grid-cols-3 gap-4 p-5">
                     {category.skills.map(skill => (
                       <div
+                        tabIndex={0}
                         key={skill.name}
                         className="flex flex-col items-center p-4 rounded-xl bg-gray-50 dark:bg-gray-800 hover:bg-gradient-to-br hover:from-orange-50 hover:to-teal-50 dark:hover:from-orange-900/20 dark:hover:to-teal-900/20 transition-all duration-200 shadow-sm hover:shadow-md cursor-pointe">
                         <div className="text-4xl mb-2">{skill.icon}</div>

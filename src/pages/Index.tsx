@@ -40,14 +40,16 @@ const Index: React.FC = React.memo(() => {
             <div className="max-w-5xl mx-auto">
               {/* Main Heading with Enhanced Typography */}
               <div className="mb-8 mt-[70px] animate-fade-in">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-4 leading-tight">
+                <p
+                  className="text-4xl md:text-6xl lg:text-7xl font-black mb-4 leading-tight"
+                  tabIndex={0}>
                   <span className="block text-gray-800 dark:text-white mb-2">
                     I'm
                   </span>
                   <span className="block bg-gradient-to-r from-orange-500 via-orange-600 to-teal-600 bg-clip-text text-transparent">
                     Sanjay Kumar S R
                   </span>
-                </h1>
+                </p>
 
                 <div className="flex flex-col md:flex-row items-center justify-center gap-3 mb-6">
                   <div className="hidden md:block w-2 h-2 bg-orange-500 rounded-full"></div>
@@ -116,6 +118,7 @@ const Index: React.FC = React.memo(() => {
               {/* Enhanced Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 animate-fade-in">
                 <Link
+                  role="button"
                   to="/experience"
                   className="group relative px-10 py-5 bg-gradient-to-r from-orange-500 to-teal-600 text-white rounded-2xl font-bold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-3 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -127,6 +130,7 @@ const Index: React.FC = React.memo(() => {
                 </Link>
 
                 <a
+                  role="button"
                   href="/assets/Resume.pdf"
                   download="SanjayKumar-Resume"
                   target="_blank"
@@ -140,6 +144,8 @@ const Index: React.FC = React.memo(() => {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 animate-fade-in">
                 {achievements.map((achievement, index) => (
                   <div
+                    tabIndex={0}
+                    aria-label={achievement}
                     key={index}
                     className="group bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                     <div className="flex items-start gap-3">
@@ -161,7 +167,9 @@ const Index: React.FC = React.memo(() => {
         <section className="py-12 bg-gray-50 dark:bg-gray-800/50">
           <div className="container mx-auto px-6">
             <div className="text-center mb-10">
-              <h2 className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+              <h2
+                tabIndex={0}
+                className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                 What I Do
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
@@ -181,9 +189,12 @@ const Index: React.FC = React.memo(() => {
                     <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-teal-600 rounded-lg flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
                       {service.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
+                    <p
+                      aria-label={service.title}
+                      tabIndex={0}
+                      className="text-xl font-bold text-gray-800 dark:text-white mb-4">
                       {service.title}
-                    </h3>
+                    </p>
                     <p className="text-gray-600 dark:text-gray-400">
                       {service.description}
                     </p>
@@ -198,7 +209,9 @@ const Index: React.FC = React.memo(() => {
         <section className="py-12 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-6">
             <div className="text-center mb-10">
-              <h2 className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+              <h2
+                tabIndex={0}
+                className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
                 My Expertise
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
@@ -212,9 +225,11 @@ const Index: React.FC = React.memo(() => {
                 <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
                   <Award className="text-white animate-bounce" size={36} />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-600 transition-colors duration-300">
+                <p
+                  tabIndex={0}
+                  className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-600 transition-colors duration-300">
                   Modern Frameworks
-                </h3>
+                </p>
                 <p className="text-gray-600 dark:text-gray-400 text-lg">
                   React.js, Next.js, TypeScript
                 </p>
@@ -224,9 +239,11 @@ const Index: React.FC = React.memo(() => {
                 <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
                   <Target className="text-white animate-bounce" size={36} />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-green-600 dark:group-hover:text-green-600 transition-colors duration-300">
+                <p
+                  tabIndex={0}
+                  className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-green-600 dark:group-hover:text-green-600 transition-colors duration-300">
                   UI/UX Design
-                </h3>
+                </p>
                 <p className="text-gray-600 dark:text-gray-400 text-lg">
                   Component-based architecture
                 </p>
@@ -236,9 +253,11 @@ const Index: React.FC = React.memo(() => {
                 <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
                   <Rocket className="text-white animate-bounce" size={36} />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-600 transition-colors duration-300">
+                <p
+                  tabIndex={0}
+                  className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-600 transition-colors duration-300">
                   Integration
-                </h3>
+                </p>
                 <p className="text-gray-600 dark:text-gray-400 text-lg">
                   REST API, State Management
                 </p>
@@ -251,9 +270,11 @@ const Index: React.FC = React.memo(() => {
                     size={36}
                   />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-600 transition-colors duration-300">
+                <p
+                  tabIndex={0}
+                  className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-600 transition-colors duration-300">
                   Testing & Deployment
-                </h3>
+                </p>
                 <p className="text-gray-600 dark:text-gray-400 text-lg">
                   Unit Testing, CI/CD, Docker, Nginx
                 </p>
@@ -279,6 +300,7 @@ const Index: React.FC = React.memo(() => {
 
             <div className="text-center">
               <Link
+                role="button"
                 to="/skills"
                 className="group inline-flex items-center gap-3 p-4
                 bg-gradient-to-r from-orange-500 to-teal-600 text-white rounded-2xl font-semibold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">

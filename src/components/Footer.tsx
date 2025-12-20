@@ -57,11 +57,13 @@ const Footer = () => {
           </div> */}
 
           <div className="border-gray-700">
-            <p className="text-gray-100 flex items-center justify-center gap-2 mb-2">
+            <p
+              tabIndex={0}
+              className="text-gray-100 flex items-center justify-center gap-2 mb-2">
               Made with <Heart size={16} className="text-red-500" /> using React
               & Tailwind CSS
             </p>
-            <p className="text-gray-200 text-md">
+            <p className="text-gray-200 text-md" tabIndex={0}>
               Copyright © {currentYear}{" "}
               <span className="font-semibold bg-gradient-to-r from-orange-600 to-teal-400 bg-clip-text text-transparent">
                 Sanjay Kumar S R
