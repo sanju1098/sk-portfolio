@@ -10,6 +10,7 @@ import weatherImg from "../assets/Images/weather.png";
 import travelgenieImg from "../assets/Images/travelGenie.png";
 import aiStudioVerseImg from "../assets/Images/aiStudioVerse.png";
 import bharatTradeImg from "../assets/Images/bharatTrade.png";
+import npmImg from "../assets/Images/sleep-with-delay-npm.png";
 import { Codesandbox, Github } from "lucide-react";
 
 export const projects = [
@@ -33,6 +34,15 @@ export const projects = [
       "Vector Embeddings",
       "RAG",
     ],
+  },
+  {
+    image: npmImg,
+    title: "sleep-with-delay - NPM Package",
+    description:
+      "A utility package for delaying function execution and pausing execution in JavaScript/TypeScript. This package provides simple and effective methods to introduce delays in your code, making it useful for testing, animations, or any scenario where controlled timing is required.",
+    gitLink: "https://github.com/sanju1098/sleep-with-delay",
+    demoLink: "https://www.npmjs.com/package/sleep-with-delay",
+    techStack: ["React JS", "TypeScript", "Javascript", "NPM Package"],
   },
   {
     image: chatuuuImg,
