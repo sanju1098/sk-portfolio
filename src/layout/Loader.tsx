@@ -21,7 +21,7 @@ const Loader = () => {
             Loading
           </h2>
           <p className="text-gray-600 dark:text-gray-400">
-            Please wait while we prepare your experience...
+            Please wait a moment...
           </p>
         </div>
 

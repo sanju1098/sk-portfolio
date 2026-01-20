@@ -26,14 +26,14 @@ const Index: React.FC = React.memo(() => {
           className=" flex items-center justify-center relative overflow-hidden">
           {/* Enhanced Background */}
           <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(251,146,60,0.15),transparent_50%)]"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,rgba(20,184,166,0.15),transparent_50%)]"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(251,146,60,0.15),transparent_50%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,rgba(20,184,166,0.15),transparent_50%)]" />
 
             {/* Animated Background Elements */}
-            <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-            <div className="absolute bottom-32 right-16 w-40 h-40 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full blur-3xl opacity-20 animate-pulse delay-1000"></div>
-            <div className="absolute top-1/3 right-20 w-24 h-24 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full blur-2xl opacity-20 animate-pulse delay-500"></div>
+            <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full blur-3xl opacity-20 animate-pulse" />
+            <div className="absolute bottom-32 right-16 w-40 h-40 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full blur-3xl opacity-20 animate-pulse delay-1000" />
+            <div className="absolute top-1/3 right-20 w-24 h-24 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full blur-2xl opacity-20 animate-pulse delay-500" />
           </div>
 
           <div className="container mx-auto px-6 text-center relative z-10">
@@ -52,7 +52,7 @@ const Index: React.FC = React.memo(() => {
                 </p>
 
                 <div className="flex flex-col md:flex-row items-center justify-center gap-3 mb-6">
-                  <div className="hidden md:block w-2 h-2 bg-orange-500 rounded-full"></div>
+                  <div className="hidden md:block w-2 h-2 bg-orange-500 rounded-full" />
                   <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700 dark:text-gray-300">
                     <Typewriter
                       options={{
@@ -67,7 +67,7 @@ const Index: React.FC = React.memo(() => {
                       }}
                     />
                   </h2>
-                  <div className="hidden md:block w-2 h-2 bg-orange-500 rounded-full"></div>
+                  <div className="hidden md:block w-2 h-2 bg-orange-500 rounded-full" />
                 </div>
 
                 {/* Status Badge */}
@@ -121,7 +121,7 @@ const Index: React.FC = React.memo(() => {
                   role="button"
                   to="/experience"
                   className="group relative px-10 py-5 bg-gradient-to-r from-orange-500 to-teal-600 text-white rounded-2xl font-bold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-3 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <span className="relative z-10">View My Experience</span>
                   <ArrowRight
                     size={24}
@@ -141,7 +141,7 @@ const Index: React.FC = React.memo(() => {
               </div>
 
               {/* Enhanced Achievements Grid */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 animate-fade-in">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 animate-fade-in">
                 {achievements.map((achievement, index) => (
                   <div
                     tabIndex={0}
@@ -184,7 +184,7 @@ const Index: React.FC = React.memo(() => {
                 <div
                   key={index}
                   className="relative group p-8 bg-white dark:bg-gray-900 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                  <div className="absolute inset-0 pointer-events-none"></div>
+                  <div className="absolute inset-0 pointer-events-none" />
                   <div className="relative z-10 flex flex-col items-center text-center">
                     <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-teal-600 rounded-lg flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
                       {service.icon}
@@ -279,37 +279,6 @@ const Index: React.FC = React.memo(() => {
                   Unit Testing, CI/CD, Docker, Nginx
                 </p>
               </div>
-            </div>
-
-            <div className="flex justify-center items-center my-8">
-              <div
-                className="overflow-hidden lg:w-[68%] py-6 rounded-[100px]"
-                // bg-gradient-to-r from-orange-400/30 to-teal-400/10 dark:from-orange-400/20 dark:to-teal-400/20"
-              >
-                <div className="scroll-track">
-                  {[...scrollItems, ...scrollItems].map((IconComponent, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center justify-center mx-4 flex-shrink-0 text-4xl">
-                      {IconComponent}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <Link
-                role="button"
-                to="/skills"
-                className="group inline-flex items-center gap-3 p-4
-                bg-gradient-to-r from-orange-500 to-teal-600 text-white rounded-2xl font-semibold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-                <span>View Skills</span>
-                <ArrowRight
-                  size={24}
-                  className="relative z-10 transition-transform duration-300 group-hover:translate-x-4"
-                />
-              </Link>
             </div>
           </div>
         </section>
