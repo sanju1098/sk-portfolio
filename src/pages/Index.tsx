@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  achievements,
-  primaryTechStack,
-  scrollItems,
-  services,
-} from "@/config/home";
+import { achievements, primaryTechStack, services } from "@/config/home";
 import {
   ArrowRight,
   Download,
