@@ -1,13 +1,8 @@
-import russellLogo from "../assets/Images/RTLogo.jpg";
-import unisysLogo from "../assets/Images/UnisysLogo.jpg";
-import hsiplLogo from "../assets/Images/HSIPLLogo.jpg";
-import stcLogo from "../assets/Images/SCTLogo.jpg";
-
 export const workExperiences = [
   {
     company:
       "Russell Tobin Associates Staffing Solutions (Client: Morgan Stanley)",
-    logo: russellLogo,
+    logo: "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932884/RTLogo_zwlsuh.jpg",
     role: "Senior Application Development Engineer",
     timeline: "May 2025  - Sep 2025",
     duration: "5m",
@@ -25,7 +20,7 @@ export const workExperiences = [
   },
   {
     company: "Unisys India Private Limited",
-    logo: unisysLogo,
+    logo: "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932899/UnisysLogo_qxx1ts.jpg",
     role: "Application Development Engineer",
     timeline: "June 2023  - April 2025",
     duration: "1y 11m",
@@ -60,7 +55,7 @@ export const workExperiences = [
   },
   {
     company: "Harlalka Services India Private Limited",
-    logo: hsiplLogo,
+    logo: "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932880/HSIPLLogo_rnxcps.jpg",
     role: "Frontend Developer",
     timeline: "October 2021 – June 2023",
     duration: "1y 09m",
@@ -79,7 +74,7 @@ export const workExperiences = [
   },
   {
     company: "Sixth Circle Technologies Pvt Ltd",
-    logo: stcLogo,
+    logo: "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932887/SCTLogo_om1txh.jpg",
     role: "Intern Web Developer",
     timeline: "February 2021 – September 2021",
     location: "Bangalore, Karnataka",

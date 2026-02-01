@@ -1,21 +1,9 @@
-// import firebaseAppImg from "../assets/Images/firebase.png";
-// import clerkAuthAppImg from "../assets/Images/clerkAuth.png";
-// import notesImg from "../assets/Images/notes.png";
-// import formKitImg from "../assets/Images/formkit.png";
-import astraMindImg from "../assets/Images/astraMind.png";
-import chatuuuImg from "../assets/Images/chatuuuAI.png";
-import booktheshowImg from "../assets/Images/booktheshow.png";
-import cryptoLoom from "../assets/Images/cryptoLoom.png";
-import weatherImg from "../assets/Images/weather.png";
-import travelgenieImg from "../assets/Images/travelGenie.png";
-import aiStudioVerseImg from "../assets/Images/aiStudioVerse.png";
-import bharatTradeImg from "../assets/Images/bharatTrade.png";
-import npmImg from "../assets/Images/sleep-with-delay-npm.png";
 import { Codesandbox, Github } from "lucide-react";
 
 export const projects = [
   {
-    image: astraMindImg,
+    image:
+      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932880/astraMind_bvig4z.png",
     title: "AstraMind",
     description:
       "AstraMind is an intelligent platform that lets users chat with their documents. By combining advanced AI with seamless document processing, AstraMind transforms PDFs into interactive knowledge sources. Upload a file, ask a question, and get precise, context-aware answers backed by source citations — all inside a clean, modern UI.",
@@ -36,7 +24,8 @@ export const projects = [
     ],
   },
   {
-    image: npmImg,
+    image:
+      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932894/sleep-with-delay-npm_niskjq.png",
     title: "sleep-with-delay - NPM Package",
     description:
       "A utility package for delaying function execution and pausing execution in JavaScript/TypeScript. This package provides simple and effective methods to introduce delays in your code, making it useful for testing, animations, or any scenario where controlled timing is required.",
@@ -45,7 +34,8 @@ export const projects = [
     techStack: ["React JS", "TypeScript", "Javascript", "NPM Package"],
   },
   {
-    image: chatuuuImg,
+    image:
+      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932878/chatuuuAI_femjpc.png",
     title: "Chatuuu",
     description:
       "Chatuuu is a lightweight full-stack AI chat application built using Next.js, TypeScript, and Shadcn UI, featuring real-time AI messaging with support for image uploads that the system can intelligently read and interpret. Powered by Gemini 2.5 Flash through ai-sdk, ai-sdk/google, and AI Elements, it delivers high-performance processing with streamed text responses for fast and smooth interactions. The project brings together a modern frontend, an efficient backend, and advanced AI capabilities to create a responsive, intelligent, and seamless user experience.",
@@ -62,7 +52,8 @@ export const projects = [
     ],
   },
   {
-    image: bharatTradeImg,
+    image:
+      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932878/bharatTrade_rmqsmw.png",
     title: "Bharat Trade",
     description:
       "Bharat Trade is a feature-rich web application that provides market data, stock analytics, currency exchange, news, and performance tracking using mock data (not real-time). The app is designed with a clean, glassmorphic UI and supports both light and dark themes. It leverages modular components and hooks for scalability and maintainability.",
@@ -87,7 +78,8 @@ export const projects = [
   //   ],
   // },
   {
-    image: aiStudioVerseImg,
+    image:
+      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932882/aiStudioVerse_b2e8s3.png",
     title: "AI Studio Verse",
     description:
       "AI Studio Verse is a comprehensive AI-powered platform that combines intelligent text generation, advanced image analysis, and interactive chat capabilities. Built with a modern, responsive design, it provides creators and professionals with an intuitive workspace to harness AI tools for content creation and analysis.",
@@ -103,7 +95,8 @@ export const projects = [
     ],
   },
   {
-    image: booktheshowImg,
+    image:
+      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932880/booktheshow_a31ewh.png",
     title: "Book The Show",
     description:
       "BookTheShow is a full-featured web application that allows users to browse movies, explore theaters, and book movie tickets across multiple cities and languages. It includes Firebase authentication with support for both email/password login and Google sign-in, enabling users to securely manage their bookings with ease.",
@@ -128,7 +121,8 @@ export const projects = [
   //   techStack: ["React JS", "Material UI", "JavaScript", "CSS", "Firebase"],
   // },
   {
-    image: travelgenieImg,
+    image:
+      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932899/travelGenie_gacsi3.png",
     title: "TravelGenie.AI",
     description:
       "TravelGenie.AI is a smart travel planning platform powered by Gemini 1.5 Flash AI, designed to create personalized itineraries. By entering details like destination, dates, budget, and interests, users get optimized trip plans with curated activities. The AI enables fast itinerary generation and real-time recommendations.",
@@ -144,7 +138,8 @@ export const projects = [
     ],
   },
   {
-    image: weatherImg,
+    image:
+      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932905/weather_c3ymuf.png",
     title: "Weather Forecast",
     description:
       "Weather Forecast provides real-time weather updates for any searched city with a modern, user-friendly interface. It displays current weather details, including temperature, wind speed, humidity, and atmospheric pressure, along with a five-day forecast. The UI features a clean design with structured cards and clear typography for easy readability.",
@@ -160,7 +155,8 @@ export const projects = [
     ],
   },
   {
-    image: cryptoLoom,
+    image:
+      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932878/cryptoLoom_dwnvvg.png",
     title: "CryptoLoom",
     description:
       "CryptoLoom is a real-time cryptocurrency dashboard that streams live market data from Binance’s WebSocket API. It displays up-to-date price, volume, and percentage change for various cryptocurrencies in both card and table views.",
