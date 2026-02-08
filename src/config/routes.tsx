@@ -16,12 +16,12 @@ const About = lazy(() => import("../pages/About"));
 const Layout = () => {
   return (
     <ErrorBoundary>
+      <Header />
+      <ScrollToTop />
       <Suspense fallback={<Loader />}>
-        <Header />
-        <ScrollToTop />
         <Outlet />
-        <Footer />
       </Suspense>
+      <Footer />
     </ErrorBoundary>
   );
 };
