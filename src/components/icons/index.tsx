@@ -2,7 +2,6 @@ import {
   SiJavascript,
   SiTypescript,
   SiHtml5,
-  SiCss3,
   SiReact,
   SiNextdotjs,
   SiRedux,
@@ -29,7 +28,7 @@ import {
   SiYarn,
   SiPnpm,
 } from "react-icons/si";
-import { FaAssistiveListeningSystems, FaSass } from "react-icons/fa";
+import { FaAssistiveListeningSystems, FaCss3, FaSass } from "react-icons/fa";
 import { CgLoadbarDoc } from "react-icons/cg";
 import { TbApi, TbGitFork } from "react-icons/tb";
 import { MdSpeed } from "react-icons/md";
@@ -45,7 +44,7 @@ export const HTMLIcon = (props: any) => (
   <SiHtml5 size={35} color="#E34F26" {...props} />
 );
 export const CSSIcon = (props: any) => (
-  <SiCss3 size={35} color="#1572B6" {...props} />
+  <FaCss3 size={35} color="#1572B6" {...props} />
 );
 
 export const ReactIcon = (props: any) => (
