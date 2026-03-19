@@ -1,7 +1,7 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Footer from "@/layout/Footer";
+import Header from "@/layout/Header";
 import ErrorBoundary from "@/layout/ErrorBoundary";
 import Loader from "@/layout/Loader";
 import ScrollToTop from "@/layout/ScrollToTop";

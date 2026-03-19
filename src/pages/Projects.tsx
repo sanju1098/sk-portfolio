@@ -1,5 +1,5 @@
 import React from "react";
-import { projects, workProfiles } from "@/config/project";
+import { projects, workProfiles } from "@/content/project";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -96,12 +96,18 @@ const Projects: React.FC = React.memo(() => {
                           <span className="w-3 h-3 bg-yellow-500 rounded-full" />
                           <span className="w-3 h-3 bg-green-500 rounded-full" />
                         </div>
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          loading="eager"
-                          className="w-full h-50 rounded-xl object-contain transition-transform duration-300 group-hover:scale-105"
-                        />
+                        <picture>
+                          <source srcSet={project.image} type="image/webp" />
+                          <img
+                            src="https://res.cloudinary.com/dwsalphhy/image/upload/v1773916479/default-fallback-image_vdokpl.png"
+                            alt={project.title}
+                            loading="eager"
+                            className="w-full h-50 rounded-xl object-contain transition-transform duration-300 group-hover:scale-105"
+                            onLoad={e => {
+                              e.currentTarget.src = project.image;
+                            }}
+                          />
+                        </picture>
                       </div>
 
                       {/* Project Content */}

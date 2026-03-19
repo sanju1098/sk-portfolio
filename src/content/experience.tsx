@@ -1,5 +1,22 @@
 export const workExperiences = [
   {
+    company: "Publicis Sapient ",
+    logo: "https://res.cloudinary.com/dwsalphhy/image/upload/v1773920349/ps_logo.jpg",
+    role: "Senior Experience Engineer",
+    timeline: "Sep 2025  - Present",
+    duration: "5m",
+    location: "Bangalore, Karnataka",
+    projects: [
+      {
+        name: "P&O Cruises and Cunard",
+        responsibilities: [
+          "Delivered personalization and experimentation features for the Carnival Cruise Line platform, supporting P&O Cruises and Cunard applications within a microfrontend architecture, leveraging AEM-based dynamic content to improve user engagement.",
+          "Optimized frontend performance and scalability by developing reusable components, reducing unnecessary re-renders, and resolving P2–P4 production issues, improving overall system reliability.",
+        ],
+      },
+    ],
+  },
+  {
     company:
       "Russell Tobin Associates Staffing Solutions (Client: Morgan Stanley)",
     logo: "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932884/RTLogo_zwlsuh.jpg",

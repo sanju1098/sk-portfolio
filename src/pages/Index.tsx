@@ -1,5 +1,5 @@
 import React from "react";
-import { achievements, primaryTechStack, services } from "@/config/home";
+import { achievements, primaryTechStack, services } from "@/content/home";
 import {
   ArrowRight,
   Download,

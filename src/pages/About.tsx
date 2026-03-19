@@ -1,4 +1,4 @@
-import { certificates, workAchievements } from "@/config/about";
+import { certificates, workAchievements } from "@/content/about";
 import {
   FileBadge,
   FileSymlink,
@@ -95,7 +95,7 @@ const About: React.FC = React.memo(() => {
                     <h2
                       tabIndex={0}
                       className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-                      Professional Achievements
+                      Achievements
                     </h2>
                   </div>
                   <div className="flex flex-wrap gap-8 justify-center">
@@ -204,7 +204,7 @@ const About: React.FC = React.memo(() => {
                     <h2
                       tabIndex={0}
                       className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-                      Certifications & Awards
+                      Certifications
                     </h2>
                   </div>
                   <div className="flex flex-wrap gap-8 justify-center">

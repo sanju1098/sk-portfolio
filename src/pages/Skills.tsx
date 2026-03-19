@@ -1,5 +1,5 @@
 import React from "react";
-import { skillCategories } from "@/config/skills";
+import { skillCategories } from "@/content/skills";
 
 const Skills: React.FC = React.memo(() => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { workExperiences } from "@/config/experience";
+import { workExperiences } from "@/content/experience";
 import { MapPin, Calendar } from "lucide-react";
 
 const Experience: React.FC = React.memo(() => {
