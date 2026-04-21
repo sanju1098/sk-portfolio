@@ -1,6 +1,6 @@
 import React from "react";
 import { projects, workProfiles } from "@/content/project";
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -35,7 +35,7 @@ const Projects: React.FC = React.memo(() => {
         </DialogDescription>
       </DialogHeader>
       <DialogFooter>
-        <a
+        {/* <a
           target="_blank"
           rel="noopener noreferrer"
           href={project.demoLink}
@@ -43,7 +43,7 @@ const Projects: React.FC = React.memo(() => {
           title="View live preview">
           Live Preview
           <ExternalLink size={14} />
-        </a>
+        </a> */}
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -130,7 +130,7 @@ const Projects: React.FC = React.memo(() => {
                                 <Github size={20} />
                               </a>
                             )}
-                            {project.demoLink && (
+                            {/* {project.demoLink && (
                               <a
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -139,7 +139,7 @@ const Projects: React.FC = React.memo(() => {
                                 title={`View live preview for ${project.title}`}>
                                 <ExternalLink size={20} />
                               </a>
-                            )}
+                            )} */}
                           </div>
                         </div>
 
