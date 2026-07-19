@@ -1,4 +1,4 @@
-import { Codesandbox, Github } from "lucide-react";
+import { Github, Zap } from "lucide-react";
 
 export const projects = [
   {
@@ -51,16 +51,16 @@ export const projects = [
       "Google Generative AI",
     ],
   },
-  {
-    image:
-      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932878/bharatTrade_rmqsmw.png",
-    title: "Bharat Trade",
-    description:
-      "Bharat Trade is a feature-rich web application that provides market data, stock analytics, currency exchange, news, and performance tracking using mock data (not real-time). The app is designed with a clean, glassmorphic UI and supports both light and dark themes. It leverages modular components and hooks for scalability and maintainability.",
-    gitLink: "https://github.com/sanju1098/bharat-trade",
-    demoLink: "https://bharat-trade.vercel.app/",
-    techStack: ["React JS", "TypeScript", "Tailwind CSS", "ShadCN UI", "Vite"],
-  },
+  // {
+  //   image:
+  //     "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932878/bharatTrade_rmqsmw.png",
+  //   title: "Bharat Trade",
+  //   description:
+  //     "Bharat Trade is a feature-rich web application that provides market data, stock analytics, currency exchange, news, and performance tracking using mock data (not real-time). The app is designed with a clean, glassmorphic UI and supports both light and dark themes. It leverages modular components and hooks for scalability and maintainability.",
+  //   gitLink: "https://github.com/sanju1098/bharat-trade",
+  //   demoLink: "https://bharat-trade.vercel.app/",
+  //   techStack: ["React JS", "TypeScript", "Tailwind CSS", "ShadCN UI", "Vite"],
+  // },
   // {
   //   image: formKitImg,
   //   title: "FormKit - Drag & Drop Form Builder",
@@ -154,16 +154,16 @@ export const projects = [
       "CSS",
     ],
   },
-  {
-    image:
-      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932878/cryptoLoom_dwnvvg.png",
-    title: "CryptoLoom",
-    description:
-      "CryptoLoom is a real-time cryptocurrency dashboard that streams live market data from Binance’s WebSocket API. It displays up-to-date price, volume, and percentage change for various cryptocurrencies in both card and table views.",
-    gitLink: "https://github.com/sanju1098/crypto-loom",
-    demoLink: "https://crypto-loom-pi.vercel.app/",
-    techStack: ["React JS", "TypeScript", "Vite", "WebSocket", "Binance API"],
-  },
+  // {
+  //   image:
+  //     "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932878/cryptoLoom_dwnvvg.png",
+  //   title: "CryptoLoom",
+  //   description:
+  //     "CryptoLoom is a real-time cryptocurrency dashboard that streams live market data from Binance’s WebSocket API. It displays up-to-date price, volume, and percentage change for various cryptocurrencies in both card and table views.",
+  //   gitLink: "https://github.com/sanju1098/crypto-loom",
+  //   demoLink: "https://crypto-loom-pi.vercel.app/",
+  //   techStack: ["React JS", "TypeScript", "Vite", "WebSocket", "Binance API"],
+  // },
   // {
   //   image: chatAppImg,
   //   title: "WebSocket Real-Time Chat Application",
@@ -206,9 +206,9 @@ export const workProfiles = [
     link: "https://github.com/sanju1098",
   },
   {
-    profileName: "CodeSandbox",
+    profileName: "Stackblitz",
     className: "bg-orange-500 text-white hover:bg-orange-600",
-    icon: <Codesandbox size={18} />,
-    link: "https://codesandbox.io/u/Sanjay%20Kumar%20SR",
+    icon: <Zap size={18} />,
+    link: "https://stackblitz.com/@sanju1098",
   },
 ];

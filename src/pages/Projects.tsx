@@ -200,7 +200,7 @@ const Projects: React.FC = React.memo(() => {
               </span>{" "}
               on my{" "}
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/sanju1098"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-orange-600 dark:text-orange-400 hover:underline hover:text-orange-700 dark:hover:text-orange-300">
@@ -208,11 +208,11 @@ const Projects: React.FC = React.memo(() => {
               </a>{" "}
               and{" "}
               <a
-                href="https://codesandbox.io/u/yourusername"
+                href="https://stackblitz.com/@sanju1098"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-orange-600 dark:text-orange-400 hover:underline hover:text-orange-700 dark:hover:text-orange-300">
-                CodeSandbox
+                Stack Blitz
               </a>
               . Explore more of my projects and ongoing work there!
             </p>
