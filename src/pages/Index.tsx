@@ -1,284 +1,271 @@
 import React from "react";
-import { achievements, primaryTechStack, services } from "@/content/home";
-import {
-  ArrowRight,
-  Download,
-  Rocket,
-  CheckCircle,
-  Award,
-  Target,
-} from "lucide-react";
 import { Link } from "react-router-dom";
+import { ArrowDownToLine, ArrowRight, ExternalLink } from "lucide-react";
 import Typewriter from "typewriter-effect";
+import { featuredProjects, services, stats } from "@/content/home";
+import Picture from "@/components/Picture";
+import resumeUrl from "@/assets/Resume.pdf";
 
 const Index: React.FC = React.memo(() => {
   return (
-    <div className=" bg-white dark:bg-gray-900 transition-colors duration-300">
-      <div className="">
-        {/* Hero Section */}
-        <section
-          id="home"
-          className=" flex items-center justify-center relative overflow-hidden">
-          {/* Enhanced Background */}
-          <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(251,146,60,0.15),transparent_50%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,rgba(20,184,166,0.15),transparent_50%)]" />
+    <>
+      <section
+        id="top"
+        className="relative overflow-hidden px-6 pb-20 pt-32 md:pb-8 md:pt-44">
+        <div
+          className="pointer-events-none absolute inset-0 grid-field"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-130 glow-accent"
+          aria-hidden
+        />
 
-            {/* Animated Background Elements */}
-            <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full blur-3xl opacity-20 animate-pulse" />
-            <div className="absolute bottom-32 right-16 w-40 h-40 bg-gradient-to-r from-teal-400 to-teal-600 rounded-full blur-3xl opacity-20 animate-pulse delay-1000" />
-            <div className="absolute top-1/3 right-20 w-24 h-24 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full blur-2xl opacity-20 animate-pulse delay-500" />
-          </div>
+        <div className="relative mx-auto max-w-7xl">
+          <div className="rise text-center md:text-left">
+            <span className="chip-accent">
+              <span
+                className="size-1.5 animate-pulse rounded-full bg-accent"
+                aria-hidden
+              />
+              Available for collaboration
+            </span>
 
-          <div className="container mx-auto px-6 text-center relative z-10">
-            <div className="max-w-5xl mx-auto">
-              {/* Main Heading with Enhanced Typography */}
-              <div className="mb-8 mt-[70px] animate-fade-in">
-                <p
-                  className="text-4xl md:text-6xl lg:text-7xl font-black mb-4 leading-tight"
-                  tabIndex={0}>
-                  <span className="block text-gray-800 dark:text-white mb-2">
-                    I'm
-                  </span>
-                  <span className="block bg-gradient-to-r from-orange-500 via-orange-600 to-teal-600 bg-clip-text text-transparent">
-                    Sanjay Kumar S R
-                  </span>
-                </p>
-
-                <div className="flex flex-col md:flex-row items-center justify-center gap-3 mb-6">
-                  <div className="hidden md:block w-2 h-2 bg-orange-500 rounded-full" />
-                  <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700 dark:text-gray-300">
-                    <Typewriter
-                      options={{
-                        strings: [
-                          "Senior Frontend Developer",
-                          "Senior UI Developer",
-                          "Application Developer",
-                        ],
-                        autoStart: true,
-                        loop: true,
-                        delay: 50,
-                      }}
-                    />
-                  </h2>
-                  <div className="hidden md:block w-2 h-2 bg-orange-500 rounded-full" />
-                </div>
-
-                {/* Status Badge */}
-                {/* <div className="animate-fade-in">
-                  <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500/10 to-teal-500/10 border border-orange-200 dark:border-orange-800 rounded-full backdrop-blur-sm">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                    <span className="text-orange-600 dark:text-orange-400 font-small">
-                      Available for new opportunities
-                    </span>
-                  </div>
-                </div> */}
-              </div>
-
-              {/* Enhanced Description */}
-              <div className="mb-12 animate-fade-in">
-                <p className="text-xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed font-medium">
-                  Turning ideas into{" "}
-                  <span className="bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent font-bold">
-                    elegant, high-performance
-                  </span>{" "}
-                  web applications.
-                </p>
-                <div className="text-xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed font-medium">
-                  With{" "}
-                  <span className="text-orange-600 dark:text-orange-400 font-bold">
-                    4+ years
-                  </span>{" "}
-                  of experience, I build{" "}
-                  <span className="bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent font-bold">
-                    responsive, scalable, and user-centric
-                  </span>{" "}
-                  applications that empower businesses to grow and stand out
-                  online.
-                </div>
-
-                {/* Tech Stack Pills */}
-                <div className="flex flex-wrap justify-center gap-3 my-8">
-                  {primaryTechStack.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-4 py-2 bg-white/80 dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 rounded-full text-sm font-semibold text-gray-700 dark:text-gray-300 hover:scale-110 hover:bg-orange-100 dark:hover:bg-orange-900/30 transition-all duration-300 cursor-default shadow hover:shadow-lg">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Enhanced Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 animate-fade-in">
-                <Link
-                  role="button"
-                  to="/experience"
-                  className="group relative px-10 py-5 bg-gradient-to-r from-orange-500 to-teal-600 text-white rounded-2xl font-bold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-3 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <span className="relative z-10">View My Experience</span>
-                  <ArrowRight
-                    size={24}
-                    className="relative z-10 transition-transform duration-300 group-hover:translate-x-4"
-                  />
-                </Link>
-
-                <a
-                  role="button"
-                  href="/assets/Resume.pdf"
-                  download="SanjayKumar-Resume"
-                  target="_blank"
-                  className="group px-10 py-5 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-2xl font-bold text-lg hover:border-orange-500 hover:text-orange-500 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-3">
-                  <Download size={24} className="group-hover:animate-bounce" />
-                  Download Resume
-                </a>
-              </div>
-
-              {/* Enhanced Achievements Grid */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 animate-fade-in">
-                {achievements.map((achievement, index) => (
-                  <div
-                    tabIndex={0}
-                    aria-label={achievement}
-                    key={index}
-                    className="group bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200">
-                        <CheckCircle className="text-white" size={16} />
-                      </div>
-                      <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 leading-relaxed">
-                        {achievement}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* What I Do Section */}
-        <section className="py-12 bg-gray-50 dark:bg-gray-800/50">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-10">
-              <h2
-                tabIndex={0}
-                className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
-                What I Do
+            <div className="mt-6 flex flex-col items-center justify-center gap-3 md:flex-row md:justify-start">
+              <div
+                className="hidden h-2 w-2 rounded-full bg-accent md:block"
+                aria-hidden
+              />
+              <h2 className="text-xl font-medium text-muted-foreground md:text-2xl">
+                <Typewriter
+                  options={{
+                    strings: [
+                      "Senior Experience Engineer",
+                      "Senior Frontend Developer",
+                      "AI Product Engineer",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    delay: 50,
+                    cursor: "",
+                  }}
+                />
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                Committed to delivering high-quality, production-ready
-                applications that provide seamless and efficient user
-                experiences across various devices and platforms.
-              </p>
+              <div
+                className="hidden h-2 w-2 rounded-full bg-accent md:block"
+                aria-hidden
+              />
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-              {services.map((service, index) => (
+            <h1 className="mt-6 max-w-[22ch] text-balance font-display text-4xl font-semibold leading-[1.02] tracking-tight text-gradient md:text-7xl">
+              Building high-performance interfaces and scalable systems.
+            </h1>
+
+            <p className="mt-8 max-w-[62ch] text-pretty leading-relaxed text-muted-foreground md:text-lg">
+              Frontend engineer with 4.5+ years building scalable React.js and
+              Next.js applications with reusable UI architecture, REST API
+              integration, state management, and rendering optimization. I am
+              also interested in backend engineering and have built backend
+              applications and REST APIs with Node.js and Express, while
+              shipping AI-powered products with the Vercel AI SDK, Gemini, and
+              Groq.
+            </p>
+
+            <div className="mt-10 flex flex-col flex-wrap justify-center gap-3 md:flex-row md:justify-start">
+              <a
+                href={resumeUrl}
+                download="Sanjay Kumar S R_Resume"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-sm bg-primary px-5 text-sm font-medium text-primary-foreground ring-1 ring-primary transition-all hover:brightness-110 active:scale-[0.97]">
+                <ArrowDownToLine className="size-4" aria-hidden />
+                Download résumé
+              </a>
+
+              <Link
+                to="/projects"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-sm border border-border bg-secondary px-5 text-sm font-medium text-secondary-foreground transition-all hover:bg-muted">
+                View projects
+                <ArrowRight className="size-4 opacity-70" aria-hidden />
+              </Link>
+            </div>
+
+            <dl className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4">
+              {stats.map(stat => (
                 <div
-                  key={index}
-                  className="relative group p-8 bg-white dark:bg-gray-900 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                  <div className="absolute inset-0 pointer-events-none" />
-                  <div className="relative z-10 flex flex-col items-center text-center">
-                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-teal-600 rounded-lg flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
-                      {service.icon}
-                    </div>
-                    <p
-                      aria-label={service.title}
-                      tabIndex={0}
-                      className="text-xl font-bold text-gray-800 dark:text-white mb-4">
-                      {service.title}
-                    </p>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      {service.description}
-                    </p>
-                  </div>
+                  key={stat.label}
+                  className="rounded-md border border-border bg-panel p-3 panel-hover">
+                  <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                    {stat.label}
+                  </dt>
+                  <dd className="mt-2 text-sm font-medium text-card-foreground">
+                    {stat.value}
+                  </dd>
                 </div>
               ))}
-            </div>
+            </dl>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Skills Highlight Section */}
-        <section className="py-12 bg-white dark:bg-gray-900">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-10">
-              <h2
-                tabIndex={0}
-                className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
-                My Expertise
+      <section className="px-6 pb-8 pt-4">
+        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[1.25fr_0.75fr]">
+          <div className="rounded-md border border-border bg-panel p-7 shadow-panel">
+            <p className="label-mono">Product-first engineering</p>
+            <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight text-card-foreground md:text-5xl">
+              I mix product thinking with front-end execution.
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+              I design reusable interfaces, improve performance, and build
+              scalable user experiences that help teams ship faster without
+              sacrificing clarity, accessibility, or quality.
+            </p>
+          </div>
+
+          <div className="rounded-md border border-border bg-panel p-7 shadow-panel">
+            <p className="label-mono">Core focus</p>
+            <ul className="mt-5 space-y-3 text-sm text-muted-foreground md:text-base">
+              <li className="flex items-center gap-3">
+                <span className="size-2 rounded-full bg-accent" aria-hidden />
+                UI systems and reusable components
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="size-2 rounded-full bg-accent" aria-hidden />
+                Performance, accessibility, and design quality
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="size-2 rounded-full bg-accent" aria-hidden />
+                AI products, enterprise apps, and product delivery
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center md:text-left">
+            <h2 className="font-display text-3xl font-semibold tracking-tight text-card-foreground md:text-5xl">
+              What I do
+            </h2>
+            <p className="mt-4 max-w-3xl text-muted-foreground md:text-lg">
+              I build reliable, user-centered interfaces and product experiences
+              that help teams ship faster and scale with confidence.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {services.map((service, index) => (
+              <article
+                key={index}
+                className="rounded-md bg-panel p-7 ring-1 ring-border panel-hover">
+                <div className="flex size-12 items-center justify-center rounded-sm bg-accent/70 text-accent">
+                  {service.icon}
+                </div>
+                <h3 className="mt-6 text-xl font-medium text-card-foreground">
+                  {service.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {service.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <h2 className="mt-3 font-display text-3xl font-medium tracking-tight text-card-foreground md:text-4xl">
+                Recent projects
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                Skilled in writing clean, maintainable code and collaborating
-                effectively with cross-functional teams in Agile environments.
-              </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-5xl mx-auto">
-              <div className="text-center group">
-                <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
-                  <Award className="text-white animate-bounce" size={36} />
-                </div>
-                <p
-                  tabIndex={0}
-                  className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-600 transition-colors duration-300">
-                  Modern Frameworks
-                </p>
-                <p className="text-gray-600 dark:text-gray-400 text-lg">
-                  React.js, Next.js, TypeScript
-                </p>
-              </div>
-
-              <div className="text-center group">
-                <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
-                  <Target className="text-white animate-bounce" size={36} />
-                </div>
-                <p
-                  tabIndex={0}
-                  className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-green-600 dark:group-hover:text-green-600 transition-colors duration-300">
-                  UI/UX Design
-                </p>
-                <p className="text-gray-600 dark:text-gray-400 text-lg">
-                  Component-based architecture
-                </p>
-              </div>
-
-              <div className="text-center group">
-                <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
-                  <Rocket className="text-white animate-bounce" size={36} />
-                </div>
-                <p
-                  tabIndex={0}
-                  className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-600 transition-colors duration-300">
-                  Integration
-                </p>
-                <p className="text-gray-600 dark:text-gray-400 text-lg">
-                  REST API, State Management
-                </p>
-              </div>
-
-              <div className="text-center group">
-                <div className="w-24 h-24 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
-                  <CheckCircle
-                    className="text-white animate-bounce"
-                    size={36}
-                  />
-                </div>
-                <p
-                  tabIndex={0}
-                  className="text-xl font-bold mb-4 text-black dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-600 transition-colors duration-300">
-                  Testing & Deployment
-                </p>
-                <p className="text-gray-600 dark:text-gray-400 text-lg">
-                  Unit Testing, CI/CD, Docker, Nginx
-                </p>
-              </div>
-            </div>
+            <Link
+              to="/projects"
+              className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-widest text-accent hover:underline">
+              All projects
+              <ArrowRight className="size-4" aria-hidden />
+            </Link>
           </div>
-        </section>
-      </div>
-    </div>
+
+          <ul className="mt-6 grid gap-6 md:grid-cols-3">
+            {featuredProjects.map(project => {
+              const projectUrl = project.live || project.repo;
+
+              return (
+                <li key={project.name}>
+                  <div className="block h-full rounded-md bg-panel p-6 ring-1 ring-border/70 panel-hover">
+                    <Picture
+                      src={project.images[0]?.src}
+                      alt={
+                        project.images[0]?.alt ||
+                        `${project.name} project preview`
+                      }
+                      loading="lazy"
+                      className="aspect-video w-full rounded-sm object-contain object-center"
+                    />
+
+                    <div className="mt-5 flex flex-col items-start gap-2">
+                      <div className="flex items-center gap-2">
+                        <h3 className="font-display text-lg font-medium text-card-foreground">
+                          {project.name}
+                        </h3>
+
+                        <a
+                          href={projectUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`Open ${project.name}`}
+                          className="text-muted-foreground transition-colors hover:text-foreground">
+                          <ExternalLink size={16} />
+                        </a>
+                      </div>
+
+                      <div className="flex flex-row flex-wrap gap-1.5">
+                        {project.category.map(category => (
+                          <span
+                            key={category}
+                            className="chip-accent inline-flex flex-row gap-1">
+                            {category}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      {project.subtitle}
+                    </p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </section>
+
+      <section className="px-6 py-12">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 rounded-md bg-panel p-10 ring-1 ring-border/70 md:flex-row md:items-center">
+          <div>
+            <h2 className="font-display text-2xl font-medium text-card-foreground md:text-3xl">
+              Building something ambitious?
+            </h2>
+            <p className="mt-3 max-w-[52ch] text-sm text-muted-foreground">
+              Open to senior frontend roles and backend-focused collaborations
+              across web, AI, and other emerging technology.
+            </p>
+          </div>
+          <Link
+            to="/contact"
+            className="inline-flex h-10 items-center gap-2 rounded-sm bg-primary px-5 text-sm font-medium text-primary-foreground ring-1 ring-primary transition-all hover:brightness-110 active:scale-[0.97]">
+            Get in touch
+            <ArrowRight className="size-4" aria-hidden />
+          </Link>
+        </div>
+      </section>
+    </>
   );
 });
 

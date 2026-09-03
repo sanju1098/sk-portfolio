@@ -3,64 +3,80 @@ import { skillCategories } from "@/content/skills";
 
 const Skills: React.FC = React.memo(() => {
   return (
-    <div className="bg-white dark:bg-gray-900 transition-colors duration-300">
-      <div className="pt-20">
-        <section id="skills" className="py-10 bg-gray-50 dark:bg-gray-800/50">
-          <div className="container mx-auto px-6">
-            <div className="animate-fade-in text-center">
-              <h1 tabIndex={0} className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">
-                  Technical Skills
-                </span>
-              </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                Frontend development expertise with modern technologies and best
-                practices
-              </p>
-            </div>
+    <>
+      <section className="relative overflow-hidden px-6 pb-16 pt-32 md:pb-20 md:pt-44">
+        <div
+          className="pointer-events-none absolute inset-0 grid-field"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-130 glow-accent"
+          aria-hidden
+        />
 
-            {/* Main Skills Grid */}
-            <div className="max-w-8xl mx-auto px-4 py-10 grid lg:grid-cols-3 md:grid-cols-2 gap-8">
-              {skillCategories.map((category, index) => (
-                <div
-                  key={index}
-                  className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700bg-white dark:bg-gray-900 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                  {/* Header */}
-                  <div className="flex items-center gap-3 p-5 bg-gradient-to-r from-orange-400/10 to-teal-400/10 dark:from-orange-400/20 dark:to-teal-400/20">
-                    <div className="text-3xl">{category.icon}</div>
+        <div className="relative mx-auto max-w-7xl rise text-center md:text-left">
+          <h1 className="mt-6 max-w-[18ch] font-display text-4xl font-semibold leading-[1.02] tracking-tight text-gradient md:text-7xl">
+            Tools for thoughtful shipping.
+          </h1>
+
+          <p className="mt-8 max-w-[62ch] text-pretty leading-relaxed text-muted-foreground md:text-lg">
+            A practical toolkit for building polished interfaces, scalable
+            systems, and dependable product experiences.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills" className="px-6 pb-20 pt-4">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-6 lg:grid-cols-12">
+            {skillCategories.map((category, index) => (
+              <article
+                key={category.title || index}
+                className={`group rounded-md bg-panel p-6 ring-1 ring-border panel-hover md:p-7 ${
+                  index === 0 || index === 2
+                    ? "lg:col-span-5"
+                    : index === 1 || index === 3
+                      ? "lg:col-span-7"
+                      : "lg:col-span-12"
+                }`}>
+                <div className="flex items-start justify-between gap-4 border-b border-border pb-5">
+                  <div className="flex items-start gap-4">
+                    <div className="flex size-12 shrink-0 items-center justify-center rounded-sm bg-secondary">
+                      {category.icon}
+                    </div>
                     <div>
-                      <h3
-                        tabIndex={0}
-                        className="text-lg font-bold text-gray-900 dark:text-white">
+                      <h2 className="mt-2 font-display text-xl font-medium text-card-foreground">
                         {category.title}
-                      </h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">
-                        {category.description}
-                      </p>
+                      </h2>
                     </div>
                   </div>
-
-                  {/* Skills */}
-                  <div className="grid grid-cols-3 gap-4 p-5">
-                    {category.skills.map(skill => (
-                      <div
-                        tabIndex={0}
-                        key={skill.name}
-                        className="flex flex-col items-center p-4 rounded-xl bg-gray-50 dark:bg-gray-800 hover:bg-gradient-to-br hover:from-orange-50 hover:to-teal-50 dark:hover:from-orange-900/20 dark:hover:to-teal-900/20 transition-all duration-200 shadow-sm hover:shadow-md cursor-pointe">
-                        <div className="text-4xl mb-2">{skill.icon}</div>
-                        <p className="text-md font-semibold text-gray-700 dark:text-gray-200 text-center">
-                          {skill.name}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
                 </div>
-              ))}
-            </div>
+
+                <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground">
+                  {category.description}
+                </p>
+
+                <ul className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3">
+                  {category.skills.map(skill => (
+                    <li
+                      key={skill.name}
+                      tabIndex={0}
+                      className="flex min-h-16 items-center gap-3 rounded-sm border border-border/70 bg-background/40 px-3 py-2.5 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/50 hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                      <span className="flex size-10 shrink-0 items-center justify-center rounded-sm bg-panel">
+                        {skill.icon}
+                      </span>
+                      <span className="min-w-0 font-mono text-xs font-medium leading-tight text-muted-foreground transition-colors group-hover:text-card-foreground">
+                        {skill.name}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
           </div>
-        </section>
-      </div>
-    </div>
+        </div>
+      </section>
+    </>
   );
 });
 

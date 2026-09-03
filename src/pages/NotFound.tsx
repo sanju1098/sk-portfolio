@@ -1,6 +1,6 @@
+import { ArrowLeft, Home, Search } from "lucide-react";
 import { useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
-import { Home, ArrowLeft, Search } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const NotFound = () => {
   const location = useLocation();
@@ -13,63 +13,47 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
-      <div className="text-center px-6 max-w-2xl mx-auto">
-        {/* Animated 404 */}
-        <div className="mb-8">
-          <div className="relative">
-            <h1 className="text-9xl md:text-[12rem] font-bold bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent animate-pulse">
-              404
-            </h1>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <div className="w-32 h-32 bg-orange-200 dark:bg-orange-900/30 rounded-full blur-xl animate-ping"></div>
-            </div>
-          </div>
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background px-6 py-20">
+      <div
+        className="pointer-events-none absolute inset-0 grid-field opacity-60"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-72 glow-accent"
+        aria-hidden
+      />
+
+      <div className="relative z-10 mx-auto max-w-2xl rounded-md border border-border bg-panel p-8 text-center shadow-panel ring-1 ring-border/80 md:p-12">
+        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-sm border border-border bg-secondary text-accent">
+          <Search className="size-9" aria-hidden />
         </div>
 
-        {/* Animated Search Icon */}
-        <div className="mb-8">
-          <div className="w-24 h-24 mx-auto bg-gradient-to-r from-orange-500 to-teal-600 rounded-full flex items-center justify-center animate-bounce">
-            <Search className="text-white" size={40} />
-          </div>
-        </div>
+        <p className="label-mono mt-6">404</p>
+        <h1 className="mt-4 font-display text-5xl font-semibold tracking-tight text-gradient md:text-7xl">
+          Page missing
+        </h1>
+        <p className="mt-4 text-muted-foreground md:text-lg">
+          The route you tried to open no longer exists or was moved.
+        </p>
 
-        <div className="mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Oops! Page Not Found
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 mb-2">
-            The page you're looking for seems to have wandered off into the
-            digital void.
-          </p>
-          <p className="text-lg text-gray-500 dark:text-gray-500">
-            Don't worry, it happens to the best of us!
-          </p>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
           <Link
             to="/"
-            className="group px-8 py-4 bg-gradient-to-r from-orange-500 to-teal-600 text-white rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2">
-            <Home size={20} />
-            Back to Home
+            className="inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-all hover:brightness-110">
+            <Home className="size-4" aria-hidden />
+            Back home
           </Link>
 
           <button
+            type="button"
             onClick={() => window.history.back()}
-            className="px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-semibold hover:border-orange-500 hover:text-orange-500 transition-all duration-200 flex items-center gap-2">
-            <ArrowLeft size={20} />
-            Go Back
+            className="inline-flex items-center justify-center gap-2 rounded-sm border border-border bg-secondary px-5 py-3 text-sm font-medium text-secondary-foreground transition-colors hover:bg-muted">
+            <ArrowLeft className="size-4" aria-hidden />
+            Go back
           </button>
         </div>
-
-        {/* Floating Animation Elements */}
-        <div className="absolute top-20 left-10 w-16 h-16 bg-orange-200 dark:bg-orange-900/30 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-20 h-20 bg-teal-200 dark:bg-teal-900/30 rounded-full blur-xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/3 right-20 w-12 h-12 bg-purple-200 dark:bg-purple-900/30 rounded-full blur-xl animate-pulse delay-500"></div>
       </div>
-    </div>
+    </main>
   );
 };
 

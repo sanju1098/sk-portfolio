@@ -1,107 +1,123 @@
 import React from "react";
 import { workExperiences } from "@/content/experience";
-import { MapPin, Calendar } from "lucide-react";
+import Picture from "@/components/Picture";
 
 const Experience: React.FC = React.memo(() => {
   return (
-    <div className="bg-white dark:bg-gray-900 transition-colors duration-300">
-      <div className="pt-20">
-        <section
-          id="experience"
-          className="py-10 bg-gray-50 dark:bg-gray-800/50">
-          <div className="container mx-auto px-6">
-            <div className="animate-fade-in text-center">
-              <h1 tabIndex={0} className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">
-                  Professional Experience
-                </span>
-              </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                My journey through different roles and the impact I've made at
-                each organization
+    <>
+      <section className="relative overflow-hidden px-6 pb-16 pt-32 md:pb-20 md:pt-44">
+        <div
+          className="pointer-events-none absolute inset-0 grid-field"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-130 glow-accent"
+          aria-hidden
+        />
+
+        <div className="relative mx-auto max-w-7xl rise text-center md:text-left">
+          <h1 className="mt-6 max-w-[18ch] text-balance font-display text-4xl font-semibold leading-[1.02] tracking-tight text-gradient md:text-7xl">
+            Professional experience
+          </h1>
+
+          <p className="mt-8 max-w-[62ch] text-pretty leading-relaxed text-muted-foreground md:text-lg">
+            A record of building high-load frontend systems, accessible
+            interfaces, and dependable product experiences.
+          </p>
+        </div>
+      </section>
+
+      <section id="experience" className="px-6 pb-20 pt-10 md:pb-24 md:pt-14">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <div className="lg:sticky lg:top-28">
+              <p className="label-mono">Selected roles</p>
+              <h2 className="mt-4 max-w-[12ch] text-balance font-display text-3xl font-semibold leading-[1.05] tracking-tight text-gradient md:text-5xl">
+                Professional background
+              </h2>
+              <p className="mt-4 max-w-[36ch] text-pretty leading-relaxed text-muted-foreground md:text-lg">
+                Four teams, one throughline: frontend systems shaped by
+                ownership, scale, and shipped outcomes.
               </p>
             </div>
-
-            <div className="max-w-7xl mx-auto m-4">
-              {workExperiences.map((exp, index) => (
-                <div key={index} className="relative md:pl-8 pb-12 last:pb-0">
-                  {/* Timeline line - hidden on mobile */}
-                  {index !== workExperiences.length - 1 && (
-                    <div className="hidden md:block absolute left-4 top-12 w-0.5 h-full bg-gradient-to-b from-orange-500 to-teal-600"></div>
-                  )}
-
-                  {/* Timeline dot - hidden on mobile */}
-                  <div className="hidden md:block absolute left-2 top-6 w-4 h-4 bg-gradient-to-r from-orange-500 to-teal-600 rounded-full border-4 border-white dark:border-gray-900"></div>
-
-                  <div className="bg-gray-100 dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 md:p-8">
-                    <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:items-start md:justify-between">
-                      <div className="flex items-start space-x-4 flex-1 min-w-0">
-                        <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center flex-shrink-0">
-                          <img
-                            src={exp.logo}
-                            alt={`${exp.company} logo`}
-                            className="w-12 h-12 object-contain"
-                          />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <h3
-                            tabIndex={0}
-                            className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2 break-words">
-                            {exp.company}
-                          </h3>
-                          <p
-                            tabIndex={0}
-                            className="text-lg md:text-xl font-semibold text-orange-600 dark:text-orange-400 mb-3 break-words">
-                            {exp.role}
-                            {/* {exp.duration && (
-                              <span className="hidden md:inline-flex items-center text-sm bg-gradient-to-r from-orange-100 to-teal-50 dark:from-orange-900/40 dark:to-teal-900/30 text-gray-700 dark:text-gray-200 mx-2 px-3 py-1 rounded-full shadow-sm">
-                                {exp.duration}
-                              </span>
-                            )} */}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex flex-col md:items-end space-y-2 md:flex-shrink-0 md:ml-4">
-                        <div className="flex items-center text-gray-600 dark:text-gray-400">
-                          <Calendar size={16} className="mr-2 flex-shrink-0" />
-                          <span className="font-medium text-sm md:text-base">
-                            {exp.timeline}
-                          </span>
-                        </div>
-                        <div className="flex items-center text-gray-600 dark:text-gray-400">
-                          <MapPin size={16} className="mr-2 flex-shrink-0" />
-                          <span className="text-sm md:text-base">
-                            {exp.location}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {exp?.projects?.map((project, idx) => (
-                      <div key={idx} className="mb-1 p-2">
-                        <div className="flex items-center font-medium text-md text-gray-900 dark:text-white mb-2">
-                          {/* <Globe size={18} className="mr-2 text-orange-500" /> */}
-                          {project.name}
-                        </div>
-                        <ul className="list-disc list-inside space-y-1 text-gray-600 dark:text-gray-400 text-sm">
-                          {project.responsibilities.map((resp, rIdx) => (
-                            <li
-                              key={rIdx}
-                              className="text-gray-600 dark:text-gray-400 text-sm">
-                              {resp}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
-        </section>
-      </div>
-    </div>
+
+          <ol className="space-y-10 lg:col-span-8">
+            {workExperiences.map((exp, index) => (
+              <li
+                key={`${exp.company}-${index}`}
+                className="relative border-b border-l border-border/60 pb-6 pl-7 sm:pl-8">
+                <span
+                  className={`absolute -left-1.25 top-1.5 size-2.5 rounded-full ${
+                    index === 0 ? "bg-accent" : "bg-border"
+                  }`}
+                  aria-hidden
+                />
+
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="flex min-w-0 items-start gap-3.5">
+                    <Picture
+                      src={exp.logo}
+                      alt={`${exp.company} logo`}
+                      width={44}
+                      height={44}
+                      loading="lazy"
+                      className="size-11 shrink-0 rounded-sm border border-border bg-card object-contain p-1"
+                    />
+                    <div className="min-w-0">
+                      <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                        {index === 0 ? "Current role" : "Previous role"}
+                      </p>
+                      <h3 className="text-xl font-medium leading-tight text-card-foreground md:text-2xl">
+                        {exp.role}
+                      </h3>
+                      <p className="font-mono text-xs text-accent">
+                        {exp.company.trim()}
+                      </p>
+                      <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                        {exp.location}
+                      </p>
+                    </div>
+                  </div>
+                  <span className="shrink-0 font-mono text-xs uppercase tracking-[0.12em] text-accent sm:pt-1">
+                    {exp.timeline}
+                  </span>
+                </div>
+
+                <div className="mt-5 flex flex-wrap gap-1.5">
+                  {exp.stack.map(technology => (
+                    <span className="chip text-[10px]" key={technology}>
+                      {technology}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-5">
+                  <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-muted-foreground">
+                    Key contributions
+                  </p>
+                  <ul className="mt-3 space-y-2.5">
+                    {exp.responsibilities.map(responsibility => (
+                      <li
+                        key={responsibility}
+                        className="flex gap-3 text-base leading-relaxed text-muted-foreground">
+                        <span
+                          className="mt-2.5 size-1 shrink-0 rounded-full bg-accent"
+                          aria-hidden
+                        />
+                        <span className="max-w-[62ch] text-pretty text-[14px]">
+                          {responsibility}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+    </>
   );
 });
 
