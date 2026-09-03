@@ -1,40 +1,67 @@
-# Sanjay Kumar S R — Portfolio
+# Sanjay Kumar S R | Portfolio
 
-Welcome to my personal portfolio! This project showcases my work, skills, and achievements as a Frontend Developer. Built with React, TypeScript, and Vite, it demonstrates my expertise in modern web development, UI/UX design, and scalable application architecture.
+A modern portfolio for Sanjay Kumar S R, a Frontend Engineer with 4.5+ years of experience building scalable React, Next.js, and TypeScript applications. The portfolio also highlights practical backend applications and REST APIs built with Node.js and Express.
 
-## About Me
+## Highlights
 
-I am Sanjay Kumar S R, a passionate Senior Application Developer with 4+ years of experience building responsive, scalable, and user-centric web applications. My focus is on delivering high-quality, production-ready solutions that provide seamless user experiences across devices and platforms.
+- Responsive portfolio experience with dark and light themes
+- Project showcase with screenshots, technology stacks, live demos, and repositories
+- Experience timeline with company logos, roles, responsibilities, and technology context
+- Skills, achievements, certificates, and résumé download
+- Contact page with a mailto form and social profile links
+- Shared image loading indicators with fallback handling
+- Route-aware browser titles and portfolio-specific `SR` branding
 
-- **Role:** Senior Frontend Developer
-- **Experience:** 4+ years
-- **Expertise:** React.js, Next.js, TypeScript, UI/UX Design, REST API Integration
-- **Location:** Bengaluru, Karnataka, India
+## Pages
 
-## Portfolio Features
+- `/` - Home
+- `/about` - About and achievements
+- `/projects` - Project showcase
+- `/skills` - Technical skills
+- `/experience` - Career timeline
+- `/contact` - Contact details and message form
 
-- **Modern UI/UX:** Clean, responsive design with beautiful animations and dark mode support.
-- **Projects Showcase:** Highlights of my featured projects, including images, descriptions, tech stack, and live/demo links.
-- **Skills & Expertise:** Overview of my technical skills and areas of expertise.
-- **Achievements:** Key milestones and recognitions in my career.
-- **Downloadable Resume:** Easy access to my latest resume.
-- **Contact & Profiles:** Quick links to my professional profiles and contact information.
+## Tech Stack
+
+- React 19 and TypeScript
+- Vite
+- Tailwind CSS 4
+- React Router
+- Radix UI and Lucide React
+- TanStack Query
+- React Hook Form and Zod
+- Node.js and Express for backend projects
+
+## Getting Started
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Run linting:
+
+```bash
+npm run lint
+```
+
+## Continuous Integration
+
+The workflow in `.github/workflows/portfolio.yml` runs on pull requests targeting `master` and on pushes to `master`. It uses Node.js 22, installs dependencies with `npm install`, and verifies the project with `npm run build`.
 
 ## Live Demo
 
-You can view the live portfolio at:
-
-[https://sanjay-dev-beta.vercel.app/](https://sanjay-dev-beta.vercel.app/)
-
-## Contact
-
-Feel free to connect with me for collaboration, opportunities, or just to say hello!
-
-- [LinkedIn](https://www.linkedin.com/in/sanjay-kumar-s-r/)
-- [GitHub](https://github.com/sanju1098)
-- [Email](mailto:sanjay.kumar981110@gmail.com)
-- [Medium](https://medium.com/@sanjay--kumar)
-
----
-
-Thank you for visiting my portfolio!
+[View Live](https://sanjaysr.vercel.app/)
