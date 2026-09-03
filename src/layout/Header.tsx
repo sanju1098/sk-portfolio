@@ -47,7 +47,7 @@ const Header = () => {
             aria-hidden
           />
           <span className="font-mono text-[16px] uppercase tracking-tight text-card-foreground">
-            Sanjay.Dev
+            Sanjay.SR
           </span>
         </Link>
 
