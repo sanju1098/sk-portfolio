@@ -1,5 +1,5 @@
-import { createBrowserRouter, Outlet } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import { createBrowserRouter, Outlet, useLocation } from "react-router-dom";
+import { lazy, Suspense, useEffect } from "react";
 import Footer from "@/layout/Footer";
 import Header from "@/layout/Header";
 import ErrorBoundary from "@/layout/ErrorBoundary";
@@ -15,6 +15,21 @@ const NotFound = lazy(() => import("../pages/NotFound"));
 const About = lazy(() => import("../pages/About"));
 
 const Layout = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const pageTitles: Record<string, string> = {
+      "/": "Sanjay Kumar | Portfolio",
+      "/about": "About | Sanjay Kumar",
+      "/projects": "Projects | Sanjay Kumar",
+      "/skills": "Skills | Sanjay Kumar",
+      "/experience": "Experience | Sanjay Kumar",
+      "/contact": "Contact | Sanjay Kumar",
+    };
+
+    document.title = pageTitles[location.pathname] || "Page | Sanjay Kumar";
+  }, [location.pathname]);
+
   return (
     <ErrorBoundary>
       <Header />
