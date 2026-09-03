@@ -1,242 +1,244 @@
-import React from "react";
+import React, { useState } from "react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, Github } from "lucide-react";
 import { projects, workProfiles } from "@/content/project";
-import { Github } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import Picture from "@/components/Picture"; // Adjust import path as needed
 
-const Projects: React.FC = React.memo(() => {
-  // Dialog content component to avoid repetition
-  const dialogContent = (project: any) => (
-    <DialogContent className="sm:max-w-1/2 bg-[#f9fafb] dark:bg-zinc-800">
-      <DialogHeader>
-        <DialogTitle className="text-3xl dark:text-white font-bold mb-4">
-          {project.title}
-        </DialogTitle>
-        <DialogDescription className="text-md dark:text-gray-300">
-          {project.description}
-          <div className="flex flex-wrap gap-2 mt-2">
-            {project.techStack.map((tech: any) => (
-              <span
-                key={tech}
-                className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium transition-transform duration-200 hover:scale-110">
-                {tech}
-              </span>
-            ))}
-          </div>
-        </DialogDescription>
-      </DialogHeader>
-      <DialogFooter>
-        {/* <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={project.demoLink}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-teal-600 dark:bg-teal-600 text-white font-medium shadow-md hover:bg-teal-700 dark:hover:bg-teal-700 transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-400/30"
-          title="View live preview">
-          Live Preview
-          <ExternalLink size={14} />
-        </a> */}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={project.gitLink}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-teal-600 dark:bg-teal-600 text-white font-medium shadow-md hover:bg-teal-700 dark:hover:bg-teal-700 transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-400/30"
-          title="View live preview">
-          GitHub
-          <Github size={14} />
-        </a>
-        <DialogClose asChild>
-          <Button variant="outline" className="dark:text-white">
-            Close
-          </Button>
-        </DialogClose>
-      </DialogFooter>
-    </DialogContent>
-  );
+interface ProjectImage {
+  src: string;
+  alt: string;
+}
+
+interface ProjectCarouselProps {
+  images: ProjectImage[];
+  name: string;
+}
+
+const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, name }) => {
+  const [index, setIndex] = useState(0);
+  const count = images.length;
+
+  const displayImages = images.length > 0 ? images : [{ src: "", alt: name }];
+
+  const go = (next: number) => setIndex((next + count) % count);
 
   return (
-    <div className="bg-white dark:bg-gray-900 transition-colors duration-300">
-      <div className="pt-20">
-        <section id="projects" className="py-10 bg-gray-50 dark:bg-gray-800/50">
-          <div className="container mx-auto px-6">
-            <div className="animate-fade-in text-center">
-              <h1
-                className="text-4xl md:text-5xl font-bold mb-6"
-                tabIndex={0}
-                aria-label="Featured Projects">
-                <span className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">
-                  Featured Projects
-                </span>
+    <div
+      role="group"
+      aria-roledescription="carousel"
+      aria-label={`${name} screenshots`}
+      tabIndex={0}
+      className="relative overflow-hidden rounded-xl bg-muted/30 ring-1 ring-border/70"
+      onKeyDown={e => {
+        if (e.key === "ArrowLeft") go(index - 1);
+        if (e.key === "ArrowRight") go(index + 1);
+      }}>
+      <div
+        className="flex transition-transform duration-500 ease-machined"
+        style={{ transform: `translateX(-${index * 100}%)` }}>
+        {displayImages.map((img, i) => (
+          <div
+            key={`${img.src}-${i}`}
+            className="flex aspect-16/10 w-full shrink-0 items-center justify-center bg-black/5 p-2 dark:bg-black/20"
+            aria-hidden={i !== index}
+            role="group"
+            aria-roledescription="slide"
+            aria-label={`${i + 1} of ${count}`}>
+            <Picture
+              src={img.src}
+              alt={img.alt}
+              width={1200}
+              height={750}
+              loading="lazy"
+              className="h-full w-full object-contain"
+            />
+          </div>
+        ))}
+      </div>
+
+      {count > 1 && (
+        <>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
+
+          <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 p-4">
+            <div
+              className="flex items-center gap-1.5"
+              role="tablist"
+              aria-label="Choose screenshot">
+              {images.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  role="tab"
+                  aria-selected={i === index}
+                  aria-label={`Screenshot ${i + 1}`}
+                  onClick={() => setIndex(i)}
+                  className={`h-1.5 rounded-full transition-all ${
+                    i === index
+                      ? "w-6 bg-primary"
+                      : "w-3 bg-white/50 hover:bg-white/80"
+                  }`}
+                />
+              ))}
+            </div>
+
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => go(index - 1)}
+                aria-label="Previous screenshot"
+                className="inline-flex size-8 items-center justify-center rounded-full bg-black/40 text-white ring-1 ring-white/20 backdrop-blur transition-all hover:bg-black/70 hover:scale-105 active:scale-95">
+                <ChevronLeft className="size-4" aria-hidden />
+              </button>
+              <button
+                type="button"
+                onClick={() => go(index + 1)}
+                aria-label="Next screenshot"
+                className="inline-flex size-8 items-center justify-center rounded-full bg-black/40 text-white ring-1 ring-white/20 backdrop-blur transition-all hover:bg-black/70 hover:scale-105 active:scale-95">
+                <ChevronRight className="size-4" aria-hidden />
+              </button>
+            </div>
+          </div>
+
+          <p aria-live="polite" className="sr-only">
+            Screenshot {index + 1} of {count}
+          </p>
+        </>
+      )}
+    </div>
+  );
+};
+
+const Projects: React.FC = React.memo(() => {
+  return (
+    <>
+      <section className="relative overflow-hidden px-6 pb-16 pt-32 md:pb-20 md:pt-44">
+        <div
+          className="pointer-events-none absolute inset-0 grid-field"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-130 glow-accent"
+          aria-hidden
+        />
+
+        <div className="relative mx-auto max-w-7xl rise">
+          <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+            {/* Project Heading */}
+            <div className="max-w-3xl text-center md:text-left">
+              <h1 className="mt-6 max-w-[18ch] text-balance font-display text-4xl font-semibold leading-[1.02] tracking-tight text-gradient md:text-7xl">
+                Projects
               </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto text-center">
-                Top projects I’ve worked on — a curated selection highlighting
-                impact, technologies used, and live demos.
+
+              <p className="mt-8 max-w-[62ch] text-pretty leading-relaxed text-muted-foreground md:text-lg">
+                A curated portfolio of products, experiments, and UI systems
+                built across AI, frontend, and enterprise delivery.
               </p>
             </div>
 
-            <div className="px-0 md:px-4 m-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projects.map((project, index) => (
-                  <div
-                    key={index}
-                    className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
-                    <div className="flex flex-col">
-                      {/* Project Image */}
-                      <div className="bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex flex-col p-4">
-                        <div className="flex gap-2 mb-2">
-                          <span className="w-3 h-3 bg-red-500 rounded-full" />
-                          <span className="w-3 h-3 bg-yellow-500 rounded-full" />
-                          <span className="w-3 h-3 bg-green-500 rounded-full" />
-                        </div>
-                        <picture>
-                          <source srcSet={project.image} type="image/webp" />
-                          <img
-                            src="https://res.cloudinary.com/dwsalphhy/image/upload/v1773916479/default-fallback-image_vdokpl.png"
-                            alt={project.title}
-                            loading="eager"
-                            className="w-full h-50 rounded-xl object-contain transition-transform duration-300 group-hover:scale-105"
-                            onLoad={e => {
-                              e.currentTarget.src = project.image;
-                            }}
-                          />
-                        </picture>
-                      </div>
+            {/* More Work */}
+            <div className="w-full md:w-auto">
+              <div className="flex flex-col items-start gap-3 md:items-end">
+                <div className="text-left md:text-right">
+                  <p className="font-display text-sm font-medium text-card-foreground">
+                    Want to see more?
+                  </p>
 
-                      {/* Project Content */}
-                      <div className="p-6 flex flex-col flex-1">
-                        <div className="flex items-start justify-between">
-                          <p
-                            tabIndex={0}
-                            aria-label={project.title}
-                            className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-300 group-hover:text-orange-600">
-                            {project.title}
-                          </p>
-                          <div className="flex space-x-2">
-                            {project.gitLink && (
-                              <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={project.gitLink}
-                                className="p-2 text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-500 transition-colors duration-200 transform hover:scale-125"
-                                title={`View source code on GitHub for ${project.title}`}>
-                                <Github size={20} />
-                              </a>
-                            )}
-                            {/* {project.demoLink && (
-                              <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={project.demoLink}
-                                className="p-2 text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-500 transition-colors duration-200 transform hover:scale-125"
-                                title={`View live preview for ${project.title}`}>
-                                <ExternalLink size={20} />
-                              </a>
-                            )} */}
-                          </div>
-                        </div>
+                  <p className="mt-1 max-w-xs text-xs leading-relaxed text-muted-foreground">
+                    Explore more of my work and experiments on GitHub and
+                    StackBlitz.
+                  </p>
+                </div>
 
-                        <p
-                          className="text-gray-600 dark:text-gray-400 leading-relaxed transition-colors duration-300 group-hover:text-gray-800 dark:group-hover:text-gray-200 overflow-hidden break-words"
-                          style={{
-                            display: "-webkit-box",
-                            WebkitLineClamp: 3,
-                            WebkitBoxOrient: "vertical",
-                          }}>
-                          {project.description}
-                        </p>
-                        <Dialog>
-                          <DialogTrigger asChild>
-                            <Button
-                              size="sm"
-                              aria-label={`Show ${project.title} Project in details`}
-                              title={`Show ${project.title} Project in details`}
-                              type="button"
-                              className="w-[fit-content] inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-teal-600 dark:bg-teal-600 text-white font-medium shadow-md hover:bg-teal-700 dark:hover:bg-teal-700 transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-400/30">
-                              Read More
-                            </Button>
-                          </DialogTrigger>
-                          {dialogContent(project)}
-                        </Dialog>
+                <div className="flex flex-wrap items-center gap-2">
+                  {workProfiles.map(profile => (
+                    <a
+                      key={profile.profileName}
+                      href={profile.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`group inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-medium shadow-sm ring-1 ring-border/70 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:scale-95 ${profile.className}`}>
+                      <span className="transition-transform duration-200 group-hover:scale-110">
+                        {profile.icon}
+                      </span>
 
-                        <div className="flex flex-wrap gap-2 mt-2">
-                          {project.techStack.slice(0, 4).map(tech => (
-                            <span
-                              key={tech}
-                              className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium transition-transform duration-200 hover:scale-110">
-                              {tech}
-                            </span>
-                          ))}
+                      <span>{profile.profileName}</span>
 
-                          <Dialog>
-                            <DialogTrigger asChild className="cursor-pointer">
-                              {project.techStack.length > 4 && (
-                                <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium transition-transform duration-200 hover:scale-110">
-                                  +{project.techStack.length - 4} more
-                                </span>
-                              )}
-                            </DialogTrigger>
-                            {dialogContent(project)}
-                          </Dialog>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                      <ArrowUpRight
+                        size={15}
+                        className="opacity-60 transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100"
+                        aria-hidden
+                      />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
-
-            <p className="mt-8 text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-              Apart from these featured projects, I’ve also shared several{" "}
-              <span className="font-semibold bg-gradient-to-r from-orange-500 to-teal-600 bg-clip-text text-transparent">
-                continuation works, experimental apps, and code samples
-              </span>{" "}
-              on my{" "}
-              <a
-                href="https://github.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange-600 dark:text-orange-400 hover:underline hover:text-orange-700 dark:hover:text-orange-300">
-                GitHub
-              </a>{" "}
-              and{" "}
-              <a
-                href="https://codesandbox.io/u/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange-600 dark:text-orange-400 hover:underline hover:text-orange-700 dark:hover:text-orange-300">
-                CodeSandbox
-              </a>
-              . Explore more of my projects and ongoing work there!
-            </p>
-            <div className="flex justify-center gap-4 flex-wrap">
-              {workProfiles.map((profile, index) => (
-                <button
-                  key={profile.profileName + index}
-                  className={`inline-flex items-center gap-2 px-5 py-2 rounded-lg ${profile.className} transition-colors`}
-                  onClick={() =>
-                    window.open(
-                      `${profile.link}`,
-                      "_blank",
-                      "noopener,noreferrer",
-                    )
-                  }>
-                  {profile.icon}
-                  {profile.profileName}
-                </button>
-              ))}
-            </div>
           </div>
-        </section>
-      </div>
-    </div>
+        </div>
+      </section>
+
+      <section id="projects" className="px-6 pb-20 pt-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-12 md:grid-cols-2">
+            {projects.map(p => (
+              <article key={p.name} className="group rounded-xl">
+                <ProjectCarousel images={p.images} name={p.name} />
+
+                <div className="mt-6 flex items-start justify-between gap-6">
+                  <div>
+                    <div className="flex items-center gap-3">
+                      <h3 className="font-display text-xl font-medium text-card-foreground">
+                        {p.name}
+                      </h3>
+                    </div>
+                    <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                      {p.subtitle}
+                    </p>
+                    <p className="mt-4 max-w-[52ch] text-pretty text-sm leading-relaxed text-muted-foreground">
+                      {p.description}
+                    </p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {p.stack.map(s => (
+                        <span className="chip" key={s}>
+                          {s}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    {p.repo && (
+                      <a
+                        href={p.repo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex size-10 shrink-0 items-center justify-center rounded-full text-muted-foreground ring-1 ring-border transition-all hover:bg-accent/10 hover:text-accent active:scale-95">
+                        <Github className="size-4" aria-hidden />
+                        <span className="sr-only">
+                          View {p.name} source code on GitHub
+                        </span>
+                      </a>
+                    )}
+                    {p.live && (
+                      <a
+                        href={p.live}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex size-10 shrink-0 items-center justify-center rounded-full text-muted-foreground ring-1 ring-border transition-all hover:bg-accent/10 hover:text-accent active:scale-95">
+                        <ArrowUpRight className="size-4" aria-hidden />
+                        <span className="sr-only">
+                          Open {p.name} live demo in a new tab
+                        </span>
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 });
 

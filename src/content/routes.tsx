@@ -10,6 +10,7 @@ const Index = lazy(() => import("../pages/Index"));
 const Projects = lazy(() => import("../pages/Projects"));
 const Skills = lazy(() => import("../pages/Skills"));
 const Experience = lazy(() => import("../pages/Experience"));
+const Contact = lazy(() => import("../pages/Contact"));
 const NotFound = lazy(() => import("../pages/NotFound"));
 const About = lazy(() => import("../pages/About"));
 
@@ -50,10 +51,14 @@ export const routes = createBrowserRouter([
         path: "/about",
         element: <About />,
       },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
+      },
     ],
-  },
-  {
-    path: "*",
-    element: <NotFound />,
   },
 ]);

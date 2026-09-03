@@ -1,77 +1,55 @@
-import {
-  Heart,
-  // Globe, Github, Linkedin, Mail, FileText
-} from "lucide-react";
+import { Github, Heart, Linkedin, Mail } from "lucide-react";
+
+const footerLinks = [
+  {
+    label: "GitHub",
+    href: "https://github.com/sanju1098",
+    icon: Github,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/sanjay-kumar-s-r/",
+    icon: Linkedin,
+  },
+  {
+    label: "Email",
+    href: "mailto:sanjaykumar.sr1011@gmail.com",
+    icon: Mail,
+  },
+];
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  // const footerLinks = [
-  //   {
-  //     name: "Portfolio",
-  //     link: "https://sanjay-dev-beta.vercel.app/",
-  //     icon: <Globe className="h-6 w-6" />,
-  //   },
-  //   {
-  //     name: "GitHub Profile",
-  //     link: "https://github.com/sanju1098",
-  //     icon: <Github className="h-6 w-6" />,
-  //   },
-  //   {
-  //     name: "LinkedIn Profile",
-  //     link: "https://www.linkedin.com/in/sanjay-kumar-s-r/",
-  //     icon: <Linkedin className="h-6 w-6" />,
-  //   },
-  //   {
-  //     name: "Medium Profile",
-  //     link: "https://medium.com/@sanjay--kumar",
-  //     icon: <FileText className="h-6 w-6" />,
-  //   },
-  //   {
-  //     name: "Email",
-  //     link: "mailto:sanjay.kumar981110@gmail.com",
-  //     icon: <Mail className="h-6 w-6" />,
-  //   },
-  // ];
-
   return (
-    <footer className="bg-gray-950 dark:bg-black text-white py-4">
-      <div className="container mx-auto px-6">
-        <div className="text-center">
-          {/* Social Links */}
-          {/* <div className="flex justify-center items-center gap-6 mb-8">
-            {footerLinks.map((links: any, index: number) => (
-              <a
-                key={index}
-                href={links.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-orange-500 transition-colors duration-200 transform hover:scale-110"
-                aria-label={links.name}
-                title={links.name}>
-                <span className="inline-block hover:animate-bounce">
-                  {links.icon}
-                </span>
-              </a>
-            ))}
-          </div> */}
+    <footer className="border-t border-hairline bg-panel/40 px-6 py-8">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 text-center md:flex-row md:text-left">
+        <p className="flex items-center gap-2 text-sm text-muted-foreground">
+          Made with <Heart size={14} className="text-red-500" aria-hidden />{" "}
+          using React & Tailwind CSS
+        </p>
 
-          <div className="border-gray-700">
-            <p
-              tabIndex={0}
-              className="text-gray-100 flex items-center justify-center gap-2 mb-2">
-              Made with <Heart size={16} className="text-red-500" /> using React
-              & Tailwind CSS
-            </p>
-            <p className="text-gray-200 text-md" tabIndex={0}>
-              Copyright © {currentYear}{" "}
-              <span className="font-semibold bg-gradient-to-r from-orange-600 to-teal-400 bg-clip-text text-transparent">
-                Sanjay Kumar S R
-              </span>
-              . All rights reserved.
-            </p>
-          </div>
-        </div>
+        <nav aria-label="Social links" className="flex items-center gap-2">
+          {footerLinks.map(({ label, href, icon: Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target={label === "Email" ? undefined : "_blank"}
+              rel={label === "Email" ? undefined : "noopener noreferrer"}
+              aria-label={label}
+              className="inline-flex size-9 items-center justify-center rounded-sm text-muted-foreground ring-1 ring-border transition-colors hover:bg-secondary hover:text-accent">
+              <Icon className="size-4" aria-hidden />
+            </a>
+          ))}
+        </nav>
+
+        <p className="text-sm text-muted-foreground">
+          Copyright © {currentYear}{" "}
+          <span className="font-medium text-card-foreground">
+            Sanjay Kumar S R
+          </span>
+          . All rights reserved.
+        </p>
       </div>
     </footer>
   );

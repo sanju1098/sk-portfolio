@@ -1,202 +1,4 @@
-import { Codesandbox, Github } from "lucide-react";
-
-export const projects = [
-  {
-    image:
-      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932880/astraMind_bvig4z.png",
-    title: "AstraMind",
-    description:
-      "AstraMind is an intelligent platform that lets users chat with their documents. By combining advanced AI with seamless document processing, AstraMind transforms PDFs into interactive knowledge sources. Upload a file, ask a question, and get precise, context-aware answers backed by source citations — all inside a clean, modern UI.",
-    gitLink: "https://github.com/sanju1098/astramindai",
-    demoLink: "https://astramindai.lovable.app/",
-    techStack: [
-      "Lovable AI",
-      "Lovable Cloud",
-      "React JS",
-      "TypeScript",
-      "Tailwind CSS",
-      "ShadCN UI",
-      "React Router",
-      "TanStack Query",
-      "Framer Motion",
-      "Vector Embeddings",
-      "RAG",
-    ],
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932894/sleep-with-delay-npm_niskjq.png",
-    title: "sleep-with-delay - NPM Package",
-    description:
-      "A utility package for delaying function execution and pausing execution in JavaScript/TypeScript. This package provides simple and effective methods to introduce delays in your code, making it useful for testing, animations, or any scenario where controlled timing is required.",
-    gitLink: "https://github.com/sanju1098/sleep-with-delay",
-    demoLink: "https://www.npmjs.com/package/sleep-with-delay",
-    techStack: ["React JS", "TypeScript", "Javascript", "NPM Package"],
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932878/chatuuuAI_femjpc.png",
-    title: "Chatuuu",
-    description:
-      "Chatuuu is a lightweight full-stack AI chat application built using Next.js, TypeScript, and Shadcn UI, featuring real-time AI messaging with support for image uploads that the system can intelligently read and interpret. Powered by Gemini 2.5 Flash through ai-sdk, ai-sdk/google, and AI Elements, it delivers high-performance processing with streamed text responses for fast and smooth interactions. The project brings together a modern frontend, an efficient backend, and advanced AI capabilities to create a responsive, intelligent, and seamless user experience.",
-    gitLink: "https://github.com/sanju1098/chatuuu",
-    demoLink: "https://chatuuu-ai.vercel.app/",
-    techStack: [
-      "Next.JS",
-      "React JS",
-      "TypeScript",
-      "Tailwind CSS",
-      "ShadCN UI",
-      "AI SDK Elements",
-      "Google Generative AI",
-    ],
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932878/bharatTrade_rmqsmw.png",
-    title: "Bharat Trade",
-    description:
-      "Bharat Trade is a feature-rich web application that provides market data, stock analytics, currency exchange, news, and performance tracking using mock data (not real-time). The app is designed with a clean, glassmorphic UI and supports both light and dark themes. It leverages modular components and hooks for scalability and maintainability.",
-    gitLink: "https://github.com/sanju1098/bharat-trade",
-    demoLink: "https://bharat-trade.vercel.app/",
-    techStack: ["React JS", "TypeScript", "Tailwind CSS", "ShadCN UI", "Vite"],
-  },
-  // {
-  //   image: formKitImg,
-  //   title: "FormKit - Drag & Drop Form Builder",
-  //   description:
-  //     "A powerful drag-and-drop form builder built with React and TypeScript. It lets users create responsive forms with real-time preview, undo/redo, and flexible field management. Forms can be customized with colors, themes, and styles, making the builder both intuitive and highly adaptable.",
-  //   gitLink:
-  //     "https://github.com/sanju1098/okta-design-assignments/tree/master/okta-design-assignment2",
-  //   techStack: [
-  //     "Next.JS",
-  //     "React JS",
-  //     "TypeScript",
-  //     "Tailwind CSS",
-  //     "Zustand",
-  //     "ShadCN UI",
-  //   ],
-  // },
-  {
-    image:
-      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932882/aiStudioVerse_b2e8s3.png",
-    title: "AI Studio Verse",
-    description:
-      "AI Studio Verse is a comprehensive AI-powered platform that combines intelligent text generation, advanced image analysis, and interactive chat capabilities. Built with a modern, responsive design, it provides creators and professionals with an intuitive workspace to harness AI tools for content creation and analysis.",
-    gitLink: "https://github.com/sanju1098/ai-studio-verse",
-    demoLink: "https://ai-studio-verse.vercel.app/",
-    techStack: [
-      "React JS",
-      "TypeScript",
-      "Tailwind CSS",
-      "Gemini 2.5 Flash AI",
-      "ShadCN UI",
-      "Vite",
-    ],
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932880/booktheshow_a31ewh.png",
-    title: "Book The Show",
-    description:
-      "BookTheShow is a full-featured web application that allows users to browse movies, explore theaters, and book movie tickets across multiple cities and languages. It includes Firebase authentication with support for both email/password login and Google sign-in, enabling users to securely manage their bookings with ease.",
-    gitLink: "https://github.com/sanju1098/booktheshow",
-    demoLink: "https://booktheshow.vercel.app/",
-    techStack: [
-      "React JS",
-      "Tailwind CSS",
-      "JavaScript",
-      "Firebase",
-      "Firebase Auth",
-      "ShadCN UI",
-      "Movie API",
-    ],
-  },
-  // {
-  //   image: firebaseAppImg,
-  //   title: "Firebase Authentication with Google OAuth",
-  //   description:
-  //     "Developed a secure user authentication system within a React.js application, leveraging Firebase Authentication for seamless login functionality. The application features a modern and intuitive user interface built with Material-UI components, ensuring a polished user experience. Firebase Authentication provides robust, scalable security with support for multiple sign-in methods, including email/password and Google authentication.",
-  //   gitLink: "https://github.com/sanju1098/Firebase-Authentication",
-  //   techStack: ["React JS", "Material UI", "JavaScript", "CSS", "Firebase"],
-  // },
-  {
-    image:
-      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932899/travelGenie_gacsi3.png",
-    title: "TravelGenie.AI",
-    description:
-      "TravelGenie.AI is a smart travel planning platform powered by Gemini 1.5 Flash AI, designed to create personalized itineraries. By entering details like destination, dates, budget, and interests, users get optimized trip plans with curated activities. The AI enables fast itinerary generation and real-time recommendations.",
-    gitLink: "https://github.com/sanju1098/travel-genie-ai",
-    demoLink: "https://travel-genie-ai-gem.vercel.app/",
-    techStack: [
-      "React JS",
-      "TypeScript",
-      "Material UI",
-      "Tailwind CSS",
-      "Vite",
-      "Gemini 2.5 Flash AI",
-    ],
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932905/weather_c3ymuf.png",
-    title: "Weather Forecast",
-    description:
-      "Weather Forecast provides real-time weather updates for any searched city with a modern, user-friendly interface. It displays current weather details, including temperature, wind speed, humidity, and atmospheric pressure, along with a five-day forecast. The UI features a clean design with structured cards and clear typography for easy readability.",
-    gitLink: "https://github.com/sanju1098/Simple-Notes-App",
-    demoLink: "https://reactjs-weather-appplication.netlify.app/",
-    techStack: [
-      "React JS",
-      "TypeScript",
-      "Vite",
-      "Open Weathermap API",
-      "JavaScript",
-      "CSS",
-    ],
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dwsalphhy/image/upload/v1769932878/cryptoLoom_dwnvvg.png",
-    title: "CryptoLoom",
-    description:
-      "CryptoLoom is a real-time cryptocurrency dashboard that streams live market data from Binance’s WebSocket API. It displays up-to-date price, volume, and percentage change for various cryptocurrencies in both card and table views.",
-    gitLink: "https://github.com/sanju1098/crypto-loom",
-    demoLink: "https://crypto-loom-pi.vercel.app/",
-    techStack: ["React JS", "TypeScript", "Vite", "WebSocket", "Binance API"],
-  },
-  // {
-  //   image: chatAppImg,
-  //   title: "WebSocket Real-Time Chat Application",
-  //   description:
-  //     "Developed a WebSocket-based chat application that enables users to log in and engage in real-time conversations. The app supports dynamic user authentication and maintains chat connections for seamless communication. A login page with user identification and enhance the user experience. Material UI was used to ensure a consistent and user-friendly interface throughout the application.",
-  //   gitLink: "https://github.com/sanju1098/react-websocket-chat",
-  //   techStack: ["React JS", "Vite", "Material UI", "Node Server", "JavaScript"],
-  // },
-  // {
-  //   image: clerkAuthAppImg,
-  //   title: "Clerk-authenticated Web app with Mock.io API",
-  //   description:
-  //     "Next.js web application that integrates Clerk for secure user authentication, providing a seamless login and registration experience. It utilizes mockapi.io to handle API requests, simulating a real backend and enabling easy management of user data and interactions.",
-  //   gitLink: "https://github.com/sanju1098/clerk-auth-nextjs",
-  //   techStack: [
-  //     "React JS",
-  //     "TypeScript",
-  //     "Next.JS",
-  //     "Clerk Next.JS",
-  //     "Mock.io",
-  //     "Tailwind CSS",
-  //   ],
-  // },
-  // {
-  //   image: notesImg,
-  //   title: "Notes Management App – A Simple CRUD Application",
-  //   description:
-  //     "This project is a CRUD-based Notes Management Application that allows users to create, update, delete, and search for notes efficiently. Users can add new notes, edit existing ones, and remove unwanted notes while utilizing a search functionality to quickly find notes by name.",
-  //   gitLink: "https://github.com/sanju1098/Simple-Notes-App",
-  //   demoLink: "https://notes-app-crud.netlify.app/",
-  //   techStack: ["React JS", "Redux", "Bootstrap", "JavaScript", "CSS"],
-  // },
-].sort((a, b) => a.title.localeCompare(b.title));
+import { Github, Zap } from "lucide-react";
 
 export const workProfiles = [
   {
@@ -206,9 +8,307 @@ export const workProfiles = [
     link: "https://github.com/sanju1098",
   },
   {
-    profileName: "CodeSandbox",
+    profileName: "Stackblitz",
     className: "bg-orange-500 text-white hover:bg-orange-600",
-    icon: <Codesandbox size={18} />,
-    link: "https://codesandbox.io/u/Sanjay%20Kumar%20SR",
+    icon: <Zap size={18} />,
+    link: "https://stackblitz.com/@sanju1098",
+  },
+];
+
+export const projects = [
+  {
+    name: "PromptStack",
+    subtitle: "AI prompt management platform",
+    live: "https://prompt-stack-ai.vercel.app",
+    repo: "https://github.com/sanju1098/prompt-stack",
+    images: [
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788356136/4748e27c-79fc-4445-8e3e-a74ffb746137.png",
+        alt: "PromptStack - Home Page",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788356205/45a3da00-6fda-4e67-b8cd-83e57382981b.png",
+        alt: "PromptStack - Templates Page",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788356212/98ad5cc3-d2d7-47c0-9409-bc518313974d.png",
+        alt: "PromptStack - Prompt Page",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788356344/1ae311e9-42e4-4ff5-9f08-7db6bc9defc6.png",
+        alt: "PromptStack - Execute Page",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788356281/7391e485-e7f3-4d63-8ec8-9e2cbb4f856c.png",
+        alt: "PromptStack - Help Page",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788356353/fe668853-a43d-4e26-ba56-51b4658650d5.png",
+        alt: "PromptStack - API Docs",
+      },
+    ],
+    description:
+      "Full-stack AI prompt management platform to create, organize, search, test and reuse prompt templates with dynamic variables, a template marketplace, workspace analytics and an interactive playground powered by Gemini and Groq.",
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "MongoDB",
+      "Mongoose",
+      "Gemini",
+      "Groq",
+    ],
+  },
+  {
+    name: "Next Auth App",
+    subtitle: "Full-stack authentication demo with NextAuth & MongoDB",
+    live: "",
+    repo: "https://github.com/sanju1098/next-auth-app",
+    images: [
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788357963/1f1aaf19-c305-40c3-912a-7069767c98fe.png",
+        alt: "Next Auth App",
+      },
+    ],
+    description:
+      "A small Next.js application demonstrating authentication with NextAuth (email/password and credentials providers) and MongoDB via Mongoose, including register, login, profile editing, and a protected dashboard.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "NextAuth.js",
+      "MongoDB",
+      "Mongoose",
+      "Tailwind CSS",
+      "bcryptjs",
+    ],
+  },
+  {
+    name: "AstraMind",
+    subtitle: "AI-powered document intelligence platform",
+    live: "https://astramindai.lovable.app/",
+    repo: "https://github.com/sanju1098/astramindai",
+    images: [
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788350250/7a459e23-bf20-4294-8e72-e3d15facc20a.png",
+        alt: "AstraMind - Home Page",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788350277/4bca6083-b47b-46bd-ac4a-f2cc0f255b5d.png",
+        alt: "AstraMind - Login Page",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788350279/72b0a05d-631b-4411-884d-9ce0bccd334b.png",
+        alt: "AstraMind - About Page",
+      },
+    ],
+    description:
+      "AI-powered document intelligence platform that lets users upload PDFs, chat with their content, search contextually, and receive sourced answers using RAG and vector embeddings.",
+    stack: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "TanStack Query",
+      "Framer Motion",
+      "PostgreSQL",
+      "RAG",
+      "Vector Embeddings",
+    ],
+  },
+  {
+    name: "Chatuuu",
+    subtitle: "AI conversational chat platform",
+    live: "https://chatuuu-ai.vercel.app/",
+    repo: "https://github.com/sanju1098/chatuuu",
+    images: [
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788349425/0d06a8bd-2286-46c0-b192-e13f67aa6de1.png",
+        alt: "Chatuuu UI - Home Page",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788349571/27f392ad-1075-46f6-9d06-e724c221fc29.png",
+        alt: "Chatuuu UI - Response Page",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788349672/41daaf08-0a1e-4412-817a-d66fcafdf8de.png",
+        alt: "Chatuuu UI - Response Loading State",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788349740/987e45f1-45b8-46f9-9fd5-c91fcf6dbed6.png",
+        alt: "Chatuuu UI - Code Response",
+      },
+    ],
+    description:
+      "Lightweight AI chat application with streaming responses, file and image attachments, model selection, reasoning and source displays, and reusable conversational UI components.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "AI SDK",
+      "Radix UI",
+      "Lucide React",
+    ],
+  },
+  {
+    name: "Incident Management System",
+    subtitle: "Production-ready incident management API",
+    category: ["Backend", "Node.js", "Express"],
+    live: "",
+    repo: "https://github.com/sanju1098/incident-management-system",
+    images: [
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788337601/f34b4e34-d9bd-4d0e-98f4-4c696aabf54c.png",
+        alt: "Incident Management System API",
+      },
+    ],
+    description:
+      "Production-ready backend API for incident management with JWT authentication, refresh tokens, role-based access control, user and team management, secure file uploads, validation, and protected REST endpoints.",
+    stack: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "Zod",
+      "Cloudinary",
+      "REST APIs",
+    ],
+  },
+  {
+    name: "AI Studio Verse",
+    subtitle: "Multi-modal AI workspace",
+    live: "https://ai-studio-verse.vercel.app/",
+    repo: "https://github.com/sanju1098/ai-studio-verse",
+    images: [
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788350517/7a27b3d6-2391-4595-bc8b-dd44e9614133.png",
+        alt: "AI Studio Verse - Home Page",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788350523/ee96cb3f-bae5-49f6-8bf4-f735d612d92a.png",
+        alt: "AI Studio Verse - Text Generator Page",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788350650/05d94cec-1a22-4903-ad3e-4917951f88d2.png",
+        alt: "AI Studio Verse - Template Page",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788350552/6cfd2b16-0829-4df4-8952-3d16a4c9ff0f.png",
+        alt: "AI Studio Verse - Image Analyzer Page",
+      },
+    ],
+    description:
+      "AI-powered workspace combining text generation, image analysis, and interactive chat capabilities in a responsive interface powered by the Gemini API.",
+    stack: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Gemini API",
+      "Vite",
+    ],
+  },
+  {
+    name: "TravelGenie.AI",
+    subtitle: "AI-powered travel itinerary planner",
+    live: "https://travel-genie-ai-gem.vercel.app/",
+    repo: "https://github.com/sanju1098/travel-genie-ai",
+    images: [
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788351407/0c898b44-de3f-4e9c-af81-b33f39b0d40e.png",
+        alt: "TravelGenie - Home Page",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788351465/347aa602-cd3a-48c9-a6a0-bb3d095c0d82.png",
+        alt: "TravelGenie - Plan Form",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788351518/e19d5b83-8130-4be4-9c8e-5b0d76d9f141.png",
+        alt: "TravelGenie - Plan Page",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788351510/d9b65b26-ee8e-4078-be65-226f89fcaed3.png",
+        alt: "TravelGenie - Itinerary Page",
+      },
+    ],
+    description:
+      "AI-powered travel planning application that generates personalized itineraries based on destination, dates, budget, interests, and trip type using Google Gemini.",
+    stack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Material UI",
+      "Tailwind CSS",
+      "React Query",
+      "Gemini API",
+    ],
+  },
+  {
+    name: "BookTheShow",
+    subtitle: "Movie and theater ticket booking platform",
+    live: "https://booktheshow.vercel.app/",
+    repo: "https://github.com/sanju1098/booktheshow",
+    images: [
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788352146/cb89172a-0080-4bb6-bf45-2563d01e2d0e.png",
+        alt: "BookTheShow - Home Page",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788352160/bef2d66b-37dc-47d3-ba50-8457a2f49080.png",
+        alt: "BookTheShow - Booking Page",
+      },
+    ],
+    description:
+      "Responsive movie ticket booking platform for discovering movies and theaters across multiple cities and languages, with authentication, seat booking, wishlists, QR-based bookings, and booking history.",
+    stack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "SCSS",
+      "Firebase",
+      "Firebase Auth",
+      "shadcn/ui",
+    ],
+  },
+  {
+    name: "sleep-with-delay",
+    subtitle: "TypeScript async utility package",
+    live: "https://www.npmjs.com/package/sleep-with-delay",
+    repo: "https://github.com/sanju1098/sleep-with-delay",
+    images: [
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788353523/71ba34df-b778-4973-90ab-4527badaad22.png",
+        alt: "sleep-with-delay NPM package",
+      },
+    ],
+    description:
+      "Lightweight TypeScript utility package providing sleep and delayed function execution helpers for testing, animations, asynchronous workflows, and controlled execution timing.",
+    stack: ["TypeScript", "JavaScript", "Node.js", "NPM", "Rollup"],
+  },
+  {
+    name: "Weather Forecast",
+    subtitle: "Real-time weather dashboard",
+    live: "https://reactjs-weather-appplication.netlify.app/",
+    repo: "https://github.com/sanju1098/Simple-Notes-App",
+    images: [
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788353724/aa6d6da5-49df-4e5a-9082-68827c90dc06.png",
+        alt: "WeatherForecast1",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788353731/01b9fcca-2872-482e-904c-8755ea56b209.png",
+        alt: "WeatherForecast2",
+      },
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788353862/812ddf7e-00a9-438c-a42e-376ed9b66359.png",
+        alt: "WeatherForecast3",
+      },
+    ],
+    description:
+      "Responsive weather dashboard displaying current weather conditions and a five-day forecast using a public weather API.",
+    stack: ["React", "JavaScript", "CSS3", "Weather API"],
   },
 ];

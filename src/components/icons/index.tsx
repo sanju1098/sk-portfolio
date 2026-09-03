@@ -19,6 +19,7 @@ import {
   SiDocker,
   SiFigma,
   SiGit,
+  SiGithubactions,
   SiMongodb,
   SiNginx,
   SiNpm,
@@ -27,6 +28,7 @@ import {
   SiWebpack,
   SiYarn,
   SiPnpm,
+  SiRedis,
 } from "react-icons/si";
 import { FaAssistiveListeningSystems, FaCss3, FaSass } from "react-icons/fa";
 import { CgLoadbarDoc } from "react-icons/cg";
@@ -143,6 +145,9 @@ export const FigmaIcon = (props: any) => (
 export const GitIcon = (props: any) => (
   <SiGit size={35} color="#F05032" {...props} />
 );
+export const GitHubActionsIcon = (props: any) => (
+  <SiGithubactions size={35} color="#2088FF" {...props} />
+);
 export const NpmIcon = (props: any) => (
   <SiNpm size={35} color="#CB3837" {...props} />
 );
@@ -151,4 +156,7 @@ export const YarnIcon = (props: any) => (
 );
 export const PnpmIcon = (props: any) => (
   <SiPnpm size={35} color="#F69220" {...props} />
+);
+export const RedisIcon = (props: any) => (
+  <SiRedis size={35} color="#DC382D" {...props} />
 );

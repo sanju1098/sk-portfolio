@@ -1,93 +1,132 @@
 import {
-  DockerIcon,
-  JavaScriptIcon,
-  JestIcon,
-  MaterialUIIcon,
-  NextJSIcon,
-  NginxIcon,
-  NvdaIcon,
-  ReactIcon,
-  ReduxIcon,
-  ShadcnUIIcon,
-  StorybookIcon,
-  TailwindIcon,
-  TypeScriptIcon,
-} from "@/components/icons";
-import {
   Code,
-  Rocket,
   ShieldCheck,
   Paintbrush,
   Layers,
-  LayoutTemplate,
+  Server,
+  Sparkles,
 } from "lucide-react";
 
-export const achievements = [
-  "4+ years of Frontend Development",
-  "Developed Scalable and Maintainable UIs",
-  "Expert in React & TypeScript",
-  "Agile development practices",
+export const stats = [
+  { label: "Recent Build", value: "PromptStack — AI Prompt Platform" },
+  { label: "Backend Focus", value: "Node.js, Express & REST APIs" },
+  { label: "Strengths", value: "Scalable UI Systems & Reusable Components" },
+  { label: "Currently Exploring", value: "AI-Powered Product Development" },
 ];
 
 export const services = [
   {
-    icon: <Code className="text-white" size={24} />,
+    icon: <Code className="text-accent-foreground" size={24} />,
     title: "Frontend Development",
     description:
       "Building responsive, accessible, and performant user interfaces with modern frameworks.",
   },
   {
-    icon: <Rocket className="text-white" size={24} />,
-    title: "Performance Optimization",
+    icon: <Server className="text-accent-foreground" size={24} />,
+    title: "Backend Development",
     description:
-      "Optimizing applications for speed, scalability, and exceptional user experience.",
+      "Building practical backend applications and REST APIs with Node.js, Express, databases, and secure authentication.",
   },
   {
-    icon: <ShieldCheck className="text-white" size={24} />,
-    title: "Testing & Code Quality",
+    icon: <Sparkles className="text-accent-foreground" size={24} />,
+    title: "AI-Powered Applications",
     description:
-      "Writing robust unit and integration tests using Jest and React Testing Library to ensure high-quality and maintainable codebases.",
+      "Integrating LLMs and AI APIs to build intelligent features, chatbots, and AI-driven products.",
   },
   {
-    icon: <Paintbrush className="text-white" size={24} />,
-    title: "UI/UX Design",
-    description:
-      "Crafting beautiful, intuitive user interfaces with attention to detail, accessibility, and user experience.",
-  },
-  {
-    icon: <Layers className="text-white" size={24} />,
+    icon: <Layers className="text-accent-foreground" size={24} />,
     title: "Technical Architecture",
     description:
       "Designing scalable and maintainable application architecture using modern tools and best practices.",
   },
   {
-    icon: <LayoutTemplate className="text-white" size={24} />,
-    title: "Component Libraries & Design Systems",
+    icon: <Paintbrush className="text-accent-foreground" size={24} />,
+    title: "UI/UX & Design Systems",
     description:
-      "Developing reusable component libraries and integrating design systems for consistent and scalable UIs.",
+      "Crafting intuitive interfaces and reusable component libraries for consistent, scalable UIs.",
+  },
+  {
+    icon: <ShieldCheck className="text-accent-foreground" size={24} />,
+    title: "Testing & Performance",
+    description:
+      "Writing robust tests with Jest and React Testing Library while optimizing for speed and scalability.",
   },
 ];
 
-export const primaryTechStack = [
-  "React.js",
-  "TypeScript",
-  "JavaScript",
-  "Next.js",
-  "Tailwind CSS",
-];
-
-export const scrollItems = [
-  <ReactIcon size={48} />,
-  <TypeScriptIcon size={48} />,
-  <NextJSIcon size={48} />,
-  <JavaScriptIcon size={48} />,
-  <ReduxIcon size={48} />,
-  <ShadcnUIIcon size={48} />,
-  <MaterialUIIcon size={48} />,
-  <TailwindIcon size={48} />,
-  <NvdaIcon size={48} />,
-  <StorybookIcon size={48} />,
-  <JestIcon size={48} />,
-  <DockerIcon size={48} />,
-  <NginxIcon size={48} />,
+export const featuredProjects = [
+  {
+    name: "PromptStack",
+    subtitle: "AI prompt management platform",
+    category: ["Full-stack", "AI"],
+    live: "https://prompt-stack-ai.vercel.app",
+    repo: "https://github.com/sanju1098/prompt-stack",
+    images: [
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788337410/d2174917-383f-4e01-bf65-148f1f802276.png",
+        alt: "PromptStack UI",
+      },
+    ],
+    description:
+      "Full-stack AI prompt management platform to create, organize, search, test and reuse prompt templates with dynamic variables, a template marketplace, workspace analytics and an interactive playground powered by Gemini and Groq.",
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "MongoDB",
+      "Mongoose",
+      "Gemini",
+      "Groq",
+    ],
+  },
+  {
+    name: "Incident Management System",
+    subtitle: "Production-ready incident management API",
+    category: ["Backend", "Node.js", "Express"],
+    live: "",
+    repo: "https://github.com/sanju1098/incident-management-system",
+    images: [
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788337601/f34b4e34-d9bd-4d0e-98f4-4c696aabf54c.png",
+        alt: "Incident Management System API",
+      },
+    ],
+    description:
+      "Production-ready backend API for incident management with JWT authentication, refresh tokens, role-based access control, user and team management, secure file uploads, validation, and protected REST endpoints.",
+    stack: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "Zod",
+      "Cloudinary",
+      "REST APIs",
+    ],
+  },
+  {
+    name: "Chatuuu",
+    subtitle: "AI conversational chat application",
+    category: ["AI", "Frontend"],
+    live: "https://chatuuu-ai.vercel.app",
+    repo: "https://github.com/sanju1098/chatuuu",
+    images: [
+      {
+        src: "https://res.cloudinary.com/dwsalphhy/image/upload/v1788349571/27f392ad-1075-46f6-9d06-e724c221fc29.png",
+        alt: "Chatuuu UI",
+      },
+    ],
+    description:
+      "Modern AI chat application with streaming responses, model selection, file and image attachments, reasoning and source displays, and reusable conversational UI components built for AI-powered chat experiences.",
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vercel AI SDK",
+      "Radix UI",
+      "AI SDK React",
+    ],
+  },
 ];
