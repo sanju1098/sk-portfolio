@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { ArrowUpRight, ChevronLeft, ChevronRight, Github } from "lucide-react";
 import { projects, workProfiles } from "@/content/project";
-import Picture from "@/components/Picture"; // Adjust import path as needed
-
+import Picture from "@/components/Picture";
 interface ProjectImage {
   src: string;
   alt: string;
@@ -13,100 +12,102 @@ interface ProjectCarouselProps {
   name: string;
 }
 
-const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images, name }) => {
-  const [index, setIndex] = useState(0);
-  const count = images.length;
+const ProjectCarousel: React.FC<ProjectCarouselProps> = React.memo(
+  ({ images, name }) => {
+    const [index, setIndex] = useState(0);
+    const count = images.length;
 
-  const displayImages = images.length > 0 ? images : [{ src: "", alt: name }];
+    const displayImages = images.length > 0 ? images : [{ src: "", alt: name }];
 
-  const go = (next: number) => setIndex((next + count) % count);
+    const go = (next: number) => setIndex((next + count) % count);
 
-  return (
-    <div
-      role="group"
-      aria-roledescription="carousel"
-      aria-label={`${name} screenshots`}
-      tabIndex={0}
-      className="relative overflow-hidden rounded-xl bg-muted/30 ring-1 ring-border/70"
-      onKeyDown={e => {
-        if (e.key === "ArrowLeft") go(index - 1);
-        if (e.key === "ArrowRight") go(index + 1);
-      }}>
+    return (
       <div
-        className="flex transition-transform duration-500 ease-machined"
-        style={{ transform: `translateX(-${index * 100}%)` }}>
-        {displayImages.map((img, i) => (
-          <div
-            key={`${img.src}-${i}`}
-            className="flex aspect-16/10 w-full shrink-0 items-center justify-center bg-black/5 p-2 dark:bg-black/20"
-            aria-hidden={i !== index}
-            role="group"
-            aria-roledescription="slide"
-            aria-label={`${i + 1} of ${count}`}>
-            <Picture
-              src={img.src}
-              alt={img.alt}
-              width={1200}
-              height={750}
-              loading="lazy"
-              className="h-full w-full object-contain"
-            />
-          </div>
-        ))}
-      </div>
-
-      {count > 1 && (
-        <>
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
-
-          <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 p-4">
+        role="group"
+        aria-roledescription="carousel"
+        aria-label={`${name} screenshots`}
+        tabIndex={0}
+        className="relative overflow-hidden rounded-xl bg-muted/30 ring-1 ring-border/70"
+        onKeyDown={e => {
+          if (e.key === "ArrowLeft") go(index - 1);
+          if (e.key === "ArrowRight") go(index + 1);
+        }}>
+        <div
+          className="flex transition-transform duration-500 ease-machined"
+          style={{ transform: `translateX(-${index * 100}%)` }}>
+          {displayImages.map((img, i) => (
             <div
-              className="flex items-center gap-1.5"
-              role="tablist"
-              aria-label="Choose screenshot">
-              {images.map((_, i) => (
+              key={`${img.src}-${i}`}
+              className="flex aspect-16/10 w-full shrink-0 items-center justify-center bg-black/5 p-2 dark:bg-black/20"
+              aria-hidden={i !== index}
+              role="group"
+              aria-roledescription="slide"
+              aria-label={`${i + 1} of ${count}`}>
+              <Picture
+                src={img.src}
+                alt={img.alt}
+                width={1200}
+                height={750}
+                loading="lazy"
+                className="h-full w-full object-contain"
+              />
+            </div>
+          ))}
+        </div>
+
+        {count > 1 && (
+          <>
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
+
+            <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-4 p-4">
+              <div
+                className="flex items-center gap-1.5"
+                role="tablist"
+                aria-label="Choose screenshot">
+                {images.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    role="tab"
+                    aria-selected={i === index}
+                    aria-label={`Screenshot ${i + 1}`}
+                    onClick={() => setIndex(i)}
+                    className={`h-1.5 rounded-full transition-all ${
+                      i === index
+                        ? "w-6 bg-primary"
+                        : "w-3 bg-white/50 hover:bg-white/80"
+                    }`}
+                  />
+                ))}
+              </div>
+
+              <div className="flex items-center gap-2">
                 <button
-                  key={i}
                   type="button"
-                  role="tab"
-                  aria-selected={i === index}
-                  aria-label={`Screenshot ${i + 1}`}
-                  onClick={() => setIndex(i)}
-                  className={`h-1.5 rounded-full transition-all ${
-                    i === index
-                      ? "w-6 bg-primary"
-                      : "w-3 bg-white/50 hover:bg-white/80"
-                  }`}
-                />
-              ))}
+                  onClick={() => go(index - 1)}
+                  aria-label="Previous screenshot"
+                  className="inline-flex size-8 items-center justify-center rounded-full bg-black/40 text-white ring-1 ring-white/20 backdrop-blur transition-all hover:bg-black/70 hover:scale-105 active:scale-95">
+                  <ChevronLeft className="size-4" aria-hidden />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => go(index + 1)}
+                  aria-label="Next screenshot"
+                  className="inline-flex size-8 items-center justify-center rounded-full bg-black/40 text-white ring-1 ring-white/20 backdrop-blur transition-all hover:bg-black/70 hover:scale-105 active:scale-95">
+                  <ChevronRight className="size-4" aria-hidden />
+                </button>
+              </div>
             </div>
 
-            <div className="flex items-center gap-2">
-              <button
-                type="button"
-                onClick={() => go(index - 1)}
-                aria-label="Previous screenshot"
-                className="inline-flex size-8 items-center justify-center rounded-full bg-black/40 text-white ring-1 ring-white/20 backdrop-blur transition-all hover:bg-black/70 hover:scale-105 active:scale-95">
-                <ChevronLeft className="size-4" aria-hidden />
-              </button>
-              <button
-                type="button"
-                onClick={() => go(index + 1)}
-                aria-label="Next screenshot"
-                className="inline-flex size-8 items-center justify-center rounded-full bg-black/40 text-white ring-1 ring-white/20 backdrop-blur transition-all hover:bg-black/70 hover:scale-105 active:scale-95">
-                <ChevronRight className="size-4" aria-hidden />
-              </button>
-            </div>
-          </div>
-
-          <p aria-live="polite" className="sr-only">
-            Screenshot {index + 1} of {count}
-          </p>
-        </>
-      )}
-    </div>
-  );
-};
+            <p aria-live="polite" className="sr-only">
+              Screenshot {index + 1} of {count}
+            </p>
+          </>
+        )}
+      </div>
+    );
+  },
+);
 
 const Projects: React.FC = React.memo(() => {
   return (
@@ -179,15 +180,17 @@ const Projects: React.FC = React.memo(() => {
 
       <section id="projects" className="px-6 pb-20 pt-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 md:grid-cols-2">
+          <div className="grid min-w-0 gap-12 md:grid-cols-2">
             {projects.map(p => (
-              <article key={p.name} className="group rounded-xl">
+              <article
+                key={p.name}
+                className="group min-w-0 overflow-visible rounded-xl">
                 <ProjectCarousel images={p.images} name={p.name} />
 
-                <div className="mt-6 flex items-start justify-between gap-6">
-                  <div>
+                <div className="mt-6 flex items-start justify-between gap-4 sm:gap-6">
+                  <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-3">
-                      <h3 className="font-display text-xl font-medium text-card-foreground">
+                      <h3 className="min-w-0 text-pretty font-display text-xl font-medium text-card-foreground">
                         {p.name}
                       </h3>
                     </div>
@@ -197,22 +200,22 @@ const Projects: React.FC = React.memo(() => {
                     <p className="mt-4 max-w-[52ch] text-pretty text-sm leading-relaxed text-muted-foreground">
                       {p.description}
                     </p>
-                    <div className="mt-4 flex flex-wrap gap-2">
+                    <div className="mt-4 flex max-w-full flex-wrap gap-2">
                       {p.stack.map(s => (
-                        <span className="chip" key={s}>
+                        <span className="chip whitespace-nowrap" key={s}>
                           {s}
                         </span>
                       ))}
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2">
+                  <div className="flex shrink-0 items-start gap-2 pt-1">
                     {p.repo && (
                       <a
                         href={p.repo}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex size-10 shrink-0 items-center justify-center rounded-full text-muted-foreground ring-1 ring-border transition-all hover:bg-accent/10 hover:text-accent active:scale-95">
+                        className="flex h-10 w-10 min-w-10 shrink-0 aspect-square items-center justify-center rounded-full border border-border text-muted-foreground transition-all hover:border-accent hover:bg-accent/10 hover:text-accent active:scale-95">
                         <Github className="size-4" aria-hidden />
                         <span className="sr-only">
                           View {p.name} source code on GitHub
@@ -224,7 +227,7 @@ const Projects: React.FC = React.memo(() => {
                         href={p.live}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex size-10 shrink-0 items-center justify-center rounded-full text-muted-foreground ring-1 ring-border transition-all hover:bg-accent/10 hover:text-accent active:scale-95">
+                        className="flex h-10 w-10 min-w-10 shrink-0 aspect-square items-center justify-center rounded-full border border-border text-muted-foreground transition-all hover:border-accent hover:bg-accent/10 hover:text-accent active:scale-95">
                         <ArrowUpRight className="size-4" aria-hidden />
                         <span className="sr-only">
                           Open {p.name} live demo in a new tab

@@ -10,6 +10,7 @@ interface PictureProps {
   alt?: string;
   className?: string;
   loading?: "lazy" | "eager";
+  fetchPriority?: "high" | "low" | "auto";
   width?: number;
   height?: number;
   fallbackSrc?: string;
@@ -20,6 +21,7 @@ const Picture: React.FC<PictureProps> = ({
   alt = "",
   className,
   loading = "lazy",
+  fetchPriority = "auto",
   width,
   height,
   fallbackSrc = FALLBACK_IMAGE,
@@ -60,6 +62,8 @@ const Picture: React.FC<PictureProps> = ({
         width={width}
         height={height}
         loading={loading}
+        decoding="async"
+        fetchPriority={fetchPriority}
         onLoad={() => setIsLoading(false)}
         onError={handleError}
         className={cn(
