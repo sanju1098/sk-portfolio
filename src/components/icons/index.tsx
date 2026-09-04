@@ -29,8 +29,14 @@ import {
   SiYarn,
   SiPnpm,
   SiRedis,
+  SiExpress,
 } from "react-icons/si";
-import { FaAssistiveListeningSystems, FaCss3, FaSass } from "react-icons/fa";
+import {
+  FaAssistiveListeningSystems,
+  FaCss3,
+  FaNodeJs,
+  FaSass,
+} from "react-icons/fa";
 import { CgLoadbarDoc } from "react-icons/cg";
 import { TbApi, TbGitFork } from "react-icons/tb";
 import { MdSpeed } from "react-icons/md";
@@ -53,7 +59,12 @@ export const ReactIcon = (props: any) => (
   <SiReact size={35} color="#61DAFB" {...props} />
 );
 export const NextJSIcon = (props: any) => (
-  <SiNextdotjs size={35} color="#000000" {...props} />
+  <SiNextdotjs
+    size={35}
+    color="currentColor"
+    className="text-black dark:text-white"
+    {...props}
+  />
 );
 export const ReduxIcon = (props: any) => (
   <SiRedux size={35} color="#764ABC" {...props} />
@@ -66,7 +77,12 @@ export const TailwindIcon = (props: any) => (
   <SiTailwindcss size={35} color="#06B6D4" {...props} />
 );
 export const ShadcnUIIcon = (props: any) => (
-  <SiShadcnui size={35} color="#000000" {...props} />
+  <SiShadcnui
+    size={35}
+    color="currentColor"
+    className="text-black dark:text-white"
+    {...props}
+  />
 );
 export const MaterialUIIcon = (props: any) => (
   <SiMui size={35} color="#007FFF" {...props} />
@@ -160,3 +176,5 @@ export const PnpmIcon = (props: any) => (
 export const RedisIcon = (props: any) => (
   <SiRedis size={35} color="#DC382D" {...props} />
 );
+export const NodeJSIcon = (props: any) => <FaNodeJs size={35} {...props} />;
+export const ExpressIcon = (props: any) => <SiExpress size={35} {...props} />;

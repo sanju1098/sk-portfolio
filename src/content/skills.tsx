@@ -38,6 +38,8 @@ import {
   WebpackIcon,
   WebVitalsIcon,
   YarnIcon,
+  NodeJSIcon,
+  ExpressIcon,
 } from "@/components/icons";
 import {
   Code2,
@@ -46,8 +48,6 @@ import {
   TerminalSquare,
   FlaskConical,
 } from "lucide-react";
-import { FaNodeJs } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
 
 export const skillCategories = [
   {
@@ -88,8 +88,8 @@ export const skillCategories = [
     description:
       "Server-side runtimes, frameworks, APIs, and databases for building and persisting application data",
     skills: [
-      { name: "Node.js", icon: <FaNodeJs /> },
-      { name: "Express.js", icon: <SiExpress /> },
+      { name: "Node.js", icon: <NodeJSIcon /> },
+      { name: "Express.js", icon: <ExpressIcon /> },
       { name: "REST APIs", icon: <RestApiIcon /> },
       { name: "MongoDB", icon: <MongoDBIcon /> },
       { name: "Redis", icon: <RedisIcon /> },
